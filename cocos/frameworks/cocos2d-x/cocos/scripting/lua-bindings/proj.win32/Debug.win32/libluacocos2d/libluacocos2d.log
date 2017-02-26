@@ -1,0 +1,127 @@
+﻿  复制了 2 个文件
+  lua_cocos2dx_3d_auto.cpp
+  lua_cocos2dx_auto.cpp
+  lua_cocos2dx_physics_auto.cpp
+  lua_cocos2dx_spine_auto.cpp
+..\auto\lua_cocos2dx_spine_auto.cpp(180): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(196): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(333): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(350): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(196): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(201): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(218): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(90): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(362): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(371): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(387): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(485): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(502): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(536): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(673): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(950): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1020): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1037): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1104): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1120): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1155): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1175): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1368): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1426): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1484): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1548): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(1646): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(2002): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(2019): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(2130): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_spine_auto.cpp(2147): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_physics_auto.cpp(4953): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(5377): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(5773): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(6408): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(6506): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(6557): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_3d_auto.cpp(6611): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(13421): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(13463): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(21105): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(21126): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(22012): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(22159): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(22210): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(27921): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(28033): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(30535): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(35123): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(82512): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(83646): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(83675): warning C4083: 应输入“(”；找到标识符“NO”
+..\auto\lua_cocos2dx_auto.cpp(101430): warning C4083: 应输入“(”；找到标识符“NO”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_3d_auto.cpp(6415): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_3d_auto.cpp(6618): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(187): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(205): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(337): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(358): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(489): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(510): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1023): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1043): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1381): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1439): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1108): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1128): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1159): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1183): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1497): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(1659): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(2005): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(2025): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(2133): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.cpp(2153): warning C4700: 使用了未初始化的局部变量“arg1”
+  CCLuaEngine.cpp
+  lua_cocos2dx_deprecated.cpp
+  lua_cocos2dx_manual.cpp
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(21109): warning C4700: 使用了未初始化的局部变量“arg2”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(21130): warning C4700: 使用了未初始化的局部变量“arg2”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(22021): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(22166): warning C4700: 使用了未初始化的局部变量“arg0”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(30542): warning C4700: 使用了未初始化的局部变量“arg1”
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp(35130): warning C4700: 使用了未初始化的局部变量“arg1”
+  lua_cocos2dx_physics_manual.cpp
+  LuaSkeletonAnimation.cpp
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(301): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(450): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(1783): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_deprecated.cpp(1530): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(2591): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(2986): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(3072): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(3151): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(3359): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(3399): warning C4018: “<”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(4014): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(4088): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(4163): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(4236): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(4311): warning C4018: “<=”: 有符号/无符号不匹配
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5068): warning C4996: 'tolua_cocos2dx_DrawNode_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3578): note: 参见“tolua_cocos2dx_DrawNode_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5255): warning C4996: 'tolua_cocos2dx_Sprite_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3487): note: 参见“tolua_cocos2dx_Sprite_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5270): warning C4996: 'tolua_cocos2dx_LayerColor_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3552): note: 参见“tolua_cocos2dx_LayerColor_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5296): warning C4996: 'tolua_cocos2dx_ParticleSystem_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3565): note: 参见“tolua_cocos2dx_ParticleSystem_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5339): warning C4996: 'tolua_cocos2dx_SpriteBatchNode_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3500): note: 参见“tolua_cocos2dx_SpriteBatchNode_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5352): warning C4996: 'tolua_cocos2dx_MotionStreak_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3513): note: 参见“tolua_cocos2dx_MotionStreak_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5365): warning C4996: 'tolua_cocos2dx_AtlasNode_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3526): note: 参见“tolua_cocos2dx_AtlasNode_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(5378): warning C4996: 'tolua_cocos2dx_ParticleBatchNode_setBlendFunc01': 被声明为已否决
+  ..\manual\cocos2d\lua_cocos2dx_manual.cpp(3539): note: 参见“tolua_cocos2dx_ParticleBatchNode_setBlendFunc01”的声明
+..\manual\cocos2d\lua_cocos2dx_manual.cpp(7195): warning C4018: “<=”: 有符号/无符号不匹配
+  lua_cocos2dx_spine_manual.cpp
+..\manual\spine\lua_cocos2dx_spine_manual.cpp(478): warning C4996: 'tolua_spine_SkeletoneAnimation_setBlendFunc': 被声明为已否决
+  ..\manual\spine\lua_cocos2dx_spine_manual.cpp(325): note: 参见“tolua_spine_SkeletoneAnimation_setBlendFunc”的声明
+  libluacocos2d.vcxproj -> E:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\runtime-src\proj.win32\Debug.win32\libluacocos2d.lib

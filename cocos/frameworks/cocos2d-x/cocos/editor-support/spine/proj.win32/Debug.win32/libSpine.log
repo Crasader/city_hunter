@@ -1,0 +1,9 @@
+﻿  AttachmentVertices.cpp
+  Cocos2dAttachmentLoader.cpp
+  SkeletonAnimation.cpp
+  SkeletonBatch.cpp
+e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\editor-support\spine\skeletonbatch.cpp(96): warning C4996: 'cocos2d::TrianglesCommand::init': 被声明为已否决
+  e:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\cocos2d-x\cocos\renderer\cctrianglescommand.h(73): note: 参见“cocos2d::TrianglesCommand::init”的声明
+  SkeletonRenderer.cpp
+  spine-cocos2dx.cpp
+  libSpine.vcxproj -> E:\gamer\cocos2d-x\project\city_hunter\cocos\frameworks\runtime-src\proj.win32\Debug.win32\libSpine.lib

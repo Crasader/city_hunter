@@ -1,0 +1,59 @@
+$#include "../scene_manager.h"
+$#include "cocos2d.h"
+
+namespace gamer {
+
+//class Event;
+
+class SceneManager {
+  public:
+    enum TransitionStyle {
+        NONE,
+        CROSS_FADE,
+        FADE,
+        FADE_BL,
+        FADE_DOWN,
+        FADE_TR,
+        FADE_UP,
+        FLIP_ANGULAR,
+        FLIP_X,
+        FLIP_Y,
+        JUMP_ZOOM,
+        MOVE_IN_B,
+        MOVE_IN_L,
+        MOVE_IN_R,
+        MOVE_IN_T,
+        PAGE_TURN,
+        PROGRESS,
+        PROGRESS_HORIZONTAL,
+        PROGRESS_INOUT,
+        PROGRESS_OUTIN,
+        PROGRESS_RADIAL_CCW,
+        PROGRESS_RADIAL_CW,
+        PROGRESS_VERTICAL,
+        ROTO_ZOOM,
+        SHRINK_GROW,
+        SLIDE_IN_B,
+        SLIDE_IN_L,
+        SLIDE_IN_R,
+        SLIDE_IN_T,
+        SPLIT_COLS,
+        SPLIT_ROWS,
+        TURN_OFF_TILES,
+        ZOOM_FLIP_ANGULAR,
+        ZOOM_FLIP_X,
+        ZOOM_FLIP_Y
+    };
+
+	virtual ~SceneManager();
+
+	static SceneManager* getInstance();
+
+	cocos2d::Scene* getRunningScene();
+	
+    cocos2d::Scene* getCurrentScene();
+
+    int getCurrentSceneID();	
+};
+
+} // namespace gamer

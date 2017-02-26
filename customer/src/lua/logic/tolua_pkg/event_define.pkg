@@ -1,0 +1,15 @@
+$#include "../event_define.h"
+
+namespace gamer {
+
+//namespace eventname{
+//static const char* Hero_Is_Attack =  "Hero_Is_Attack";
+//}
+
+enum EventIDs {
+    INVALID             =	0,
+    HERO_UNDER_ATTACK   =	1000,
+    HERO_DEAD           =	1001
+};
+
+} // namespace gamer

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<UIProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectDir>E:\gamer\cocos2d-x\project\city_hunter\res.proj\ui\ui_login</ProjectDir>
+  <Version>1.6.0.0</Version>
+  <Resources>E:\gamer\cocos2d-x\project\city_hunter\res.proj\ui\ui_login\Resources</Resources>
+  <Name>register</Name>
+  <JsonFileName>register.json</JsonFileName>
+  <JsonFolder>E:\gamer\cocos2d-x\project\city_hunter\res.proj\ui\ui_login\Json</JsonFolder>
+  <JsonList>
+    <string>ui_login.json</string>
+  </JsonList>
+  <CanvasSize>
+    <Width>480</Width>
+    <Height>320</Height>
+  </CanvasSize>
+  <filePath>E:\gamer\cocos2d-x\project\city_hunter\res.proj\ui\ui_login\ui_login.xml.ui</filePath>
+  <ProjectType>UIProject</ProjectType>
+  <ResRelativePath />
+  <imageFileList>
+    <string>ui_login0.plist</string>
+  </imageFileList>
+  <imagePngList>
+    <string>ui_login0.png</string>
+  </imagePngList>
+  <JsonSuffix>.json</JsonSuffix>
+  <CurrentUIJson>ui_login.json</CurrentUIJson>
+</UIProject>

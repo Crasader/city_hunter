@@ -1,0 +1,1 @@
+protoc -I=./ --cpp_out=./ ./actor_cfg.proto

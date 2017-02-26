@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{037a9a02-b906-4cc5-ad98-304acd4e25ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{2d1d0979-58cd-4ab6-b91c-13650158f1fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes">
+      <UniqueIdentifier>{fc5cb953-2953-4968-83b3-39e3ff951754}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp">
+      <UniqueIdentifier>{548fac99-f0f7-46cf-99ce-af5087bc5fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lua">
+      <UniqueIdentifier>{0087b4f7-abfd-49ef-8f70-2512eb00380a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\network">
+      <UniqueIdentifier>{7d893c84-1503-4ca9-b047-028ebf9751a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic">
+      <UniqueIdentifier>{9d0270e9-c37f-4c89-8a22-f851a30b9e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\ai">
+      <UniqueIdentifier>{30e10519-db2d-4825-8b30-b35d0c99d649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\base">
+      <UniqueIdentifier>{68dba9f5-3f79-42e7-8453-fc430ea697cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\lua_bind">
+      <UniqueIdentifier>{e95d9fef-32d5-42dd-aea7-49fa8d6d99cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\manager">
+      <UniqueIdentifier>{1ba5263f-0f92-4f38-8640-a818eba6206c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\provider">
+      <UniqueIdentifier>{3e4559de-779f-40b5-b386-b7d92ccf1938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\constant">
+      <UniqueIdentifier>{2bdfbc17-db3e-456c-b0e0-13b06cc4bcd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\data">
+      <UniqueIdentifier>{d44aaf96-fdea-4c72-857b-8b0165708fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view">
+      <UniqueIdentifier>{42e59c7b-6a35-4ce9-b3e4-be47366e54cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\base">
+      <UniqueIdentifier>{6111a0b6-c2a0-48a7-9324-d757074bdd47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\constant">
+      <UniqueIdentifier>{30520d77-2a20-48ac-b539-a96d72203c6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\manager">
+      <UniqueIdentifier>{b759e621-14e4-4aeb-a6b7-4bb9f1ee254c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\provider">
+      <UniqueIdentifier>{50428c10-497e-407c-8258-7a06799e789f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\actor">
+      <UniqueIdentifier>{9907e0f6-013d-4677-8926-250128523bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\scene">
+      <UniqueIdentifier>{47dfc702-3299-419d-8edd-5e0ecf736f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\ui">
+      <UniqueIdentifier>{e3c6fcdd-95da-4d0a-97c5-5858d03b63ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lua\logic">
+      <UniqueIdentifier>{e13172db-c458-4ad0-bc89-9e3c0d8d6a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lua\data">
+      <UniqueIdentifier>{39c98c08-0136-4df8-a035-ede59c358041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lua\network">
+      <UniqueIdentifier>{b1d657f9-0e3b-460e-a18f-0da7ecb02282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\lua\view">
+      <UniqueIdentifier>{c4d9e2e3-bfbd-4035-afe3-0a6332548497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\data\google">
+      <UniqueIdentifier>{0803fa90-1987-4f0a-b455-39ab55f54bb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\data\google\protobuf">
+      <UniqueIdentifier>{220ae822-de7a-4923-88d2-6558c228f331}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\data\google\protobuf\io">
+      <UniqueIdentifier>{13003bd5-613e-4970-ad19-d10f225b8c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\data\google\protobuf\stubs">
+      <UniqueIdentifier>{53ce21e1-b5af-4c62-a579-40a40f32ad54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\lua_include">
+      <UniqueIdentifier>{68cda64a-3a74-4369-9ca3-fdb3584d462a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\tolua_include">
+      <UniqueIdentifier>{053ba214-3719-4a1f-b5f1-0db459172952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\util">
+      <UniqueIdentifier>{dd347406-ed1d-4f5f-8614-4b5b7b7eed66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\test">
+      <UniqueIdentifier>{b546c9d2-f475-45a3-a01e-7e5e33280e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\view\util">
+      <UniqueIdentifier>{c05f82c9-d9cc-42ce-8979-9402090f0bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="classes\cpp\logic\test">
+      <UniqueIdentifier>{8844da40-b8df-4003-a453-a3190159c5cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>classes</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SimulatorWin.h" />
+    <ClInclude Include="stdafx.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.h">
+      <Filter>classes\cpp\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\data_manager.h">
+      <Filter>classes\cpp\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\pb_creator.h">
+      <Filter>classes\cpp\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.pb.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor_database.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\dynamic_message.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\extension_set.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\generated_enum_reflection.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\generated_message_reflection.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\generated_message_util.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\message.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\message_lite.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\package_info.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\reflection_ops.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\repeated_field.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\service.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\text_format.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\unknown_field_set.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\wire_format.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\wire_format_lite.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\wire_format_lite_inl.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\config.h">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_arm64_gcc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_arm_gcc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_arm_qnx.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_atomicword_compat.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_generic_gcc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_macosx.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_mips_gcc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_pnacl.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_solaris.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_tsan.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_x86_gcc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_x86_msvc.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\common.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\hash.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\map_util.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\once.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\platform_macros.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\shared_ptr.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\stl_util.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\stringprintf.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\strutil.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\substitute.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\template_util.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\type_traits.h">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\coded_stream.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\coded_stream_inl.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\gzip_stream.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\package_info.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\printer.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\strtod.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\tokenizer.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream_impl.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream_impl_lite.h">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\action_command.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\actor_states.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\attack_command.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\a_star_heuristic_policies.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\graph.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\graph_algorithms.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\graph_edge.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\graph_node.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\graph_typedef.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\path_finder.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\space_partition.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\state.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\state_machine.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\trigger.h">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\command.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\command_listener.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event_define.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event_listener.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\listener.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\macros.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\typedef.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\constant\command_constants.h">
+      <Filter>classes\cpp\logic\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\constant\graph_constants.h">
+      <Filter>classes\cpp\logic\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\constant\physics_constants.h">
+      <Filter>classes\cpp\logic\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\constant\state_constants.h">
+      <Filter>classes\cpp\logic\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_scene_manager.h">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\lua_include\lauxlib.h">
+      <Filter>classes\cpp\logic\lua_include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\lua_include\lua.h">
+      <Filter>classes\cpp\logic\lua_include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\lua_include\luaconf.h">
+      <Filter>classes\cpp\logic\lua_include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\lua_include\lualib.h">
+      <Filter>classes\cpp\logic\lua_include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\audio_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\camera_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\command_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\event_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\hp_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\lua_bind_helper.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\module_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\provider\id_provider.h">
+      <Filter>classes\cpp\logic\provider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\tolua_include\tolua++.h">
+      <Filter>classes\cpp\logic\tolua_include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\common.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_float.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_graph.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_test.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.h">
+      <Filter>classes\cpp\logic\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.h">
+      <Filter>classes\cpp\logic\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\actor\actor.h">
+      <Filter>classes\cpp\view\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\actor\actor_interface.h">
+      <Filter>classes\cpp\view\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\actor\actor_typedef.h">
+      <Filter>classes\cpp\view\actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\base\game_object.h">
+      <Filter>classes\cpp\view\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\constant\scene_constants.h">
+      <Filter>classes\cpp\view\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\manager\action_manager.h">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\manager\actor_manager.h">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\manager\effect_manager.h">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\manager\scene_manager.h">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\scene\gaming_scene.h">
+      <Filter>classes\cpp\view\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\test\ui_test.h">
+      <Filter>classes\cpp\view\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud.h">
+      <Filter>classes\cpp\view\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.h">
+      <Filter>classes\cpp\view\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulatorWin.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.cc">
+      <Filter>classes\cpp\data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\data_manager.cc">
+      <Filter>classes\cpp\data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\pb_creator.cc">
+      <Filter>classes\cpp\data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.pb.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor_database.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\dynamic_message.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\extension_set.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\extension_set_heavy.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\generated_message_reflection.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\generated_message_util.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\message.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\message_lite.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\reflection_ops.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\repeated_field.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\service.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\text_format.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\unknown_field_set.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\wire_format.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\wire_format_lite.cc">
+      <Filter>classes\cpp\data\google\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_x86_gcc.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\atomicops_internals_x86_msvc.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\common.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\once.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\stringprintf.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\structurally_valid.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\strutil.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\stubs\substitute.cc">
+      <Filter>classes\cpp\data\google\protobuf\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\coded_stream.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\gzip_stream.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\printer.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\strtod.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\tokenizer.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream_impl.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\io\zero_copy_stream_impl_lite.cc">
+      <Filter>classes\cpp\data\google\protobuf\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\ai\path_finder.cc">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\ai\trigger.cc">
+      <Filter>classes\cpp\logic\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\command.cc">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\command_listener.cc">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\event.cc">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\event_listener.cc">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\listener.cc">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_command_listener.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_command_manager.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_event.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_event_define.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_event_listener.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_event_manager.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\lua_bind\lua_bind_scene_manager.cc">
+      <Filter>classes\cpp\logic\lua_bind</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\audio_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\camera_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\command_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\event_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\hp_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\lua_bind_helper.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\module_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.cc">
+      <Filter>classes\cpp\logic\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.cc">
+      <Filter>classes\cpp\logic\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\actor\actor.cc">
+      <Filter>classes\cpp\view\actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\manager\action_manager.cc">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\manager\actor_manager.cc">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\manager\effect_manager.cc">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\manager\scene_manager.cc">
+      <Filter>classes\cpp\view\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\scene\gaming_scene.cc">
+      <Filter>classes\cpp\view\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\test\ui_test.cc">
+      <Filter>classes\cpp\view\test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud.cc">
+      <Filter>classes\cpp\view\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.cc">
+      <Filter>classes\cpp\view\ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\game.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\src\lua\main.lua">
+      <Filter>classes\lua</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\data\data_manager.lua">
+      <Filter>classes\lua\data</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\logic\module_define.lua">
+      <Filter>classes\lua\logic</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\logic\module_manager.lua">
+      <Filter>classes\lua\logic</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\logic\cocos_constants.lua">
+      <Filter>classes\lua\logic</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\logic\logic_api_provider.lua">
+      <Filter>classes\lua\logic</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\view\ui_define.lua">
+      <Filter>classes\lua\view</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\view\ui_login.lua">
+      <Filter>classes\lua\view</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\view\ui_manager.lua">
+      <Filter>classes\lua\view</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\view\ui_test.lua">
+      <Filter>classes\lua\view</Filter>
+    </None>
+    <None Include="..\..\..\..\customer\src\lua\view\view_api_provider.lua">
+      <Filter>classes\lua\view</Filter>
+    </None>
+  </ItemGroup>
+</Project>
