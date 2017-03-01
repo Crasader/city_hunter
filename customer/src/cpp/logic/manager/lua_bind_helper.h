@@ -18,9 +18,9 @@
 #include <string>
 extern "C" 
 {
-    #include "lua_include/lua.h"
-    #include "lua_include/lualib.h"
-    #include "lua_include/lauxlib.h"
+    #include "lua.h"
+    #include "lualib.h"
+    #include "lauxlib.h"
 }
 
 namespace gamer {

@@ -35,8 +35,8 @@
 #include "state_constants.h"
 #include "state_machine.h"
 #include "scene_manager.h" // for test
-#include "util/utils.h"
-#include "util/utils_graph.h"
+#include "utils.h"
+#include "utils_graph.h"
 
 namespace gamer
 {
@@ -514,7 +514,7 @@ protected:
     }
 
 private:
-    typedef Actor<cocos2d::Sprite3D> ActorType;
+    //typedef Actor<cocos2d::Sprite3D> ActorType;
       
     Actor()
         :GameObject(IDProvider::getNextID())

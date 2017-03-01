@@ -14,7 +14,7 @@
 
 #include "ui_test.h"
 
-#include "../util/utils_test.h"
+#include "utils_test.h"
 
 namespace gamer 
 {

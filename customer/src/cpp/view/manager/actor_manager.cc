@@ -27,8 +27,8 @@
 #include "event_define.h"
 #include "event_manager.h"
 #include "macros.h"
-#include "protobuf/data_manager.h"
-#include "protobuf/actor_cfg.pb.h"
+#include "data_manager.h"
+#include "actor_cfg.pb.h"
 #include "scene_manager.h"
 
 namespace gamer

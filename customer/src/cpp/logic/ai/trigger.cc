@@ -1,9 +1,7 @@
 #include "trigger.h"
 
-#include "game_main_scene.h"
 #include "macros.h"
-#include "platform/platform.h"
-//#include "role.h"
+//#include "platform/platform.h"
 
 namespace gamer {
 

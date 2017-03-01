@@ -1983,9 +1983,6 @@
     <ClCompile Include="..\audio\win32\AudioDecoderManager.cpp">
       <Filter>audioengine</Filter>
     </ClCompile>
-    <ClCompile Include="..\3d\DrawNode3D.cpp">
-      <Filter>3d</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -3880,9 +3877,6 @@
     </ClInclude>
     <ClInclude Include="..\audio\win32\AudioDecoderManager.h">
       <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3d\DrawNode3D.h">
-      <Filter>3d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

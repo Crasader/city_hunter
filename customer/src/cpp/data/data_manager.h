@@ -17,7 +17,7 @@
 
 #include <string>
 #include "command_constants.h"
-#include "protobuf/actor_cfg.pb.h"
+#include "actor_cfg.pb.h"
 
 namespace gamer
 {

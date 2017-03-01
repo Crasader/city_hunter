@@ -23,7 +23,7 @@
 #include "command_constants.h"
 #include "command_listener.h"
 #include "command_manager.h"
-#include "protobuf/data_manager.h"
+#include "data_manager.h"
 #include "event.h"
 #include "macros.h"
 

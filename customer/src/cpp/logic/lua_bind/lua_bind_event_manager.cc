@@ -13,7 +13,7 @@
 /* Exported function */
 TOLUA_API int  tolua_event_manager_open (lua_State* tolua_S);
 
-#include "../event_manager.h"
+#include "event_manager.h"
 #include <map>
 #include <vector>
 

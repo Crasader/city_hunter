@@ -17,13 +17,14 @@
 
 namespace gamer 
 {
+#define MY_DEBUG			            1
 
 #define GAMER_PLATFORM_UNKNOWN			0
 #define GAMER_PLATFORM_IOS				1
 #define GAMER_PLATFORM_ANDROID			2
 #define GAMER_PLATFORM_WIN32			3
 
-#define GAMER_PLATFORM    GAMER_PLATFORM_WIN32
+#define GAMER_PLATFORM    GAMER_PLATFORM_ANDROID
 
 #define NS_GAMER_BEGIN					namespace gamer {
 #define NS_GAMER_END					}

@@ -22,7 +22,7 @@
 #include "hp_manager.h"
 #include "macros.h"
 #include "path_finder.h"
-#include "protobuf/data_manager.h"
+#include "data_manager.h"
 #include "scene_manager.h"
 
 namespace gamer

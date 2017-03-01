@@ -31,6 +31,7 @@
 #include "command_manager.h"
 #include "macros.h"
 #include "scene_manager.h"
+#include "utils.h"
 
 namespace gamer
 {
@@ -128,7 +129,8 @@ gamer::EffectManager::BloodEffect* EffectManager::createBloodEffect(int blood_lo
     ttfconfig.fontSize = 50;
     ttfconfig.fontFilePath = "fonts/britanic bold.ttf";
     auto blood = cocos2d::Label::createWithTTF(ttfconfig, 
-                                               std::to_string(blood_loss), 
+                                               //std::to_string(blood_loss), // to_string() is C++11 feature
+		                                       utils::to_string(blood_loss),
                                                cocos2d::TextHAlignment::CENTER, 
                                                400);
     blood->setTag(BloodTags::NORMAL);
@@ -185,8 +187,8 @@ gamer::EffectManager::BloodEffect* EffectManager::getBloodEffect(int blood_loss)
                                });
     if (created_blood_effects_.end() != blood)
     {
-        //(*blood)->blood_loss = blood_loss;
-        (*blood)->blood_node->setString(std::to_string(blood_loss));
+        //(*blood)->blood_node->setString(std::to_string(blood_loss));
+		(*blood)->blood_node->setString(utils::to_string(blood_loss));
         (*blood)->available = false;
         ret = *blood;
     }
@@ -199,7 +201,8 @@ gamer::EffectManager::BloodEffect* EffectManager::getBloodEffect(int blood_loss)
                           be->available = true;      
                       });
         blood = created_blood_effects_.begin();  
-        (*blood)->blood_node->setString(std::to_string(blood_loss));
+        //(*blood)->blood_node->setString(std::to_string(blood_loss));
+		(*blood)->blood_node->setString(utils::to_string(blood_loss));
         (*blood)->available = false;
         ret = *blood;
     }

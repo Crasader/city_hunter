@@ -18,7 +18,7 @@
 #include "cocos2d.h"
 #include "cocos/editor-support/cocostudio/CocoStudio.h"
 #include "cocos/ui/CocosGUI.h"
-#include "cocos/3d/DrawNode3D.h"
+#include "draw_node_3d.h"
 
 #include "graph_typedef.h"
 #include "path_finder.h"

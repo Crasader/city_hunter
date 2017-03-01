@@ -8,12 +8,12 @@
 #endif
 #include "string.h"
 
-#include "../tolua_include/tolua++.h"
+#include "tolua++.h"
 
 /* Exported function */
 TOLUA_API int  tolua_event_define_open (lua_State* tolua_S);
 
-#include "../event_define.h"
+#include "event_define.h"
 
 /* function to register type */
 static void tolua_reg_types (lua_State* tolua_S)

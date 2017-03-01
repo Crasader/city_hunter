@@ -13,8 +13,8 @@
 /* Exported function */
 TOLUA_API int  tolua_command_manager_open (lua_State* tolua_S);
 
-#include "../command_manager.h"
-#include "../command_listener.h"
+#include "command_manager.h"
+#include "command_listener.h"
 #include <vector>
 #include <string>
 

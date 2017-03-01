@@ -76,6 +76,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 #if CC_64BITS
     FileUtils::getInstance()->addSearchPath("src/64bit");
 #endif
+	//cocos2d::FileUtils::getInstance()->addSearchPath("src");
 	cocos2d::FileUtils::getInstance()->addSearchPath("res");	
 	cocos2d::FileUtils::getInstance()->addSearchPath("res/ui/RoleInfo");
 

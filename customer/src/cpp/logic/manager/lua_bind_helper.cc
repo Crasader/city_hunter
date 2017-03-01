@@ -13,9 +13,9 @@
 ********************************************************************************/
 
 #include "lua_bind_helper.h"
-#include "tolua_include/tolua++.h"
+#include "tolua++.h"
 #include "macros.h"
-#include "platform/platform.h"
+//#include "platform/platform.h"
 
 namespace gamer {
 

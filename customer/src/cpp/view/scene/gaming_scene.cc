@@ -29,7 +29,7 @@
 #include "macros.h"
 #include "space_partition.h"
 #include "scene_constants.h"
-#include "util/utils_graph.h"
+#include "utils_graph.h"
 
 namespace gamer
 {

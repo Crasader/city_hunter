@@ -8,12 +8,12 @@
 #endif
 #include "string.h"
 
-#include "../tolua_include/tolua++.h"
+#include "tolua++.h"
 
 /* Exported function */
 TOLUA_API int  tolua_scene_manager_open (lua_State* tolua_S);
 
-#include "../scene_manager.h"
+#include "scene_manager.h"
 #include "cocos2d.h"
 
 /* function to release collected object via destructor */

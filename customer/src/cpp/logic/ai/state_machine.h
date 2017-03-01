@@ -16,18 +16,27 @@
 #define CITY_HUNTER_SRC_STATE_MACHINE_H_
 
 #include <map>
+//#include "actor_typedef.h"
 #include "actor_states.h"
 #include "macros.h"
-#include "state.h"
+//#include "state.h"
 
 namespace gamer
 {
+
+template<typename Entity> class State;
+template<typename Entity> class IdleState;
+template<typename Entity> class FindingTargetState;
+template<typename Entity> class NearingState;
+template<typename Entity> class AttackingState;
+template<typename Entity> class BeingAttackedState;
+template<typename Entity> class DeadState;
 
 template <typename Entity>
 class FSM 
 {
 public:
-    typedef State<Entity> State;
+    typedef State<Entity> ActorState;
 
 	FSM(Entity* owner) 
         :owner_(owner)
@@ -66,7 +75,7 @@ public:
         changeState(state);
     }
 
-    inline State* current_state() const { return current_state_; }
+    inline ActorState* current_state() const { return current_state_; }
 
     inline int current_state_id() const 
     { 
@@ -86,38 +95,38 @@ public:
     inline Entity* owner(Entity* ent) const { return owner_; }
 
 private:
-    State* createState(gamer::StateIDs state_id)
+	ActorState* createState(gamer::StateIDs state_id)
     {
         switch (state_id)
         {
         case gamer::StateIDs::ATTACKING_STATE:
             {
-                return new AttackingState<ActorType >(state_id); 
+                return (ActorState*)new AttackingState<ActorType>(state_id);
             }
             break;
         case gamer::StateIDs::FINDING_TARGET_STATE:
             {
-                return new FindingTargetState<ActorType >(state_id); 
+                return (ActorState*)new FindingTargetState<ActorType>(state_id);
             }
             break;
         case gamer::StateIDs::IDLE_STATE:
             {
-                return new IdleState<ActorType >(state_id); 
+                return (ActorState*)new IdleState<ActorType>(state_id);
             }
             break;
         case gamer::StateIDs::NEARING_STATE:
             {
-                return new NearingState<ActorType >(state_id); 
+                return (ActorState*)new NearingState<ActorType>(state_id);
             }
             break;
         case gamer::StateIDs::BEING_ATTACKED_STATE:
             {
-                return new BeingAttackedState<ActorType >(state_id); 
+                return (ActorState*)new BeingAttackedState<ActorType>(state_id);
             }
             break;
         case gamer::StateIDs::DEAD_STATE:
             {
-                return new DeadState<ActorType >(state_id); 
+                return (ActorState*)new DeadState<ActorType>(state_id);
             }
             break;
         default:
@@ -128,7 +137,7 @@ private:
     }
 
     // change state if current state is not the input state, then store the state
-    void changeState(State* state)
+    void changeState(ActorState* state)
     {
         if (nullptr == state)
             return;
@@ -164,7 +173,7 @@ private:
         is_state_changing_ = false;
     }
 
-    void addState(State* state)
+    void addState(ActorState* state)
     {
         if (nullptr == state)
             return;
@@ -176,7 +185,7 @@ private:
         }
     }
 
-    State* getState(int state_id)  
+	ActorState* getState(int state_id)
     { 
         auto it = states_map_.find(state_id);
         if (states_map_.end() != it)
@@ -186,7 +195,7 @@ private:
         return nullptr;
     }
 
-    inline const bool isInState(const State* state) const 
+    inline const bool isInState(const ActorState* state) const
     {
         if (nullptr == state || nullptr == current_state_)
             return false;
@@ -198,15 +207,15 @@ private:
     {
         std::for_each(states_map_.begin(), 
             states_map_.end(), 
-            [&](std::pair<int, State*> a)
+            [&](std::pair<int, ActorState*> a)
         { 
             SAFE_DELETE(a.second);
         });
     }
 
 	Entity* owner_;
-	State* current_state_;
-    std::map<int, State*> states_map_;
+	ActorState* current_state_;
+    std::map<int, ActorState*> states_map_;
 	bool is_state_changing_;
 	bool enabled_;
 };

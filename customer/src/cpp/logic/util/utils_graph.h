@@ -18,6 +18,7 @@
 #include <list>
 
 #include "cocos2d.h"
+#include "draw_node_3d.h"
 
 #include "scene_manager.h"
 #include "typedef.h"

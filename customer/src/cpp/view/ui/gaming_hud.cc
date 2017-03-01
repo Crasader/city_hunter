@@ -18,8 +18,8 @@
 #include "command_manager.h"
 #include "path_finder.h"
 #include "scene_manager.h"
-#include "test/ui_test.h"
-#include "util/utils_graph.h"
+#include "ui_test.h"
+#include "utils_graph.h"
 
 namespace gamer 
 {

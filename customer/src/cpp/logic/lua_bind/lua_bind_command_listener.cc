@@ -13,11 +13,11 @@
 /* Exported function */
 TOLUA_API int  tolua_command_listener_open (lua_State* tolua_S);
 
-#include "../command_listener.h"
+#include "command_listener.h"
 #include <functional>
 #include <string>
-#include "../event_listener.h"
-#include "../lua_bind_helper.h"
+#include "event_listener.h"
+#include "lua_bind_helper.h"
 
 /* function to release collected object via destructor */
 #ifdef __cplusplus

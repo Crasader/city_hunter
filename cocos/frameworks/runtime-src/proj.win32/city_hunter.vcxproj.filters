@@ -419,9 +419,6 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\tolua_include\tolua++.h">
       <Filter>classes\cpp\logic\tolua_include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\common.h">
-      <Filter>classes\cpp\logic\util</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils.h">
       <Filter>classes\cpp\logic\util</Filter>
     </ClInclude>
@@ -478,6 +475,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.h">
       <Filter>classes\cpp\view\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.h">
+      <Filter>classes\cpp\logic\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -694,6 +694,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.cc">
       <Filter>classes\cpp\view\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.cpp">
+      <Filter>classes\cpp\logic\test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

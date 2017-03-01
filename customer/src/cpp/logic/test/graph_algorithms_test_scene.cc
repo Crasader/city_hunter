@@ -17,7 +17,7 @@
 #include "cocos/2d/CCSprite.h"
 
 #include "macros.h"
-#include "util/utils_graph.h"
+#include "utils_graph.h"
 
 namespace gamer
 {
