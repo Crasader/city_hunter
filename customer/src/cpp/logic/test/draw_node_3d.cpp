@@ -22,7 +22,7 @@
  THE SOFTWARE.
  ****************************************************************************/
 
-#include "DrawNode3D.h"
+#include "draw_node_3d.h"
 
 NS_CC_BEGIN
 
