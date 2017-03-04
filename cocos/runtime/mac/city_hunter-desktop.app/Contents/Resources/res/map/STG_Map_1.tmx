@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Image_357_at_frame_10" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="Image_357_at_frame_10.jpg" width="560" height="429"/>
+ </tileset>
+ <layer name="fglayer" width="100" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6C3sX9DY9xNSEACAAAAAABcN+0AADywQV8AKA==
+  </data>
+ </layer>
+ <layer name="objlayer" width="100" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzl1bWPVFEUx/HN4lrgXuBe4F7gXuBe4F7gXuBeoIvuBt3FluCLB3f4k/g2N/nlZt7dM8wkk7kUn5zknPN7L6d5r7CgoKAKqqIaqqMGaqIWaqMO6qIe6if0rVmduRrKat6vulcYyR0N0BCN0BhN0BTN0Bwt0BKt0BptEvrWrM5cDWU171fdi+WOtmiH9uiAjuiEzuiCruiG7uiBngl9a1Znroaymver7sVyRy/0Rh/0RT/0xwAMxCAMxhAMxbCEvjWrM1dDWc37VfdiuWM4RmAkRmE0xmAsxmE8JmAiJmFyQt+a1Zmroazm/ap7sdwxBVMxDdMxAzMxC7MxB3MxD/OxIKFvzerM1VBW837VvVjuWIhFWIwlWIplWI4VWIlVWI01WJvQt2Z15mooq3m/6l4sd6zDemzARmzCZmzBVmzDduzATuxK6FuzOnM1lNW8X3Uvljt2Yw/2Yh/24wAO4hAO4wiO4hiOJ/StWZ25Gspq3q+6F8sdJ3ASp3AaZ3AWRTiH87iAi7iEywl9a1Znroaymver7sVyxxVcxTVcxw3cRCnKcAu3cQd3cS9FP52szsoMWc37VfdiueMBHuIRHuMJnuIZKvAcL/ASr/A6RT+drM4qDFnN+1X3YrnjHd7jAz7iEz7jC77iG77jB37iV0Lfmv2NP//4XpdNtRfLHdZvpM5CmWKUGJ/j9i3Pq2weyx3Wb6TOQply3Dc+x+1bnlfZ/H+4I592cv3+bO2E/llv8DZPdnL9/mztWP47+bCT6/dnayfTf5TlH1Yie0VpZIq9msm/OV/uyPQfZflO6reyNI1MuVcz+Tfnyx1/AdrB82Q=
+  </data>
+ </layer>
+ <layer name="bglayer" width="100" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzl1bWPVFEUx/HN4lrgXuBe4F7gXuBe4F7gXuBeoIvuBt3FluCLB3f4k/g2N/nlZt7dM8wkk7kUn5zknPN7L6d5r7CgoKAKqqIaqqMGaqIWaqMO6qIe6if0rVmduRrKat6vulcYyR0N0BCN0BhN0BTN0Bwt0BKt0BptEvrWrM5cDWU171fdi+WOtmiH9uiAjuiEzuiCruiG7uiBngl9a1Znroaymver7sVyRy/0Rh/0RT/0xwAMxCAMxhAMxbCEvjWrM1dDWc37VfdiuWM4RmAkRmE0xmAsxmE8JmAiJmFyQt+a1Zmroazm/ap7sdwxBVMxDdMxAzMxC7MxB3MxD/OxIKFvzerM1VBW837VvVjuWIhFWIwlWIplWI4VWIlVWI01WJvQt2Z15mooq3m/6l4sd6zDemzARmzCZmzBVmzDduzATuxK6FuzOnM1lNW8X3Uvljt2Yw/2Yh/24wAO4hAO4wiO4hiOJ/StWZ25Gspq3q+6F8sdJ3ASp3AaZ3AWRTiH87iAi7iEywl9a1Znroaymver7sVyxxVcxTVcxw3cRCnKcAu3cQd3cS9FP52szsoMWc37VfdiueMBHuIRHuMJnuIZKvAcL/ASr/A6RT+drM4qDFnN+1X3YrnjHd7jAz7iEz7jC77iG77jB37iV0Lfmv2NP//4XpdNtRfLHdZvpM5CmWKUGJ/j9i3Pq2weyx3Wb6TOQply3Dc+x+1bnlfZ/H+4I592cv3+bO2E/llv8DZPdnL9/mztWP47+bCT6/dnayfTf5TlH1Yie0VpZIq9msm/OV/uyPQfZflO6reyNI1MuVcz+Tfnyx1/AdrB82Q=
+  </data>
+ </layer>
+ <objectgroup name="objects" width="100" height="20">
+  <object name="hero" x="267" y="437" width="61" height="50">
+   <properties>
+    <property name="hero" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="711" y="290" width="60" height="59">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="641" y="398" width="60" height="59">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="835" y="76" width="54" height="52">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="920" y="370" width="47" height="59">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="791" y="352" width="60" height="59">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="600" y="77" width="55" height="61">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="1238" y="321" width="43" height="57">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="1558" y="321" width="43" height="57">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="1878" y="321" width="43" height="57">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="2838" y="321" width="43" height="57">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="2966" y="321" width="43" height="57">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="enemy" x="1016" y="370" width="47" height="59">
+   <properties>
+    <property name="enemy" value="1"/>
+   </properties>
+  </object>
+  <object name="ground" x="0" y="496" width="3168">
+   <properties>
+    <property name="ground" value="2"/>
+   </properties>
+   <polyline points="0,0 3198,-1"/>
+  </object>
+  <object x="481" y="496">
+   <polyline points="0,0 0,-2"/>
+  </object>
+  <object name="ground" x="1" y="287">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 481,8"/>
+  </object>
+  <object name="ground" x="483" y="292">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 290,-25"/>
+  </object>
+  <object name="ground" x="773" y="266">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 391,46"/>
+  </object>
+  <object name="ground" x="1164" y="312">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 59,79"/>
+  </object>
+  <object name="ground" x="1224" y="393">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 349,5"/>
+  </object>
+  <object name="ground" x="1572" y="396">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 654,27"/>
+  </object>
+  <object name="ground" x="2227" y="423">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 784,8"/>
+  </object>
+  <object name="ground" x="3014" y="430">
+   <properties>
+    <property name="ground" value="1"/>
+   </properties>
+   <polyline points="0,0 180,0 182,-43"/>
+  </object>
+ </objectgroup>
+</map>

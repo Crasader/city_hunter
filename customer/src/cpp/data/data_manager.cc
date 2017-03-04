@@ -53,9 +53,13 @@ bool DataManager::init()
     {
         GOOGLE_PROTOBUF_VERIFY_VERSION;  
 
-        dir_cfg_ = cocos2d::FileUtils::getInstance()->getWritablePath();
-        actor_cfg_path_ = dir_cfg_ + "res\\cfg\\actor_cfg.pb";
-
+        //dir_cfg_ = cocos2d::FileUtils::getInstance()->getWritablePath();
+        //actor_cfg_path_ = dir_cfg_ + "res\\cfg\\actor_cfg.pb";
+        actor_cfg_path_ = cocos2d::FileUtils::getInstance()->fullPathForFilename("HelloWorld.png");
+        int i = actor_cfg_path_.rfind("/");
+        auto res_root = actor_cfg_path_.substr(0, i + 1);
+        actor_cfg_path_ = res_root + "cfg//actor_cfg.pb";
+     
         std::fstream input(actor_cfg_path_.c_str(), std::ios::in | std::ios::binary);
         if (!actor_cfg_.ParseFromIstream(&input)) 
         {        

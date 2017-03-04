@@ -26,7 +26,7 @@
 #include "scene_constants.h"
 #include "space_partition_test_scene.h" // test
 #include "macros.h"
-#include "test/ui_test.h"
+#include "ui_test.h"
 
 namespace gamer
 {
