@@ -80,7 +80,6 @@
 		B385233A1E6A880300F3C157 /* hp_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523301E6A880300F3C157 /* hp_manager.cc */; };
 		B385233B1E6A880300F3C157 /* lua_bind_helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523321E6A880300F3C157 /* lua_bind_helper.cc */; };
 		B385233C1E6A880300F3C157 /* module_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523341E6A880300F3C157 /* module_manager.cc */; };
-		B38523441E6A883A00F3C157 /* draw_node_3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B385233E1E6A883A00F3C157 /* draw_node_3d.cpp */; };
 		B38523451E6A883A00F3C157 /* graph_algorithms_test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523401E6A883A00F3C157 /* graph_algorithms_test_scene.cc */; };
 		B38523461E6A883A00F3C157 /* space_partition_test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523421E6A883A00F3C157 /* space_partition_test_scene.cc */; };
 		B38523521E6A88C900F3C157 /* actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523501E6A88C900F3C157 /* actor.cc */; };
@@ -120,7 +119,6 @@
 		B38523AC1E6A8EC200F3C157 /* hp_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523301E6A880300F3C157 /* hp_manager.cc */; };
 		B38523AD1E6A8EC200F3C157 /* lua_bind_helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523321E6A880300F3C157 /* lua_bind_helper.cc */; };
 		B38523AE1E6A8EC200F3C157 /* module_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523341E6A880300F3C157 /* module_manager.cc */; };
-		B38523AF1E6A8ECD00F3C157 /* draw_node_3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B385233E1E6A883A00F3C157 /* draw_node_3d.cpp */; };
 		B38523B01E6A8ECD00F3C157 /* graph_algorithms_test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523401E6A883A00F3C157 /* graph_algorithms_test_scene.cc */; };
 		B38523B11E6A8ECD00F3C157 /* space_partition_test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523421E6A883A00F3C157 /* space_partition_test_scene.cc */; };
 		B38523B21E6A8EEB00F3C157 /* actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38523501E6A88C900F3C157 /* actor.cc */; };
@@ -428,8 +426,6 @@
 		B38523341E6A880300F3C157 /* module_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = module_manager.cc; path = ../../../../customer/src/cpp/logic/manager/module_manager.cc; sourceTree = "<group>"; };
 		B38523351E6A880300F3C157 /* module_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = module_manager.h; path = ../../../../customer/src/cpp/logic/manager/module_manager.h; sourceTree = "<group>"; };
 		B385233D1E6A882100F3C157 /* id_provider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = id_provider.h; path = ../../../../customer/src/cpp/logic/provider/id_provider.h; sourceTree = "<group>"; };
-		B385233E1E6A883A00F3C157 /* draw_node_3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = draw_node_3d.cpp; path = ../../../../customer/src/cpp/logic/test/draw_node_3d.cpp; sourceTree = "<group>"; };
-		B385233F1E6A883A00F3C157 /* draw_node_3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = draw_node_3d.h; path = ../../../../customer/src/cpp/logic/test/draw_node_3d.h; sourceTree = "<group>"; };
 		B38523401E6A883A00F3C157 /* graph_algorithms_test_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = graph_algorithms_test_scene.cc; path = ../../../../customer/src/cpp/logic/test/graph_algorithms_test_scene.cc; sourceTree = "<group>"; };
 		B38523411E6A883A00F3C157 /* graph_algorithms_test_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = graph_algorithms_test_scene.h; path = ../../../../customer/src/cpp/logic/test/graph_algorithms_test_scene.h; sourceTree = "<group>"; };
 		B38523421E6A883A00F3C157 /* space_partition_test_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = space_partition_test_scene.cc; path = ../../../../customer/src/cpp/logic/test/space_partition_test_scene.cc; sourceTree = "<group>"; };
@@ -842,8 +838,6 @@
 		B38522351E6A843C00F3C157 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				B385233E1E6A883A00F3C157 /* draw_node_3d.cpp */,
-				B385233F1E6A883A00F3C157 /* draw_node_3d.h */,
 				B38523401E6A883A00F3C157 /* graph_algorithms_test_scene.cc */,
 				B38523411E6A883A00F3C157 /* graph_algorithms_test_scene.h */,
 				B38523421E6A883A00F3C157 /* space_partition_test_scene.cc */,
@@ -1522,7 +1516,6 @@
 				B38523841E6A8DF900F3C157 /* data_manager.cc in Sources */,
 				B38523B61E6A8EEB00F3C157 /* scene_manager.cc in Sources */,
 				B38523AD1E6A8EC200F3C157 /* lua_bind_helper.cc in Sources */,
-				B38523AF1E6A8ECD00F3C157 /* draw_node_3d.cpp in Sources */,
 				B38525ED1E6AF5F300F3C157 /* wire_format.cc in Sources */,
 				B38525EA1E6AF5F300F3C157 /* substitute.cc in Sources */,
 				B38525DD1E6AF5F300F3C157 /* generated_message_util.cc in Sources */,
@@ -1596,7 +1589,6 @@
 				B385233A1E6A880300F3C157 /* hp_manager.cc in Sources */,
 				B38523461E6A883A00F3C157 /* space_partition_test_scene.cc in Sources */,
 				B38525D01E6AF02000F3C157 /* strutil.cc in Sources */,
-				B38523441E6A883A00F3C157 /* draw_node_3d.cpp in Sources */,
 				B38525BD1E6AF02000F3C157 /* coded_stream.cc in Sources */,
 				B385231F1E6A87CD00F3C157 /* lua_bind_event_define.cc in Sources */,
 				B38525BA1E6AF02000F3C157 /* extension_set_heavy.cc in Sources */,

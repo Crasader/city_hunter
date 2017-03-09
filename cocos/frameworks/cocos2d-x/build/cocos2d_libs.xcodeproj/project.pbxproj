@@ -4129,6 +4129,10 @@
 		B29594B61926D5EC003EEF37 /* CCMeshCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B29594B31926D5EC003EEF37 /* CCMeshCommand.h */; };
 		B29594B71926D5EC003EEF37 /* CCMeshCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = B29594B31926D5EC003EEF37 /* CCMeshCommand.h */; };
 		B2CC507C19776DD10041958E /* CCPhysicsJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A170721807CE7A005B8026 /* CCPhysicsJoint.cpp */; };
+		B35541191E71930C009C7985 /* MyDrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35541171E71930C009C7985 /* MyDrawNode3D.cpp */; };
+		B355411A1E71930C009C7985 /* MyDrawNode3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B35541171E71930C009C7985 /* MyDrawNode3D.cpp */; };
+		B355411B1E71930C009C7985 /* MyDrawNode3D.h in Headers */ = {isa = PBXBuildFile; fileRef = B35541181E71930C009C7985 /* MyDrawNode3D.h */; };
+		B355411C1E71930C009C7985 /* MyDrawNode3D.h in Headers */ = {isa = PBXBuildFile; fileRef = B35541181E71930C009C7985 /* MyDrawNode3D.h */; };
 		B5668D7D1B3838E4003CBD5E /* UIScrollViewBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5668D7B1B3838E4003CBD5E /* UIScrollViewBar.cpp */; };
 		B5668D7E1B3838E4003CBD5E /* UIScrollViewBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5668D7B1B3838E4003CBD5E /* UIScrollViewBar.cpp */; };
 		B5668D7F1B3838E4003CBD5E /* UIScrollViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B5668D7C1B3838E4003CBD5E /* UIScrollViewBar.h */; };
@@ -6964,6 +6968,8 @@
 		B29594B11926D5D9003EEF37 /* ccShader_3D_PositionTex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_3D_PositionTex.vert; sourceTree = "<group>"; };
 		B29594B21926D5EC003EEF37 /* CCMeshCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMeshCommand.cpp; sourceTree = "<group>"; };
 		B29594B31926D5EC003EEF37 /* CCMeshCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMeshCommand.h; sourceTree = "<group>"; };
+		B35541171E71930C009C7985 /* MyDrawNode3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyDrawNode3D.cpp; sourceTree = "<group>"; };
+		B35541181E71930C009C7985 /* MyDrawNode3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDrawNode3D.h; sourceTree = "<group>"; };
 		B3AF019E1842FBA400A98B85 /* b2MotorJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2MotorJoint.cpp; sourceTree = "<group>"; };
 		B3AF019F1842FBA400A98B85 /* b2MotorJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2MotorJoint.h; sourceTree = "<group>"; };
 		B5668D7B1B3838E4003CBD5E /* UIScrollViewBar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIScrollViewBar.cpp; sourceTree = "<group>"; };
@@ -10255,6 +10261,8 @@
 		B29594B81926D61F003EEF37 /* 3d */ = {
 			isa = PBXGroup;
 			children = (
+				B35541171E71930C009C7985 /* MyDrawNode3D.cpp */,
+				B35541181E71930C009C7985 /* MyDrawNode3D.h */,
 				3E2A09C01BAA91B70086B878 /* CCMotionStreak3D.cpp */,
 				3E2A09C11BAA91B70086B878 /* CCMotionStreak3D.h */,
 				B603F1A61AC8EA0900A9579C /* CCTerrain.cpp */,
@@ -11560,6 +11568,7 @@
 				B677B0DB1B18492D006762CB /* CCNavMeshUtils.h in Headers */,
 				B6CAAFE41AF9A9E100B9B856 /* CCPhysics3D.h in Headers */,
 				15AE1A7F19AAD40300C27E9E /* b2DistanceJoint.h in Headers */,
+				B355411B1E71930C009C7985 /* MyDrawNode3D.h in Headers */,
 				B665E3301AA80A6500DDB1C5 /* CCPUOnCountObserverTranslator.h in Headers */,
 				15AE188719AAD33D00C27E9E /* CCBSequenceProperty.h in Headers */,
 				B665E2D01AA80A6500DDB1C5 /* CCPUInterParticleCollider.h in Headers */,
@@ -14038,6 +14047,7 @@
 				B665E3ED1AA80A6600DDB1C5 /* CCPUSlaveBehaviour.h in Headers */,
 				B6CAB42C1AF9AA1A00B9B856 /* btRaycastVehicle.h in Headers */,
 				15AE198619AAD36400C27E9E /* WidgetReader.h in Headers */,
+				B355411C1E71930C009C7985 /* MyDrawNode3D.h in Headers */,
 				1A570224180BCC1A0088DEC7 /* CCParticleBatchNode.h in Headers */,
 				B6CAB32C1AF9AA1A00B9B856 /* btGImpactCollisionAlgorithm.h in Headers */,
 				15FB20961AE7C57D00C31518 /* cdt.h in Headers */,
@@ -15419,6 +15429,7 @@
 				B665E2521AA80A6500DDB1C5 /* CCPUDoAffectorEventHandler.cpp in Sources */,
 				50ABC0151926664800A911A9 /* CCImage.cpp in Sources */,
 				50ABBE231925AB6F00A911A9 /* base64.cpp in Sources */,
+				B35541191E71930C009C7985 /* MyDrawNode3D.cpp in Sources */,
 				B665E3AA1AA80A6500DDB1C5 /* CCPURandomiserTranslator.cpp in Sources */,
 				15AE1B5D19AADA9900C27E9E /* UITextBMFont.cpp in Sources */,
 				B6DD2FF51B04825B00E47F5F /* fastlz.c in Sources */,
@@ -16478,6 +16489,7 @@
 				B665E2EB1AA80A6500DDB1C5 /* CCPULinearForceAffectorTranslator.cpp in Sources */,
 				B665E4271AA80A6600DDB1C5 /* CCPUUtil.cpp in Sources */,
 				5020A15D1D49912500E80C72 /* AnimationStateData.c in Sources */,
+				B355411A1E71930C009C7985 /* MyDrawNode3D.cpp in Sources */,
 				B665E2BF1AA80A6500DDB1C5 /* CCPUGeometryRotator.cpp in Sources */,
 				15AE1ADA19AAD41000C27E9E /* b2Rope.cpp in Sources */,
 				B6CAB2D61AF9AA1A00B9B856 /* btOptimizedBvh.cpp in Sources */,

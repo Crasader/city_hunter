@@ -52,8 +52,7 @@ private:
 
     bool initListeners();
 
-    //void onCommandDrawPath(gamer::Event* event);   
-    void onCommandDrawPath(gamer::Command* event);   
+    void onCommandDrawPath(gamer::Command* cmd);
 
     graph::SparseGraph3D* sparse_graph_;
 
