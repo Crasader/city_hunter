@@ -25,6 +25,8 @@ class PBCreator
 public:
     static void creatActorCfg();
 
+	static void creatSpaceCfg();
+
     static const std::string dir_cfg;
 };
 

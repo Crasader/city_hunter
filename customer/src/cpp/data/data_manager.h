@@ -18,6 +18,7 @@
 #include <string>
 #include "command_constants.h"
 #include "actor_cfg.pb.h"
+#include "space_cfg.pb.h"
 
 namespace gamer
 {
@@ -32,6 +33,8 @@ public:
     bool init();
 
     inline const gamer::ActorCfg& actor_cfg() const { return actor_cfg_; }
+
+	inline const gamer::cfg::SpaceCfg& space_cfg() const { return space_cfg_; }
 
     inline const std::string& idle_action() const
     {
@@ -91,9 +94,10 @@ private:
         return actor_id % actor_cfg.actor_model(0).id();
     }
 
-    std::string dir_cfg_;
-    std::string actor_cfg_path_;    
+    std::string dir_cfg_;  
     gamer::ActorCfg actor_cfg_;
+	gamer::cfg::SpaceCfg space_cfg_;
+
     bool is_init_ok_;
 };
 

@@ -247,6 +247,7 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\data_manager.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\pb_creator.h" />
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\action_command.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\actor_states.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\ai\attack_command.h" />
@@ -286,8 +287,6 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\lua_bind_helper.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\module_manager.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\provider\id_provider.h" />
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.h" />
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\tolua_include\tolua++.h" />
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils.h" />
@@ -351,6 +350,7 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\data_manager.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\pb_creator.cc" />
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\ai\path_finder.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\ai\trigger.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\base\command.cc" />
@@ -372,8 +372,6 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\hp_manager.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\lua_bind_helper.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\module_manager.cc" />
-    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.cpp" />
-    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\view\actor\actor.cc" />
     <ClCompile Include="..\..\..\..\customer\src\cpp\view\manager\action_manager.cc" />

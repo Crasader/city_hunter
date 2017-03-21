@@ -10,7 +10,7 @@
 #include "lua_bind_helper.h"
 #include "module_manager.h"
 
-//#include "pb_creator.h"
+#include "pb_creator.h"
 
 using namespace CocosDenshion;
 
@@ -100,6 +100,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     {
         return false;
     }
+
+	gamer::PBCreator::creatSpaceCfg();
 
     return true;
 }

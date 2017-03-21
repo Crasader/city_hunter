@@ -18,7 +18,6 @@
 #include "cocos2d.h"
 #include "cocos/editor-support/cocostudio/CocoStudio.h"
 #include "cocos/ui/CocosGUI.h"
-#include "draw_node_3d.h"
 
 #include "graph_typedef.h"
 #include "path_finder.h"
@@ -103,14 +102,7 @@ private:
 
     friend class SceneManager;
 
-    int cell_width_;
-    int cell_height_;
-
     graph::Cell cell_;
-
-    int num_cells_x_;
-    int num_cells_y_; 
-    int num_cells_z_; 
 
     graph::Size cells_num_;
 
@@ -121,9 +113,6 @@ private:
     cocos2d::ui::ImageView* image_purple_target_;  // target   
     cocos2d::ui::ImageView* image_red_source_;     // source
     cocos2d::ui::ImageView* image_gray_obstacle_;  // obstacle
-
-    //cocos2d::DrawNode* draw_node_;
-    //cocos2d::DrawNode3D* draw_node_;
 
     cocos2d::Layer* draw_path_layer_;
 
@@ -140,28 +129,9 @@ private:
 
     graph::SpacePartition3D* space_partition_;
 
-    float space_ori_x_; 
-    float space_ori_y_;
-    float space_ori_z_;
-
     cocos2d::Vec3 space_ori_;
-
-    float space_size_x_;
-    float space_size_y_;
-    float space_size_z_;
-
     graph::Size space_size_;
-
-    int num_boxes_x_;
-    int num_boxes_y_;
-    int num_boxes_z_;
-
     graph::Size num_space_box_;
-
-    float box_size_x_;
-    float box_size_y_;
-    float box_size_z_; 
-
     graph::Size size_space_box_;
 
     cocos2d::DrawNode3D* draw_node_;

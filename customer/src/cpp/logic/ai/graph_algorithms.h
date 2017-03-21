@@ -36,8 +36,10 @@ namespace graph
         ,max_size_(max_size)
         ,size_(0)
         {
-            heap_.assign(max_size + 1, 0);
-            inv_heap_.assign(max_size + 1, 0);
+            //heap_.assign(max_size + 1, 0);
+            //inv_heap_.assign(max_size + 1, 0);
+			heap_.assign(max_size, 0);
+			inv_heap_.assign(max_size, 0);
         }
         
         inline bool empty() const { return 0 == size_; }
@@ -195,6 +197,8 @@ public:
     // the A* search algorithm
     void search()
     {
+		//cocos2d::Scene* scene = (cocos2d::Scene*)graph_.getScene();
+		auto scene = cocos2d::Director::getInstance()->getRunningScene();
         // create an indexed priority queue of nodes. The nodes with the
         // lowest overall F cost (G+H) are positioned at the front.
         IndexedPriorityQueueLow<float> pq(costs_of_f_, graph_.num_nodes());
@@ -242,6 +246,18 @@ public:
                     pq.insert(edge->node_to());
 
                     search_frontier_[edge->node_to()] = edge;
+
+					auto nodepos1 = graph_.getNode(edge->node_from()).position();
+					auto nodepos2 = graph_.getNode(edge->node_to()).position();
+					if (scene)
+					{
+						auto layer = scene->getChildByTag(0);
+						auto draw_node = layer->getChildByName("2017");
+						if (draw_node)
+						{
+							(dynamic_cast<cocos2d::DrawNode3D*>(draw_node))->drawLine(nodepos1, nodepos2, cocos2d::Color4F(0, 1, 0, 1));
+						}						
+					}
                 }
                 // if this node is already on the frontier but the cost to get here
                 // is cheaper than has been found previously, update the node

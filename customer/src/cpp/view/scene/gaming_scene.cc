@@ -25,6 +25,7 @@
 #include "event_define.h"
 #include "event_listener.h"
 #include "event_manager.h"
+#include "data_manager.h"
 #include "graph_typedef.h"
 #include "macros.h"
 #include "space_partition.h"
@@ -79,13 +80,6 @@ bool GamingScene::init()
 
     initCamera();
 
-    //drawPathOfAStarAlgorithms();
-
-    //int obstacle = utils_graph::getNodeIndexByPos(cocos2d::Vec3(0, 0, 0));
-    //int obstacle = getNodeIndexByPos(cocos2d::Vec3(0, 0, 0));
-    //auto graph = PathFinder::getInstance()->graph();
-    //graph->getNode(obstacle).set_enabled(false);
-
     return true;
 }
 
@@ -93,35 +87,27 @@ void GamingScene::initVars()
 {
     touched_btn_type_ = TouchedButtonTypes::BTN_UNKNOWN;
 
-    space_ori_.x = -100; 
-    space_ori_.y = 0;
-    space_ori_.z = 100;
+	auto space_cfg = gamer::DataManager::getInstance()->space_cfg();
 
-    //cell_width_  = 5;
-    //cell_height_ = 5;
-   
-    cell_.w = 5;
-    cell_.h = 5;
-    
-    //num_cells_x_ = 40;
-    //num_cells_y_ = 0;
-    //num_cells_z_ = 40;
-    
-    cells_num_.x = 40;
-    cells_num_.y = 0;
-    cells_num_.z = 40;
-    
-    //source_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(-100, 0, 0));
-    //target_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(100, 0, 0));
+	space_ori_.x = space_cfg.space_ori().x();
+	space_ori_.y = space_cfg.space_ori().y();
+	space_ori_.z = space_cfg.space_ori().z();
+
+	cell_.w = space_cfg.cell_size().x();
+	cell_.h = space_cfg.cell_size().y();
+
+	cells_num_.x = space_cfg.cell_num().x();
+	cells_num_.y = space_cfg.cell_num().y();
+	cells_num_.z = space_cfg.cell_num().z();
 
     // init var about space box
-    num_space_box_.x = 2;
-    num_space_box_.y = 1;
-    num_space_box_.z = 2;
+	num_space_box_.x = space_cfg.space_box_num().x();
+	num_space_box_.y = space_cfg.space_box_num().y();
+	num_space_box_.z = space_cfg.space_box_num().z();
 
-    space_size_.x = 200;
-    space_size_.y = 100;
-    space_size_.z = 200;
+	space_size_.x = space_cfg.space_size().x();
+	space_size_.y = space_cfg.space_size().y();
+	space_size_.z = space_cfg.space_size().z();
 
     size_space_box_.x = space_size_.x / num_space_box_.x;
     size_space_box_.y = space_size_.y / num_space_box_.y;
@@ -155,13 +141,6 @@ void GamingScene::initTouchEventListeners()
     listener->onTouchBegan = CC_CALLBACK_2(GamingScene::onTouchBegan, this);
     listener->onTouchEnded = CC_CALLBACK_2(GamingScene::onTouchEnded, this);
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
-
-    // key press event listener
-    //auto listener2 = cocos2d::EventListenerMouse::create();
-    //listener2->onMouseUp = [&](cocos2d::Event* event){ onMouseUp(event); };
-    //    //CC_CALLBACK_2(GamingScene::onMouseUp, this);
-    //this->_eventDispatcher->addEventListenerWithSceneGraphPriority(listener2, this);
-    //event_listener_mouse_ = listener2;
 }
 
 void GamingScene::initDrawPathLayer()
@@ -175,6 +154,8 @@ void GamingScene::initDrawPathLayer()
 
 void GamingScene::initGraphAlgorithms()
 {
+	//auto map = cocos2d::experimental::TMXTiledMap::create("map/graph.tmx");
+
     sparse_graph_ = new graph::SparseGraph3D(false);
     PathFinder::getInstance()->set_graph(sparse_graph_);
 
@@ -188,7 +169,7 @@ void GamingScene::initGraphAlgorithms()
                               space_ori_.z - row * cell_.h - cell_.h / 2.0);
 
             sparse_graph_->addNode(graph::NavGraphNode<cocos2d::Vec3>(
-                                   sparse_graph_->getNextFreeNodeIndex(),
+                                   sparse_graph_->next_free_node(),
                                    pos));
         }
     }
@@ -240,9 +221,6 @@ void GamingScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     cocos2d::Point touch_point = touch->getLocationInView();
     touch_point = cocos2d::Director::getInstance()->convertToGL(touch_point); 
 
-    //if (!isTouchValid(touch_point))
-    //    return;
-
     cocos2d::log("[GamingScene::onTouchEnded] touch_point.x : %f", touch_point.x);
     cocos2d::log("[GamingScene::onTouchEnded] touch_point.y : %f", touch_point.y);
 
@@ -250,9 +228,6 @@ void GamingScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 
     cocos2d::log("[GamingScene::onTouchEnded] affter fixed, touch_point.x : %f", touch_point.x);
     cocos2d::log("[GamingScene::onTouchEnded] affter fixed, touch_point.y : %f", touch_point.y);
-
-    //int index = getNodeIndexByPos(touch_point);
-    //cocos2d::log("[GamingScene::onTouchEnded] index of touched node : %d", index);
 
     if (TouchedButtonTypes::BTN_SOURCE == touched_btn_type_)
     {
@@ -294,48 +269,15 @@ void GamingScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 
 void GamingScene::onEventActorsCreated(gamer::Event* event)
 {
-    //auto actors = gamer::ActorManager::getInstance()->created_actors();
-
-    //std::for_each(actors.begin(), 
-    //              actors.end(), 
-    //              [&](std::pair<int, ActorType*> a)
-    //              { 
-    //                  addActorToSpace(a.second);
-    //                  // test
-    //                  //a.second->initPath2Target();
-    //              });
-
-    //cocos2d::Vec3 target_pos(-100, 0, 0);
-    //float query_radius = space_size_.x / 2;
-    //space_partition_->calculateNeighbors(target_pos, query_radius);
-
-    //cocos2d::Vec3 extents = cocos2d::Vec3(query_radius, query_radius, query_radius);
-    //cocos2d::AABB aabb(-extents, extents);
-    //auto obb = cocos2d::OBB(aabb);
-    //obb._center = target_pos;
-
-    //cocos2d::Vec3 corners[8] = {};
-    //obb.getCorners(corners);
-    //draw_node_->drawCube(corners, cocos2d::Color4F(0, 0, 1, 1));
-    
     // test
     source_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(-100, 0, 0));
     target_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(100, 0, 0));
     
     drawPathOfAStarAlgorithms();
-    
-    //int obstacle = utils_graph::getNodeIndexByPos(cocos2d::Vec3(0, 0, 0));
-    //auto graph = PathFinder::getInstance()->graph();
-    //graph->getNode(obstacle).set_enabled(false);
-    
-    //cocos2d::log("Neighbors : %d", space_partition_->getNumOfNeighbors(*actors.begin()->second));
 }
 
 bool GamingScene::isTouchValid(const cocos2d::Point& pos) const
 {
-    //auto win_size = cocos2d::Director::getInstance()->getWinSize();
-    //auto origin   = cocos2d::Director::getInstance()->getVisibleOrigin();
-
     if (pos.x >= space_ori_.x && 
         pos.x <= space_ori_.x + cells_num_.x * cell_.w &&
         pos.y >= space_ori_.y &&
@@ -357,20 +299,6 @@ void GamingScene::fixTouchedPoint(cocos2d::Point& pos)
     pos.y = space_ori_.y + ny * interval + interval / 2;
 }
 
-//int GamingScene::getNodeIndexByPos(const cocos2d::Vec3& pos)
-//{
-//    int complete_row   = (space_ori_.z - pos.z - cell_.h / 2.0) / cell_.h;
-//    int incpmplete_row = (pos.x - space_ori_.x - cell_.w / 2.0) / cell_.w;
-//    
-//    int index = complete_row * num_cells_.x + incpmplete_row;
-//    if (index < 0)
-//    {
-//        index = 0;
-//    }
-//    
-//    return index;
-//}
-
 void GamingScene::drawTerrain()
 {
     drawGrids();
@@ -379,15 +307,17 @@ void GamingScene::drawTerrain()
 void GamingScene::drawGrids()
 {
     auto draw_node = cocos2d::DrawNode3D::create();
+	//draw_node->setTag(2017);
+	draw_node->setName("2017");
     this->addChild(draw_node);
-
+	auto n = this->getChildByName("2017");
     // draw x
-    for( int j =-20; j<=20 ;j++)
+    for(int j =-20; j<=20 ;j++)
     {
         draw_node->drawLine(cocos2d::Vec3(-100, 0, 5*j), cocos2d::Vec3(100, 0, 5*j), cocos2d::Color4F(1, 0, 0, 1));
     }
     // draw z
-    for( int j =-20; j<=20 ;j++)
+    for(int j =-20; j<=20 ;j++)
     {
         draw_node->drawLine(cocos2d::Vec3(5*j, 0, -100), cocos2d::Vec3(5*j, 0, 100), cocos2d::Color4F(0, 0, 1, 1));
     }
@@ -404,10 +334,6 @@ void GamingScene::drawPath()
 void GamingScene::drawPathOfAStarAlgorithms()
 {
     path_.clear();
-
-    graph::AStarSearch astar(*sparse_graph_, source_, target_);
-    path_ = astar.getPathToTarget();
-    drawPath();
 
     PathFinder::getInstance()->set_path(path_);
 }
@@ -448,18 +374,6 @@ void GamingScene::initActors()
                             0.7f);
         actor->playAction(model, true);
     }
-
-    //auto actor2 = gamer::Actor<cocos2d::Sprite3D>::create("model/knight/knight.c3b");
-    //if (nullptr != actor2 && actor2->entity())
-    //{
-    //    this->addChild(actor2->entity());
-    //    actor2->entity()->setScale(20);
-    //    actor2->entity()->setPosition3D(cocos2d::Vec3(100, 0, 100));
-    //    actor2->entity()->setRotation3D(cocos2d::Vec3(0, 90, 0));
-
-    //    actor2->addAnimation(std::string("walk"), std::string("model/knight/knight.c3b"), 227 / 30.0, 19 / 30.0, 0.7f);
-    //    actor2->playAnimation(std::string("walk"), true);
-    //}
 }
 
 void GamingScene::drawSpace()
@@ -481,18 +395,7 @@ void GamingScene::drawSpace()
 
                 cocos2d::Vec3 corners[8] = {};
                 obb.getCorners(corners);
-                draw_node_->drawCube(corners, cocos2d::Color4F(0, 1, 0, 1));
-
-                //ActorType* actor = ActorType::create("model/archer/archer.c3b");
-                //this->addChild(actor->entity());
-
-                //actor->set_ai_enabled(false);
-
-                //cocos2d::Vec3 pos(obb._center);
-                //pos.y -= size_space_box_.y / 2;
-                //actor->entity()->setPosition3D(pos);
-
-                //space_partition_->addEntity(*actor);                
+                draw_node_->drawCube(corners, cocos2d::Color4F(0, 1, 0, 1));               
             }
         }
     }

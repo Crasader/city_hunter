@@ -60,10 +60,9 @@ bool PathFinder::init()
 
 graph::AStarSearch::PathNodes PathFinder::doAStarSearch(int source, int target)
 {
-    graph::AStarSearch::PathNodes path_nodes;
-
-    if (nullptr == sparse_graph_)
-        return path_nodes;
+	graph::AStarSearch::PathNodes path_nodes;
+	if (nullptr == sparse_graph_)
+		return path_nodes;
 
     graph::AStarSearch astar(*sparse_graph_, source, target);
     return astar.getPathToTarget();

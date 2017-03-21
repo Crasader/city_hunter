@@ -18,6 +18,7 @@
 #include <fstream>
 
 #include "actor_cfg.pb.h"
+#include "space_cfg.pb.h"
 
 namespace gamer
 {
@@ -317,6 +318,54 @@ void PBCreator::creatActorCfg()
     output.close();
 
     google::protobuf::ShutdownProtobufLibrary();
+}
+
+void PBCreator::creatSpaceCfg()
+{
+	GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+	gamer::cfg::SpaceCfg space_cfg;
+	// space ori
+	auto vec = new gamer::cfg::Vec();
+	vec->set_x(-100);
+	vec->set_y(0);
+	vec->set_z(100);
+	space_cfg.set_allocated_space_ori(vec);
+	// space box num
+	vec = new gamer::cfg::Vec();
+	vec->set_x(2);
+	vec->set_y(1);
+	vec->set_z(2);
+	space_cfg.set_allocated_space_box_num(vec);
+	// space size
+	vec = new gamer::cfg::Vec();
+	vec->set_x(200);
+	vec->set_y(100);
+	vec->set_z(200);
+	space_cfg.set_allocated_space_size(vec);
+	// cell size
+	vec = new gamer::cfg::Vec();
+	vec->set_x(5);
+	vec->set_y(5);
+	space_cfg.set_allocated_cell_size(vec);
+	// cell num
+	vec = new gamer::cfg::Vec();
+	vec->set_x(40);
+	vec->set_y(0);
+	vec->set_z(40);
+	space_cfg.set_allocated_cell_num(vec);
+
+	std::string path = dir_cfg + "space_cfg.pb";
+	std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+
+	if ( !space_cfg.SerializeToOstream(&output) )
+	{
+		assert("creatActorCfg failed !");
+	}
+
+	output.close();
+
+	google::protobuf::ShutdownProtobufLibrary();
 }
 
 } // namespace gamer 

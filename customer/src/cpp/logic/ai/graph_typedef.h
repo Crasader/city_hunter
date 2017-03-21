@@ -64,7 +64,7 @@ typedef struct SizeType
     float y;
     float z;
 } Size;
-    
+
 } // namespace graph
     
 } // namespace gamer

@@ -1,1 +1,1 @@
-protoc -I=./ --cpp_out=./ ./actor_cfg.proto
+protoc -I=./ --cpp_out=./ ./space_cfg.proto

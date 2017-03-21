@@ -17,7 +17,7 @@
 #include "cocos/3d/CCSprite3D.h"
 #include "cocos/3d/CCOBB.h"
 #include "cocos/3d/CCAABB.h"
-#include "draw_node_3d.h"
+//#include "cocos/3d/MyDrawNode3D.h"
 
 #include "actor.h"
 #include "space_partition.h"

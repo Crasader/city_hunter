@@ -431,9 +431,6 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_test.h">
       <Filter>classes\cpp\logic\util</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.h">
-      <Filter>classes\cpp\logic\test</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.h">
       <Filter>classes\cpp\logic\test</Filter>
     </ClInclude>
@@ -476,8 +473,8 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.h">
       <Filter>classes\cpp\view\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.h">
-      <Filter>classes\cpp\logic\test</Filter>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.h">
+      <Filter>classes\cpp\data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -662,9 +659,6 @@
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\module_manager.cc">
       <Filter>classes\cpp\logic\manager</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\graph_algorithms_test_scene.cc">
-      <Filter>classes\cpp\logic\test</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.cc">
       <Filter>classes\cpp\logic\test</Filter>
     </ClCompile>
@@ -695,8 +689,8 @@
     <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.cc">
       <Filter>classes\cpp\view\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\test\draw_node_3d.cpp">
-      <Filter>classes\cpp\logic\test</Filter>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.cc">
+      <Filter>classes\cpp\data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

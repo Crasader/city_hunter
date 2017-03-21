@@ -16,7 +16,7 @@
 #define CITY_HUNTER_SRC_UTILS_TEST_H_
 
 #include "cocos2d.h"
-#include "draw_node_3d.h"
+#include "cocos/3d/MyDrawNode3D.h"
 
 #include "scene_manager.h"
 #include "typedef.h"

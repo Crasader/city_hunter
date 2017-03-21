@@ -1,0 +1,15 @@
+package gamer.cfg;
+
+message Vec {
+  required float x = 1;
+  required float y = 2;
+  optional float z = 3;
+}
+
+message SpaceCfg {
+  required Vec space_ori     = 1;
+  required Vec space_size    = 2;
+  required Vec space_box_num = 3;
+  required Vec cell_size     = 4;
+  required Vec cell_num      = 5;
+}

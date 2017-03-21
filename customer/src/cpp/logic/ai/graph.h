@@ -335,8 +335,6 @@ public:
         assert(0 && "[SparseGraph::getEdge] : edge does not exist!");
     }
 
-    inline int getNextFreeNodeIndex() const { return next_node_index_; }
-
     int addNode(GraphNode node)
     {
         if (node.index() < (int)nodes_.size())
@@ -540,10 +538,6 @@ public:
         return total;
     }
 
-    inline bool is_digraph() const { return is_digraph_; }
-
-    inline bool empty() const { return nodes_.empty(); }
-
     bool isNodePresent(int node_index) const
     {
         if ((node_index >= (int)nodes_.size() || 
@@ -685,6 +679,12 @@ public:
         edges_.clear(); // ? TODO : remove all edges before doing this
     }
     
+	inline bool is_digraph() const { return is_digraph_; }
+
+	inline bool empty() const { return nodes_.empty(); }
+
+	inline int next_free_node() const { return next_node_index_; }
+
 private:
     void cullInvalidEdges()
     {
@@ -728,7 +728,9 @@ private:
     friend class NodeIterator;
     friend class EdgeIterator;
     friend class ConstNodeIterator;
-    friend class ConstEdgeIterator;    
+    friend class ConstEdgeIterator;  
+	// test
+	void* scene_;
 };
 
 } // namespace graph

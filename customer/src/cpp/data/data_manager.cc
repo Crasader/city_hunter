@@ -54,13 +54,20 @@ bool DataManager::init()
         GOOGLE_PROTOBUF_VERIFY_VERSION;  
 
         dir_cfg_ = cocos2d::FileUtils::getInstance()->getWritablePath();
-        actor_cfg_path_ = dir_cfg_ + "res\\cfg\\actor_cfg.pb";
-
-        std::fstream input(actor_cfg_path_.c_str(), std::ios::in | std::ios::binary);
+        auto actor_cfg_path = dir_cfg_ + "res\\cfg\\actor_cfg.pb";
+        std::fstream input(actor_cfg_path.c_str(), std::ios::in | std::ios::binary);
         if (!actor_cfg_.ParseFromIstream(&input)) 
         {        
-            assert("readActorCfg failed !");
+            assert("read ActorCfg failed !");
         }
+
+		auto space_cfg_path = dir_cfg_ + "res\\cfg\\space_cfg.pb";
+		std::fstream input2(space_cfg_path.c_str(), std::ios::in | std::ios::binary);
+		if (!space_cfg_.ParseFromIstream(&input2))
+		{
+			assert("read SpaceCfg failed !");
+		}
+
         is_init_ok_ = true;
     }
     return true;
