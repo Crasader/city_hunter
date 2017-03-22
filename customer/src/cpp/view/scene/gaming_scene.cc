@@ -21,6 +21,7 @@ modification:
 #include "actor_manager.h"
 #include "actor_typedef.h"
 #include "camera_manager.h"
+#include "data_manager.h"
 #include "event.h"
 #include "event_define.h"
 #include "event_listener.h"
@@ -92,6 +93,8 @@ bool GamingScene::init()
 void GamingScene::initVars()
 {
 	touched_btn_type_ = TouchedButtonTypes::BTN_UNKNOWN;
+
+	auto space_cfg_ = gamer::DataManager::getInstance()->space_cfg();
 
 	space_ori_.x = -100;
 	space_ori_.y = 0;
