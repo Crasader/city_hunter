@@ -56,6 +56,8 @@
 		9FF504861A5E881200AFDA55 /* libsimulator Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF5047E1A5E86D600AFDA55 /* libsimulator Mac.a */; };
 		9FF504871A5E88CE00AFDA55 /* libsimulator iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FF504801A5E86D600AFDA55 /* libsimulator iOS.a */; };
 		9FFC07361A4A764100AED399 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC07341A4A764100AED399 /* MainMenu.xib */; };
+		B37FE1A51E82CF5A0015416D /* space_cfg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = B37FE1A31E82CF5A0015416D /* space_cfg.pb.cc */; };
+		B37FE1A61E82CF5A0015416D /* space_cfg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = B37FE1A31E82CF5A0015416D /* space_cfg.pb.cc */; };
 		B385226D1E6A865E00F3C157 /* path_finder.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38522661E6A865E00F3C157 /* path_finder.cc */; };
 		B385226E1E6A865E00F3C157 /* trigger.cc in Sources */ = {isa = PBXBuildFile; fileRef = B385226B1E6A865E00F3C157 /* trigger.cc */; };
 		B38522FC1E6A870900F3C157 /* actor_cfg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = B38522F61E6A870900F3C157 /* actor_cfg.pb.cc */; };
@@ -360,6 +362,8 @@
 		9FF504831A5E87B100AFDA55 /* ConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleWindowController.m; sourceTree = "<group>"; };
 		9FFC07351A4A764100AED399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9FFC07371A4A765100AED399 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.xib"; sourceTree = "<group>"; };
+		B37FE1A31E82CF5A0015416D /* space_cfg.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = space_cfg.pb.cc; path = ../../../../customer/src/cpp/data/space_cfg.pb.cc; sourceTree = "<group>"; };
+		B37FE1A41E82CF5A0015416D /* space_cfg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = space_cfg.pb.h; path = ../../../../customer/src/cpp/data/space_cfg.pb.h; sourceTree = "<group>"; };
 		B385225D1E6A865E00F3C157 /* a_star_heuristic_policies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = a_star_heuristic_policies.h; path = ../../../../customer/src/cpp/logic/ai/a_star_heuristic_policies.h; sourceTree = "<group>"; };
 		B385225E1E6A865E00F3C157 /* action_command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = action_command.h; path = ../../../../customer/src/cpp/logic/ai/action_command.h; sourceTree = "<group>"; };
 		B385225F1E6A865E00F3C157 /* actor_states.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = actor_states.h; path = ../../../../customer/src/cpp/logic/ai/actor_states.h; sourceTree = "<group>"; };
@@ -734,13 +738,15 @@
 		B38522281E6A807000F3C157 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				B385254F1E6AF02000F3C157 /* google */,
 				B38522F61E6A870900F3C157 /* actor_cfg.pb.cc */,
 				B38522F81E6A870900F3C157 /* data_manager.cc */,
 				B38522FA1E6A870900F3C157 /* pb_creator.cc */,
+				B37FE1A31E82CF5A0015416D /* space_cfg.pb.cc */,
 				B38522F71E6A870900F3C157 /* actor_cfg.pb.h */,
 				B38522F91E6A870900F3C157 /* data_manager.h */,
 				B38522FB1E6A870900F3C157 /* pb_creator.h */,
+				B37FE1A41E82CF5A0015416D /* space_cfg.pb.h */,
+				B385254F1E6AF02000F3C157 /* google */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -1500,6 +1506,7 @@
 				B38525E41E6AF5F300F3C157 /* atomicops_internals_x86_msvc.cc in Sources */,
 				B38525DB1E6AF5F300F3C157 /* extension_set_heavy.cc in Sources */,
 				B38525D61E6AF5F300F3C157 /* descriptor.cc in Sources */,
+				B37FE1A61E82CF5A0015416D /* space_cfg.pb.cc in Sources */,
 				B38525EC1E6AF5F300F3C157 /* unknown_field_set.cc in Sources */,
 				B38523B11E6A8ECD00F3C157 /* space_partition_test_scene.cc in Sources */,
 				B38523AC1E6A8EC200F3C157 /* hp_manager.cc in Sources */,
@@ -1609,6 +1616,7 @@
 				B38525CB1E6AF02000F3C157 /* atomicops_internals_x86_msvc.cc in Sources */,
 				B38523231E6A87CD00F3C157 /* lua_bind_scene_manager.cc in Sources */,
 				B38523101E6A878900F3C157 /* listener.cc in Sources */,
+				B37FE1A51E82CF5A0015416D /* space_cfg.pb.cc in Sources */,
 				B38525C21E6AF02000F3C157 /* zero_copy_stream.cc in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,

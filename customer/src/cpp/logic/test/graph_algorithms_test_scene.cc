@@ -276,7 +276,7 @@ void GraphAlgorithmsTestScene::initGraphAlgorithms()
             cocos2d::Vec2 pos(offset_x_ + col * cell_width_ + cell_width_ / 2, 
                               offset_y_ + row * cell_height_ + cell_height_ / 2);
             sparse_graph_->addNode(graph::NavGraphNode<cocos2d::Vec2>(
-                                   sparse_graph_->getNextFreeNodeIndex(),
+                                   sparse_graph_->next_free_node(),
                                    //cocos2d::Vec2(col, row)));
                                    pos));
 

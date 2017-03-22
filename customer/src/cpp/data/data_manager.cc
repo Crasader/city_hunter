@@ -66,7 +66,7 @@ bool DataManager::init()
             assert("read ActorCfg failed !");
         }
 
-		auto space_cfg_path = res_root + "cfg\\space_cfg.pb";
+		auto space_cfg_path = res_root + "cfg//space_cfg.pb";
 		std::fstream input2(space_cfg_path.c_str(), std::ios::in | std::ios::binary);
 		if (!space_cfg_.ParseFromIstream(&input2))
 		{
