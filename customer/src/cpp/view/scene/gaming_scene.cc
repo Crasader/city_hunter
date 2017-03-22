@@ -89,10 +89,13 @@ void GamingScene::initVars()
 
 	auto space_cfg = gamer::DataManager::getInstance()->space_cfg();
 
-	space_ori_.x = space_cfg.space_ori().x();
-	space_ori_.y = space_cfg.space_ori().y();
-	space_ori_.z = space_cfg.space_ori().z();
-
+    cell_.w = 5;
+    cell_.h = 5;
+    
+    cells_num_.x = 40;
+    cells_num_.y = 0;
+    cells_num_.z = 40;
+    
 	cell_.w = space_cfg.cell_size().x();
 	cell_.h = space_cfg.cell_size().y();
 
@@ -391,7 +394,7 @@ void GamingScene::drawSpace()
 
                 cocos2d::Vec3 corners[8] = {};
                 obb.getCorners(corners);
-                draw_node_->drawCube(corners, cocos2d::Color4F(0, 1, 0, 1));               
+                draw_node_->drawCube(corners, cocos2d::Color4F(0, 1, 0, 1));
             }
         }
     }
