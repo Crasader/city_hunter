@@ -33,10 +33,6 @@ NS_CC_BEGIN
  * Copy DrawNode for 3D geometry drawing.
  */
 class CC_DLL DrawNode3D: public cocos2d::Node
-<<<<<<< HEAD
-//class DrawNode3D : public cocos2d::Node
-=======
->>>>>>> 67ad2c87687c959dafbf38a663e8014fee5cfa4e
 {
 public:
     /** creates and initialize a DrawNode3D node */
