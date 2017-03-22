@@ -193,13 +193,6 @@ void GamingScene::initGraphAlgorithms()
 bool GamingScene::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     cocos2d::log("[GamingScene::onTouchBegan]");
-
-    //cocos2d::Point touch_point = touch->getLocationInView();
-    //touch_point = cocos2d::Director::getInstance()->convertToGL(touch_point); 
-
-    //if (!isTouchValid(touch_point))
-    //    return false;
-
     return true;
 }
 
@@ -307,8 +300,7 @@ void GamingScene::drawTerrain()
 void GamingScene::drawGrids()
 {
     auto draw_node = cocos2d::DrawNode3D::create();
-	//draw_node->setTag(2017);
-	draw_node->setName("2017");
+    draw_node->setName("2017");
     this->addChild(draw_node);
 	auto n = this->getChildByName("2017");
     // draw x
@@ -333,9 +325,13 @@ void GamingScene::drawPath()
 
 void GamingScene::drawPathOfAStarAlgorithms()
 {
-    path_.clear();
+    //path_.clear();
 
-    PathFinder::getInstance()->set_path(path_);
+    //graph::AStarSearch astar(*sparse_graph_, source_, target_);
+    //path_ = astar.getPathToTarget();
+    //drawPath();
+
+    //PathFinder::getInstance()->set_path(path_);
 }
 
 void GamingScene::initCamera()

@@ -300,7 +300,8 @@ THE SOFTWARE.
 #include "3d/CCSprite3D.h"
 #include "3d/CCSprite3DMaterial.h"
 #include "3d/CCTerrain.h"
-#include "3d/MyDrawNode3D.h" // my 2017-03-09
+#include "3d/MyDrawNode3D.h" // my modify 2017-03-09
+
 // vr
 #include "vr/CCVRGenericRenderer.h"
 

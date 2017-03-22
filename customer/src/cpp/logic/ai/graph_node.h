@@ -33,7 +33,8 @@ public:
     }
 
     GraphNode(int index) 
-        :index_(index) 
+        :index_(index)
+        ,enabled_(true)
     {
     }
 
@@ -73,7 +74,7 @@ public:
 
     virtual ~NavGraphNode() {};
 
-    inline PositionType position() const { return position_; }
+    inline Position position() const { return position_; }
 
     inline void set_position(PositionType pos) { position_ = pos; }
 

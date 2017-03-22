@@ -38,8 +38,8 @@ namespace graph
         {
             //heap_.assign(max_size + 1, 0);
             //inv_heap_.assign(max_size + 1, 0);
-			heap_.assign(max_size, 0);
-			inv_heap_.assign(max_size, 0);
+            heap_.assign(max_size, 0);
+            inv_heap_.assign(max_size, 0);
         }
         
         inline bool empty() const { return 0 == size_; }
@@ -86,40 +86,41 @@ namespace graph
             heap_[b] = temp;
             
             // change the handles too
-            inv_heap_[heap_[a]] = a; inv_heap_[heap_[b]] = b;
+            inv_heap_[heap_[a]] = a;
+            inv_heap_[heap_[b]] = b;
         }
         
-        void reorderUpwards(int nd)
+        void reorderUpwards(int idx)
         {
             // move up the heap swapping the elements until the heap is ordered
-            while ( (nd>1) && (keys_[heap_[nd/2]] > keys_[heap_[nd]]) )
+            while ( (idx > 1) && (keys_[heap_[idx / 2]] > keys_[heap_[idx]]) )
             {
-                swap(nd/2, nd);
-                nd /= 2;
+                swap(idx / 2, idx);
+                idx /= 2;
             }
         }
         
-        void reorderDownwards(int nd, int HeapSize)
+        void reorderDownwards(int idx, int heap_size)
         {
             // move down the heap from node nd swapping the elements until
             // the heap is reordered
-            while (2*nd <= HeapSize)
+            while (2 * idx <= heap_size)
             {
-                int child = 2 * nd;
+                int child = 2 * idx;
                 
                 // set child to smaller of nd's two children
-                if ((child < HeapSize) && (keys_[heap_[child]] > keys_[heap_[child+1]]))
+                if ((child < heap_size) && (keys_[heap_[child]] > keys_[heap_[child + 1]]))
                 {
                     ++child;
                 }
                 
                 // if this nd is larger than its child, swap
-                if (keys_[heap_[nd]] > keys_[heap_[child]])
+                if (keys_[heap_[idx]] > keys_[heap_[child]])
                 {
-                    swap(child, nd);
+                    swap(child, idx);
                     
                     // move the current node down the tree
-                    nd = child;
+                    idx = child;
                 }
                 else
                 {
@@ -197,8 +198,7 @@ public:
     // the A* search algorithm
     void search()
     {
-		//cocos2d::Scene* scene = (cocos2d::Scene*)graph_.getScene();
-		auto scene = cocos2d::Director::getInstance()->getRunningScene();
+        auto scene = cocos2d::Director::getInstance()->getRunningScene();
         // create an indexed priority queue of nodes. The nodes with the
         // lowest overall F cost (G+H) are positioned at the front.
         IndexedPriorityQueueLow<float> pq(costs_of_f_, graph_.num_nodes());
@@ -221,8 +221,8 @@ public:
                 return;
 
             // if the node is disabled, ignore it
-            if ( !graph_.getNode(next_closest_node).enabled() )
-                continue;
+            //if ( !graph_.getNode(next_closest_node).enabled() )
+            //    continue;
 
             // now to test all the edges attached to this node
             typename Graph::ConstEdgeIterator const_edge_iter(graph_, next_closest_node);
@@ -246,18 +246,19 @@ public:
                     pq.insert(edge->node_to());
 
                     search_frontier_[edge->node_to()] = edge;
-
-					auto nodepos1 = graph_.getNode(edge->node_from()).position();
-					auto nodepos2 = graph_.getNode(edge->node_to()).position();
-					if (scene)
-					{
-						auto layer = scene->getChildByTag(0);
-						auto draw_node = layer->getChildByName("2017");
-						if (draw_node)
-						{
-							(dynamic_cast<cocos2d::DrawNode3D*>(draw_node))->drawLine(nodepos1, nodepos2, cocos2d::Color4F(0, 1, 0, 1));
-						}						
-					}
+                    
+                    auto npos1 = graph_.getNode(edge->node_from()).position();
+                    auto npos2 = graph_.getNode(edge->node_to()).position();
+                    if (scene)
+                    {
+                        auto layer = scene->getChildByTag(0);
+                        auto draw_node = dynamic_cast<cocos2d::DrawNode3D*>(layer->getChildByName("2017"));
+                        if (draw_node)
+                        {
+                            draw_node->drawLine(cocos2d::Vec3(npos1.x, 0, npos1.y), cocos2d::Vec3(npos2.x, 0, npos2.y), cocos2d::Color4F(0, 1, 0, 1));
+                            //draw_node->drawLine(npos1, npos2, cocos2d::Color4F(0, 1, 0, 1));
+                        }
+                    }
                 }
                 // if this node is already on the frontier but the cost to get here
                 // is cheaper than has been found previously, update the node

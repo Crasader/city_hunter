@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/data/data_manager.cc"
+            timestampString = "510334860.576255"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "DataManager::init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../cocos2d-x/cocos/platform/CCFileUtils.cpp"
+            timestampString = "510332388.136388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "791"
+            endingLineNumber = "791"
+            landmarkName = "FileUtils::fullPathForFilename(const std::string &amp;filename)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../cocos2d-x/cocos/platform/CCFileUtils.cpp"
+            timestampString = "510332391.037707"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "777"
+            endingLineNumber = "777"
+            landmarkName = "FileUtils::fullPathForFilename(const std::string &amp;filename)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/data/data_manager.cc"
+            timestampString = "510334378.183326"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "DataManager::init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../cocos2d-x/cocos/platform/CCFileUtils.cpp"
+            timestampString = "510332904.587605"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "795"
+            endingLineNumber = "795"
+            landmarkName = "FileUtils::fullPathForFilename(const std::string &amp;filename)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510420992.430183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510421010.350717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510421068.376332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510421077.332587"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510421084.667807"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510421099.832146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/actor_states.h"
+            timestampString = "510421384.116651"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "findTarget(Actor* actor)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/actor_states.h"
+            timestampString = "510421551.898852"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "findTarget(Actor* actor)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/actor_states.h"
+            timestampString = "510421912.642811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "findTarget(Actor* actor)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/actor_states.h"
+            timestampString = "510422279.016609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "findTarget(Actor* actor)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510423155.672218"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510423155.67553"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510423155.682865"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510423155.686018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "363">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501397.84558"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "387">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501397.848586"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "387">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765509.086071"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "663">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765509.089146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "663">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/path_finder.cc"
+            timestampString = "510498813.517626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "PathFinder::doAStarSearch(int source, int target)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.423454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.430122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "210"
+                  endingLineNumber = "210"
+                  offsetFromSymbolStart = "118">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.453637"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.461986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.483655"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.493332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.512522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.51712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510501046.007977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.53804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "729">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510501346.542549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "729">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/scene/gaming_scene.cc"
+            timestampString = "510498813.517626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
+            landmarkName = "GamingScene::fixTouchedPoint(cocos2d::Point&amp; pos)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/scene/gaming_scene.cc"
+            timestampString = "510498813.517626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "GamingScene::fixTouchedPoint(cocos2d::Point&amp; pos)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510767685.941958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510767688.048564"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "2058">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510767688.052355"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "2058">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763797.690528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765222.701587"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "2044">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765222.70539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "2044">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763824.65712"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.39807"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "252"
+                  endingLineNumber = "252"
+                  offsetFromSymbolStart = "1559">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.402337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "252"
+                  endingLineNumber = "252"
+                  offsetFromSymbolStart = "1559">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763846.469594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.410133"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "1059">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.414166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "244"
+                  endingLineNumber = "244"
+                  offsetFromSymbolStart = "1059">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763882.687855"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.4225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "794">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.426392"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "794">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763902.028358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.433735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "471">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.438375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "471">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510763905.973286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.445414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.449609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "438">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510764018.660941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764276.840736"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764276.844716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510764034.166469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.45773"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "227">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510764357.46171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "227">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510765298.727537"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "search()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765298.740526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "2058">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::search()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765298.74378"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "2058">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510765345.095279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765353.820549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765353.826118"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "186"
+                  endingLineNumber = "186"
+                  offsetFromSymbolStart = "516">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_algorithms.h"
+            timestampString = "510765468.582887"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "getPathToTarget()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec3, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765468.589374"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "602">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "gamer::graph::AStar&lt;gamer::graph::SparseGraph&lt;gamer::graph::NavGraphNode&lt;cocos2d::Vec2, void*&gt;, gamer::graph::NavGraphEdge&gt;, gamer::graph::HeuristicEuclid&gt;::getPathToTarget() const"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/logic/ai/graph_algorithms.h"
+                  timestampString = "510765468.593949"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "602">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510765586.454298"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "set_target_path(graph::PathNodes&amp; path)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to gamer::Actor&lt;cocos2d::Sprite3D&gt;::~Actor()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/view/actor/actor.h"
+                  timestampString = "510765586.486405"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to gamer::Actor&lt;cocos2d::Sprite3D&gt;::~Actor()"
+                  moduleName = "city_hunter-desktop"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/connor/Desktop/gamer/cocos/proj/city_hunter/customer/src/cpp/view/actor/actor.h"
+                  timestampString = "510765586.490761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510765658.137589"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_node.h"
+            timestampString = "510766089.206552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "class GraphNode"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/view/actor/actor.h"
+            timestampString = "510765803.69378"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
+            landmarkName = "onPositionUpdate(float dt)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../customer/src/cpp/logic/ai/graph_node.h"
+            timestampString = "510766089.206552"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "class GraphNode"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

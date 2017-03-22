@@ -95,7 +95,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 	gamer::CommandManager::getInstance()->sendCmd(
 		gamer::CommandIDs::CMD_ID_INIT_CAMERA, nullptr);
-	
+
     if (engine->executeScriptFile("main.lua"))
     {
         return false;

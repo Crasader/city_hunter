@@ -10,7 +10,7 @@
      1.date:
        author:
        modification:
-       ********************************************************************************/
+********************************************************************************/
 
 #include "path_finder.h"
 
@@ -60,9 +60,11 @@ bool PathFinder::init()
 
 graph::AStarSearch::PathNodes PathFinder::doAStarSearch(int source, int target)
 {
-	graph::AStarSearch::PathNodes path_nodes;
-	if (nullptr == sparse_graph_)
-		return path_nodes;
+    if (nullptr == sparse_graph_)
+    {
+        graph::AStarSearch::PathNodes path_nodes;
+        return path_nodes;
+    }
 
     graph::AStarSearch astar(*sparse_graph_, source, target);
     return astar.getPathToTarget();
@@ -80,7 +82,6 @@ bool PathFinder::initListeners()
     return true;
 }
 
-//void PathFinder::onCommandDrawPath(gamer::Event* event)
 void PathFinder::onCommandDrawPath(gamer::Command* cmd)
 {
    

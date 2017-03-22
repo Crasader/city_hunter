@@ -26,7 +26,7 @@
 #include "scene_constants.h"
 #include "space_partition_test_scene.h" // test
 #include "macros.h"
-#include "test/ui_test.h"
+#include "ui_test.h"
 
 namespace gamer
 {
@@ -200,12 +200,6 @@ graph::SpacePartition3D* SceneManager::getSpacePartition() const
 void SceneManager::onCommandCreateScene(gamer::Command* cmd)
 {
     cocos2d::log("[SceneManager::onCommandCreateScene] begin");
-    
-    // create gaming scene and run it
-    //if (nullptr == event->user_data())
-    //    return;
-
-    //auto scene = (cocos2d::Scene*)event->user_data();
 
     auto scene = createGamingScene();
     if (nullptr == scene)
@@ -221,12 +215,7 @@ void SceneManager::onCommandCreateScene(gamer::Command* cmd)
     else
     {
         cocos2d::Director::getInstance()->replaceScene(scene);
-    }   
-
-    // test
-    //scene = gamer::SpacePartitionTestScene::createScene();
-    //cocos2d::Director::getInstance()->replaceScene(scene);
-    // end test
+    }
 
     cur_scene_ = scene;
 
@@ -235,12 +224,6 @@ void SceneManager::onCommandCreateScene(gamer::Command* cmd)
 
     auto camera = cur_scene_->getDefaultCamera();
     camera->addChild(layer_hud);
-
-    // create ui for test
-    //auto ui_test = UITest::create();
-
-    //auto camera = cur_scene_->getDefaultCamera();
-    //camera->addChild(ui_test);
 
     cocos2d::log("[SceneManager::onCommandCreateScene] end");
 }
