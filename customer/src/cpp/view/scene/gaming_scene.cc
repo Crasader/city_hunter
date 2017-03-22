@@ -94,40 +94,27 @@ void GamingScene::initVars()
 {
 	touched_btn_type_ = TouchedButtonTypes::BTN_UNKNOWN;
 
-	auto space_cfg_ = gamer::DataManager::getInstance()->space_cfg();
+	auto space_cfg = gamer::DataManager::getInstance()->space_cfg();
 
-	space_ori_.x = -100;
-	space_ori_.y = 0;
-	space_ori_.z = 100;
+	space_ori_.x = space_cfg.space_ori().x();
+	space_ori_.y = space_cfg.space_ori().y();
+	space_ori_.z = space_cfg.space_ori().z();
 
-	//cell_width_  = 5;
-	//cell_height_ = 5;
+	cell_.w = space_cfg.cell_size().x();
+	cell_.h = space_cfg.cell_size().y();
 
-	cell_.w = 5;
-	cell_.h = 5;
-
-	//num_cells_x_ = 40;
-	//num_cells_y_ = 0;
-	//num_cells_z_ = 40;
-
-	cells_num_.x = 40;
-	cells_num_.y = 0;
-	cells_num_.z = 40;
-
-	//source_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(-100, 0, 0));
-	//target_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(100, 0, 0));
-
-
-
+	cells_num_.x = space_cfg.cell_num().x();
+	cells_num_.y = space_cfg.cell_num().y();
+	cells_num_.z = space_cfg.cell_num().z();
 
 	// init var about space box
-	num_space_box_.x = 2;
-	num_space_box_.y = 1;
-	num_space_box_.z = 2;
+	num_space_box_.x = space_cfg.space_box_num().x();
+	num_space_box_.y = space_cfg.space_box_num().y();
+	num_space_box_.z = space_cfg.space_box_num().z();
 
-	space_size_.x = 200;
-	space_size_.y = 100;
-	space_size_.z = 200;
+	space_size_.x = space_cfg.space_size().x();
+	space_size_.y = space_cfg.space_size().x();
+	space_size_.z = space_cfg.space_size().x();
 
 	size_space_box_.x = space_size_.x / num_space_box_.x;
 	size_space_box_.y = space_size_.y / num_space_box_.y;
@@ -194,7 +181,7 @@ void GamingScene::initGraphAlgorithms()
 				space_ori_.z - row * cell_.h - cell_.h / 2.0);
 
 			sparse_graph_->addNode(graph::NavGraphNode<cocos2d::Vec3>(
-				sparse_graph_->getNextFreeNodeIndex(),
+				sparse_graph_->next_free_node(),
 				pos));
 		}
 	}
