@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Aduio id="0" file="audio/effects/knight/swish-1.mp3" />
+	<Aduio id="1" file="audio/effects/knight/swish-2.mp3" />
+	<Aduio id="2" file="audio/effects/knight/normalAttackShout.mp3" />
+	<Aduio id="3" file="audio/effects/knight/specialAttackShout.mp3" />
+	<Aduio id="4" file="audio/effects/knight/wounded.mp3" />
+	<Aduio id="5" file="" />
+	<Aduio id="6" file="" />
+	<Aduio id="7" file="audio/effects/knight/dead.mp3" />
+
+	<Aduio id="8" file="audio/effects/archer/swish-3.mp3" />
+	<Aduio id="9" file="audio/effects/archer/swish-4.mp3" />
+	<Aduio id="10" file="audio/effects/archer/normalAttackShout.mp3" />
+	<Aduio id="11" file="audio/effects/archer/specialAttackShout.mp3" />
+	<Aduio id="12" file="audio/effects/archer/hurt.mp3" />
+	<Aduio id="13" file="" />
+	<Aduio id="14" file="" />
+	<Aduio id="15" file="audio/effects/archer/dead.mp3" />
+
+    <Aduio id="16" file="audio/effects/mage/ice_1.mp3" />
+	<Aduio id="17" file="audio/effects/mage/ice_2.mp3" />
+	<Aduio id="18" file="audio/effects/mage/normalAttack.mp3" />
+	<Aduio id="19" file="audio/effects/mage/specialAttack.mp3" />
+    <Aduio id="20" file="audio/effects/mage/hurt.mp3" />
+	<Aduio id="21" file="" />
+	<Aduio id="22" file="" />
+	<Aduio id="23" file="audio/effects/mage/dead.mp3" />
+</Root>

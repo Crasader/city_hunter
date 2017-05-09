@@ -16,13 +16,14 @@
 
 #include "actor_manager.h"
 #include "action_manager.h"
+#include "battle_manager.h"
 #include "command_manager.h"
 #include "camera_manager.h"
 #include "effect_manager.h"
+#include "data_manager.h"
 #include "hp_manager.h"
 #include "macros.h"
 #include "path_finder.h"
-#include "data_manager.h"
 #include "scene_manager.h"
 
 namespace gamer
@@ -69,6 +70,8 @@ void ModuleManager::initAllModules()
     gamer::EffectManager::getInstance()->init();
 
     gamer::DataManager::getInstance()->init();
+
+    gamer::BattleManager::getInstance()->init();
 }
 
 bool ModuleManager::init()

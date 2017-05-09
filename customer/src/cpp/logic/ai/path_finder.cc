@@ -73,7 +73,7 @@ graph::AStarSearch::PathNodes PathFinder::doAStarSearch(int source, int target)
 bool PathFinder::initListeners()
 {
     auto listener = gamer::CommandListener::create(
-        CommandIDs::CMD_ID_DRAW_PATH, 
+        CommandIDs::CMD_DRAW_PATH, 
         std::bind(&PathFinder::onCommandDrawPath, this, std::placeholders::_1),
         "PathFinder::onCommandDrawPath", 
         1);

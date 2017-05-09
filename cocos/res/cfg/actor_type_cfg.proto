@@ -1,0 +1,7 @@
+package gamer.cfg;
+
+enum ActorTypes {
+  ACTOR_HERO_KNIGHT          = 0;
+  ACTOR_HERO_ARCHER          = 1;
+  ACTOR_HERO_MAGE            = 2;
+}

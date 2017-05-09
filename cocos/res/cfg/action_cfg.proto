@@ -1,0 +1,54 @@
+package gamer.cfg;
+import "actor_type_cfg.proto";
+
+enum ActionIDs {
+  ACTION_HERO_KNIGHT_IDLE            = 0;
+  ACTION_HERO_KNIGHT_WALK            = 1;
+  ACTION_HERO_KNIGHT_NORMAL_ATK1     = 2;
+  ACTION_HERO_KNIGHT_NORMAL_ATK2     = 3;
+  ACTION_HERO_KNIGHT_SPECIAL_ATK1    = 4;
+  ACTION_HERO_KNIGHT_SPECIAL_ATK2    = 5;
+  ACTION_HERO_KNIGHT_HURT1           = 6;
+  ACTION_HERO_KNIGHT_HURT2           = 7;
+  ACTION_HERO_KNIGHT_DEFEND          = 8;
+  ACTION_HERO_KNIGHT_DEAD            = 9;
+
+  ACTION_HERO_ARCHER_IDLE            = 10;
+  ACTION_HERO_ARCHER_WALK            = 11;
+  ACTION_HERO_ARCHER_NORMAL_ATK1     = 12;
+  ACTION_HERO_ARCHER_NORMAL_ATK2     = 13;
+  ACTION_HERO_ARCHER_SPECIAL_ATK1    = 14;
+  ACTION_HERO_ARCHER_SPECIAL_ATK2    = 15;
+  ACTION_HERO_ARCHER_HURT1           = 16;
+  ACTION_HERO_ARCHER_HURT2           = 17;
+  ACTION_HERO_ARCHER_DEFEND          = 18;
+  ACTION_HERO_ARCHER_DEAD            = 19;
+
+  ACTION_HERO_MAGE_IDLE              = 20;
+  ACTION_HERO_MAGE_WALK              = 21;
+  ACTION_HERO_MAGE_NORMAL_ATK1       = 22;
+  ACTION_HERO_MAGE_NORMAL_ATK2       = 23;
+  ACTION_HERO_MAGE_SPECIAL_ATK1      = 24;
+  ACTION_HERO_MAGE_SPECIAL_ATK2      = 25;
+  ACTION_HERO_MAGE_HURT1             = 26;
+  ACTION_HERO_MAGE_HURT2             = 27;
+  ACTION_HERO_MAGE_DEFEND            = 28;
+  ACTION_HERO_MAGE_DEAD              = 29;
+}
+
+message Action {
+  required ActionIDs id    = 1;
+  optional string name     = 2;
+  required float from_time = 3;
+  required float duration  = 4;
+  required float speed     = 5;
+}
+
+message ActorAction {
+  required ActorTypes actor_type = 1;
+  repeated Action action         = 2;
+}
+
+message ActionCfg {
+  repeated ActorAction actor_action = 1;
+}

@@ -21,12 +21,10 @@
 #include <string>
 
 #include "cocos2d.h"
-#include "cocos/3d/CCSprite3D.h"
 
 #include "actor_interface.h"
 #include "actor_states.h"
 #include "game_object.h"
-#include "gaming_scene.h"  // for test
 #include "graph_typedef.h"
 #include "id_provider.h"
 #include "macros.h"
@@ -34,9 +32,9 @@
 #include "state.h"
 #include "state_constants.h"
 #include "state_machine.h"
-#include "scene_manager.h" // for test
-#include "utils.h"
-#include "utils_graph.h"
+#include "util.h"
+#include "util_graph.h"
+// TODO : deal with header
 
 namespace gamer
 {
@@ -46,34 +44,6 @@ template<typename Entity>
 class Actor : public Actor_Interface, public GameObject
 {
 public:
-    Actor()
-        :GameObject(IDProvider::getNextID())
-        ,entity_(nullptr)
-        ,state_machine_(nullptr)
-        ,ai_enabled_(true)
-        ,ai_update_interval_(1.0f)
-        ,speed_(0.2f)
-        ,lerp_alpha_(0.2f)
-        ,hp_(100)
-        ,damage_(10)
-    {
-        
-    }
-    
-    Actor(float ai_update_interval)
-        :GameObject(IDProvider::getNextID())
-        ,entity_(nullptr)
-        ,state_machine_(nullptr)
-        ,ai_enabled_(true)
-        ,ai_update_interval_(ai_update_interval)
-        ,speed_(0.2f)
-        ,lerp_alpha_(0.2f)
-        ,hp_(100)
-        ,damage_(10)
-    {
-        
-    }
-    
     virtual ~Actor()
     {
         SAFE_DELETE(state_machine_);
@@ -81,7 +51,7 @@ public:
     
     static Actor<Entity>* create(const std::string& model_path)
     {
-        Actor<Entity>* actor = new Actor<Entity>();
+        auto actor = new Actor<Entity>();
         if (actor && actor->init(model_path))
         {
             return actor;
@@ -89,7 +59,7 @@ public:
         SAFE_DELETE(actor);
         return nullptr;
     }
-    
+
     Entity* entity() const
     {
         return entity_;
@@ -105,7 +75,7 @@ public:
         name_ = name;
     }
     
-    virtual void addAction(const std::string& action_name, 
+    virtual void addAction(int action_id, 
                            const std::string& file, 
                            float from_time, 
                            float duration, 
@@ -114,11 +84,18 @@ public:
 
     }
     
-    virtual void playAction(const std::string& action_name, bool loop) override
+    virtual void playAction(int action_id, bool loop) override
     {
 
     }
     
+    inline void set_actor_type(int actor_type) override 
+    { 
+        actor_type_ = actor_type; 
+    }
+
+    inline int actor_type() const override { return actor_type_; }
+
     inline virtual void set_hp(int hp) override
     {
         hp_ = hp;
@@ -196,6 +173,34 @@ protected:
     }
     
 private:
+    Actor()
+        :GameObject(IDProvider::getNextID())
+        , entity_(nullptr)
+        , state_machine_(nullptr)
+        , ai_enabled_(true)
+        , ai_update_interval_(1.0f)
+        , speed_(0.2f)
+        , lerp_alpha_(0.2f)
+        , hp_(100)
+        , damage_(10)
+    {
+
+    }
+
+    Actor(float ai_update_interval)
+        :GameObject(IDProvider::getNextID())
+        , entity_(nullptr)
+        , state_machine_(nullptr)
+        , ai_enabled_(true)
+        , ai_update_interval_(ai_update_interval)
+        , speed_(0.2f)
+        , lerp_alpha_(0.2f)
+        , hp_(100)
+        , damage_(10)
+    {
+
+    }
+
     Entity* entity_;    
     std::string name_;
     FSM<Actor>* state_machine_;
@@ -209,6 +214,7 @@ private:
     
     float speed_;
 
+    int actor_type_;
     int hp_;
     int damage_;
 };
@@ -225,7 +231,7 @@ public:
 
     static ActorType* create(const std::string& model_path)
     {
-        ActorType* actor = new ActorType();
+        auto actor = new ActorType();
         if (actor && actor->init(model_path))
         {
             return actor;
@@ -234,15 +240,103 @@ public:
         return nullptr;
     }
 
-    virtual void addAction(const std::string& action_name, 
+    void onAIUpdate(float dt)
+    {
+        //cocos2d::log("onAIUpdate : %f", dt);
+        if ( !ai_enabled_ || nullptr == state_machine_ )
+            return;
+        state_machine_->update();
+    }
+
+    void onPositionUpdate(float dt)
+    {
+        //cocos2d::log("onPositionUpdate : %f", dt);
+        if (!ai_enabled_ || !pos_update_enabled_ || nullptr == entity_)
+            return;
+
+        if (path_.empty() || path_.end() == iter_target_node_)
+            return;
+
+        // TODO £ºcfg attack distance
+        auto target_actor_pos = this->target()->entity()->getPosition3D();
+        if (entity_->getPosition3D().distanceSquared(target_actor_pos) < 6400)
+        {
+            this->stop_position_update();
+            return;
+        }
+
+        auto graph = PathFinder::getInstance()->graph();
+        auto target_node = graph->getNode(*iter_target_node_);
+
+        auto target_pos = target_node.position();
+        auto actor_pos = entity_->getPosition3D();
+        auto next_pos = src_pos_.lerp(target_pos, lerp_alpha_);
+
+        if (next_pos.distanceSquared(target_pos) <= 0.2f)
+        {
+            if (!target_node.enabled())
+            {
+                path_ = PathFinder::getInstance()->doAStarSearch(*iter_src_node_, path_.back());
+
+                iter_src_node_ = path_.begin();
+                iter_target_node_ = iter_src_node_;
+                ++iter_target_node_;
+
+                src_pos_ = actor_pos;
+
+                // test 
+                /*
+                auto draw_node = gamer::SceneManager::getInstance()->draw_node_3d();
+                gamer::util_graph::drawPath(path_,
+                *graph,
+                *draw_node,
+                cocos2d::Color4F::WHITE);
+                */
+                lerp_alpha_ = speed_;
+            }
+            else
+            {
+                entity_->setPosition3D(next_pos);
+
+                target_node.set_enabled(false);
+
+                if (iter_target_node_ != iter_src_node_)
+                {
+                    auto src_node = graph->getNode(*iter_src_node_);
+                    src_node.set_enabled(true);
+                }
+
+                iter_src_node_ = iter_target_node_;
+                ++iter_target_node_;
+
+                src_pos_ = next_pos;
+
+                lerp_alpha_ += speed_;
+                if (lerp_alpha_ > 1.0f)
+                {
+                    lerp_alpha_ = speed_;
+                }
+            }
+        }
+        else
+        {
+            entity_->setPosition3D(next_pos);
+
+            lerp_alpha_ += speed_;
+            if (lerp_alpha_ > 1.0f)
+            {
+                lerp_alpha_ = speed_;
+            }
+        }
+    }
+
+    // TODO : add action to action manager
+    virtual void addAction(int action_id,
                            const std::string& file, 
                            float from_time, 
                            float duration, 
                            float speed) override
     {
-        if (action_name.empty())
-            return;
-
         auto animation3d = cocos2d::Animation3D::create(file); // it will be cached in Animation3DCache Instance
         if (nullptr != animation3d)
         {
@@ -250,13 +344,13 @@ public:
             animate3d->setSpeed(speed);
             animate3d->retain();
 
-            actions_map_.insert(std::make_pair(action_name, animate3d));
+            actions_map_.insert(std::make_pair(action_id, animate3d));
         }
     }
 
-    virtual void playAction(const std::string& action_name, bool loop) override
+    virtual void playAction(int action_id, bool loop) override
     {
-        auto animate3d = actions_map_.find(action_name);
+        auto animate3d = actions_map_.find(action_id);
         if (actions_map_.end() == animate3d)
             return;
 
@@ -286,98 +380,14 @@ public:
         }
     }
 
-    // finite state machine
-    FSM<ActorType >* state_machine() const
+    inline FSM<ActorType>* state_machine() const { return state_machine_; }
+
+    inline void set_actor_type(int actor_type) override
     {
-        return state_machine_;
+        actor_type_ = actor_type;
     }
 
-    void onAIUpdate(float dt)
-    {
-        //cocos2d::log("onAIUpdate : %f", dt);
-
-        if ( !ai_enabled_ || nullptr == state_machine_ )
-            return;
-        
-        state_machine_->update();
-    }
-
-    void onPositionUpdate(float dt)
-    {
-        //cocos2d::log("onPositionUpdate : %f", dt);
-
-        if ( !ai_enabled_ || !pos_update_enabled_ || nullptr == entity_)
-            return;
-
-        if (path_.empty() || path_.end() == iter_target_node_)
-            return;
-
-        // if next pos is target pos, do collision check(if collision happen, get new path), 
-        // else move to next pos.
-
-        auto graph = PathFinder::getInstance()->graph();
-        auto target_node = graph->getNode(*iter_target_node_);
-        
-        auto target_pos = target_node.position();
-        auto actor_pos  = entity_->getPosition3D();
-        auto next_pos   = src_pos_.lerp(target_pos, lerp_alpha_);
-
-        if (next_pos.distanceSquared(target_pos) <= 0.2f)
-        {
-            if ( !target_node.enabled() )
-            {
-                path_ = PathFinder::getInstance()->doAStarSearch(*iter_src_node_, path_.back());        
-
-                iter_src_node_ = path_.begin();
-                iter_target_node_ = iter_src_node_;
-                ++iter_target_node_;
-
-                src_pos_ = actor_pos;      
-
-                // test 
-                auto draw_node = gamer::SceneManager::getInstance()->draw_node_3d();
-                gamer::utils_graph::drawPath(path_, 
-                                             *graph, 
-                                             *draw_node, 
-                                             cocos2d::Color4F::WHITE);
-
-                lerp_alpha_ = speed_;
-            }
-            else
-            {
-                entity_->setPosition3D(next_pos);
-
-                target_node.set_enabled(false);
-
-                if (iter_target_node_ != iter_src_node_)
-                {
-                    auto src_node = graph->getNode(*iter_src_node_);
-                    src_node.set_enabled(true);
-                }
-
-                iter_src_node_ = iter_target_node_;
-                ++iter_target_node_;
-
-                src_pos_ = next_pos;  
-
-                lerp_alpha_ += speed_;
-                if (lerp_alpha_ > 1.0f)
-                {
-                    lerp_alpha_ = speed_;
-                }
-            }
-        }
-        else
-        {
-            entity_->setPosition3D(next_pos);
-
-            lerp_alpha_ += speed_;
-            if (lerp_alpha_ > 1.0f)
-            {
-                lerp_alpha_ = speed_;
-            }
-        }
-    }
+    inline int actor_type() const override { return actor_type_; }
 
     inline void set_hp(int hp) override { hp_ = hp; }
 
@@ -393,35 +403,54 @@ public:
 
     inline void set_name(const std::string& name) { name_ = name; }
 
-    inline void set_ai_enabled(bool enabled)
-    {
-        ai_enabled_ = enabled;
+    inline void set_ai_enabled(bool enabled) { ai_enabled_ = enabled; }
 
-        initAI();
+    inline bool ai_enabled() const { return ai_enabled_; }
+
+    inline void set_pos_update_enabled(bool enabled) { pos_update_enabled_ = enabled; }
+
+    inline bool pos_update_enabled() const { return pos_update_enabled_; }
+
+    inline void start_position_update() 
+    { 
+        if ( !entity_->isScheduled("position_update_callback") )
+        {
+            entity_->schedule([&](float dt) { this->onPositionUpdate(dt); },
+                "position_update_callback");            
+        }
+        pos_update_enabled_ = true;
     }
 
-    inline bool ai_enabled() const
-    {
-        return ai_enabled_;
-    }
-
-    inline void set_pos_update_enabled(bool enabled)
-    {
-        pos_update_enabled_ = enabled;
+    inline void stop_position_update() 
+    { 
+        entity_->unschedule("position_update_callback");
+        pos_update_enabled_ = false;
     }
 
     inline void set_ai_update_interval(float interval)
     {
-        //if (gamer::utils_float::float_equal(ai_update_interval_, interval))
-         //   return;
-
-        entity_->unschedule("ai_update_callback");
-        
-        entity_->schedule([&](float dt){ this->onAIUpdate(dt); }, interval, "ai_update_callback");
-        
+        entity_->unschedule("ai_update_callback");        
+        entity_->schedule([&](float dt){ this->onAIUpdate(dt); }, interval, "ai_update_callback");        
         ai_update_interval_ = interval;
     }
     
+    inline void start_ai_update()
+    {
+        ai_enabled_ = true;
+        if (!entity_->isScheduled("ai_update_callback"))
+        {
+            entity_->schedule([&](float dt) { this->onAIUpdate(dt); },
+                              ai_update_interval_,
+                              "ai_update_callback");
+        }        
+    }
+
+    inline void stop_ai_update()
+    {
+        entity_->unschedule("ai_update_callback");
+        ai_enabled_ = false;
+    }
+
     inline void set_target_path(graph::PathNodes& path)
     {
         path_ = path;
@@ -437,10 +466,7 @@ public:
         src_pos_ = graph->getNode(*iter_src_node_).position();
     }
     
-    inline graph::PathNodes target_path() const
-    {
-        return path_;
-    }
+    inline graph::PathNodes target_path() const { return path_; }
     
     inline cocos2d::Vec3 target_path_last_pos() const
     {
@@ -451,18 +477,9 @@ public:
         return graph->getNode(path_.back()).position();
     }
 
-    inline void set_target(ActorType* target)
-    {
-        if (nullptr != target)
-        {
-            target_ = target;
-        }
-    }
+    inline void set_target(ActorType* target) { target_ = target; }
     
-    inline ActorType* target() const
-    {
-        return target_;
-    }
+    inline ActorType* target() const { return target_; }
 
 protected:
     bool init(const std::string& model_path)
@@ -470,66 +487,23 @@ protected:
         // create visual obj
         entity_ = cocos2d::Sprite3D::create(model_path);
         if (nullptr == entity_)
-        {
             return false;
-        }
 
         // init base  attribute
         hp_ = 100; // TODO : read from cfg
-         
-        initAI();
-
-        return true;
-    }
-    
-    void initAI()
-    {
-        // create FSM
-        if (nullptr == state_machine_)
-        {
-            state_machine_ = new FSM<ActorType >(this);
-        }
+        
+        state_machine_ = new FSM<ActorType>(this);
 
         if (ai_enabled_)
         {
-            // add AI update callback
-            if ( !entity_->isScheduled("ai_update_callback") )
-            {
-                entity_->schedule([&](float dt){ this->onAIUpdate(dt); }, 
-                                  ai_update_interval_, 
-                                  "ai_update_callback");
-            }
+            this->start_ai_update();
+        }
 
-            if ( !entity_->isScheduled("position_update_callback") )
-            {
-                entity_->schedule([&](float dt){ this->onPositionUpdate(dt); }, 
-                                  "position_update_callback");
-            }            
-        }
-        else
-        {
-            entity_->unschedule("ai_update_callback");
-            entity_->unschedule("position_update_callback");
-        }
+        return true;
     }
 
-private:
-    //typedef Actor<cocos2d::Sprite3D> ActorType;
-      
-    Actor()
-        :GameObject(IDProvider::getNextID())
-        ,entity_(nullptr)
-        ,state_machine_(nullptr)
-        ,ai_enabled_(true)
-        ,pos_update_enabled_(false)
-        ,ai_update_interval_(1.0f)
-        ,speed_(0.2f)
-        ,lerp_alpha_(0.2f)  
-        ,hp_(100)
-        ,damage_(10)
-    {
-
-    }
+private:      
+    Actor() : Actor(1.5f) {}
 
     Actor(float ai_update_interval)
         :GameObject(IDProvider::getNextID())
@@ -550,7 +524,7 @@ private:
     
     std::string name_;
     
-    std::map<std::string, cocos2d::Animate3D*> actions_map_;
+    std::map<int, cocos2d::Animate3D*> actions_map_;
     
     FSM<ActorType>* state_machine_;
     
@@ -569,6 +543,7 @@ private:
     
     ActorType* target_;
 
+    int actor_type_;
     int hp_;
     int damage_;
 };

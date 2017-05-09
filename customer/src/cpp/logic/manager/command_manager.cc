@@ -23,7 +23,7 @@
 #include "event_listener.h"
 #include "event_manager.h"
 #include "macros.h"
-#include "utils.h"
+#include "util.h"
 
 namespace gamer {
 
@@ -190,7 +190,7 @@ void CommandManager::removeAllCmdListenersImpl(bool cleanup)
     {
         std::for_each (cmd_listeners_vec_->begin(), 
                        cmd_listeners_vec_->end(), 
-                       utils::delete_vector_obj());
+                       util::delete_vector_obj());
     }
     else
     {

@@ -17,10 +17,7 @@
 #include "attack_command.h"
 #include "actor.h"
 #include "actor_typedef.h"
-#include "command.h"
-#include "command_constants.h"
-#include "command_listener.h"
-#include "command_manager.h"
+#include "command_headers.h"
 #include "macros.h"
 
 namespace gamer
@@ -59,10 +56,10 @@ void HPManager::destoryInstance()
 bool HPManager::initListeners()
 {
     auto listener = gamer::CommandListener::create(
-        CommandIDs::CMD_ID_NORMAL_ATTACK, 
+        CommandIDs::CMD_ATTACK, 
         std::bind(&HPManager::onCommandAttack, this, std::placeholders::_1),
         "HPManager::onCommandAttack", 
-        1);
+        (int)gamer::Listener::ListenerPriorities::NORMAL);
     gamer::CommandManager::getInstance()->addCmdListener(listener);
 
     return true;
@@ -70,12 +67,11 @@ bool HPManager::initListeners()
 
 void HPManager::onCommandAttack(gamer::Command* cmd)
 {
-    auto att_cmd  = static_cast<AttackCommand<ActorType>*>(cmd);
-    auto attacker = att_cmd->attacker();
-    auto target   = att_cmd->target();
-    if (nullptr != target && nullptr != attacker)
+    auto actor = static_cast<gamer::ActorType*>(cmd->user_data());
+    auto target = actor->target();
+    if (nullptr != actor && nullptr != target)
     {
-        target->set_hp(target->hp() - attacker->damage());
+        target->set_hp(target->hp() - actor->damage());
     }
 }
 

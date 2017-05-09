@@ -96,7 +96,7 @@ public:
         ,num_boxes_y_(num_boxes_y)
         ,num_boxes_z_(num_boxes_z)
         ,space_origin_(origin)
-        ,neighbors_(max_entities + 1, nullptr)
+        ,neighbors_(max_entities, nullptr)
     {
         init();
     }
@@ -166,9 +166,7 @@ public:
                     if (ent->getPosition3D().distanceSquared(target_pos) <= 
                         query_radius * query_radius)
                     {
-                        //*cur_neighbor = *cur_entity;
-                        *cur_neighbor = (*cur_entity);
-                        ++cur_neighbor;
+                        *cur_neighbor++ = *cur_entity;
                     }
                 } // end for 2
             }
@@ -190,12 +188,23 @@ public:
     // returns the next Entity in the neighbor vector
     inline Entity* next() 
     { 
-        ++cur_neighbor_; 
-        return *cur_neighbor_; 
+        if (cur_neighbor_ != neighbors_.end())
+        {
+            ++cur_neighbor_;  
+            if (end())
+            {
+                return nullptr;
+            }
+            else
+            {
+                return *cur_neighbor_;
+            }
+        }
+        return nullptr;
     }
 
     // returns true if the end of the vector is found (a zero value marks the end)
-    //inline bool end() { return (cur_neighbor_ == neighbors_.end()) || (cur_neighbor_ == 0); }   
+    //inline bool end() { return (cur_neighbor_ == neighbors_.end()) || (0 == *cur_neighbor_); }   
     inline bool end() { return (cur_neighbor_ == neighbors_.end()) || (nullptr == (*cur_neighbor_)); }   
 
     // get num of neighbors

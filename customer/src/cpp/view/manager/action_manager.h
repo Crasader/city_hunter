@@ -37,7 +37,7 @@ private:
 
     bool initListeners();
     
-    void onCommandReceive(gamer::Command* cmd); // TODO : all manager should has such a function
+    void onCommandReceived(gamer::Command* cmd); // TODO : all manager should has such a function
 
     void dealWithPlayActionCommand(gamer::Command* cmd);
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<space space_ori_x="-100" space_ori_y="0" space_ori_z="100" space_size_x="200" space_size_y="100" space_size_z="200" space_box_num_x="2" space_box_num_y="1" space_box_num_z="2" space_cell_num_x="40" space_cell_num_y="0" space_cell_num_z="40">
+</space>-->
+
+<space space_ori_x="-200" space_ori_y="0" space_ori_z="200" space_size_x="400" space_size_y="200" space_size_z="400" space_box_num_x="8" space_box_num_y="2" space_box_num_z="8" space_cell_num_x="40" space_cell_num_y="0" space_cell_num_z="40">
+</space>

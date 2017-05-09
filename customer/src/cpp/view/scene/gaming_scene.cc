@@ -22,15 +22,12 @@ modification:
 #include "actor_typedef.h"
 #include "camera_manager.h"
 #include "data_manager.h"
-#include "event.h"
-#include "event_define.h"
-#include "event_listener.h"
-#include "event_manager.h"
+#include "event_headers.h"
 #include "graph_typedef.h"
 #include "macros.h"
 #include "space_partition.h"
 #include "scene_constants.h"
-#include "utils_graph.h"
+#include "util_graph.h"
 
 namespace gamer
 {
@@ -100,25 +97,54 @@ void GamingScene::initVars()
 	space_ori_.y = space_cfg.space_ori().y();
 	space_ori_.z = space_cfg.space_ori().z();
 
-	cell_.w = space_cfg.cell_size().x();
-	cell_.h = space_cfg.cell_size().y();
-
-	cells_num_.x = space_cfg.cell_num().x();
-	cells_num_.y = space_cfg.cell_num().y();
-	cells_num_.z = space_cfg.cell_num().z();
-
-	// init var about space box
 	num_space_box_.x = space_cfg.space_box_num().x();
 	num_space_box_.y = space_cfg.space_box_num().y();
 	num_space_box_.z = space_cfg.space_box_num().z();
 
 	space_size_.x = space_cfg.space_size().x();
-	space_size_.y = space_cfg.space_size().x();
-	space_size_.z = space_cfg.space_size().x();
+	space_size_.y = space_cfg.space_size().y();
+	space_size_.z = space_cfg.space_size().z();
+
+	if (0 == num_space_box_.x)
+	{
+		num_space_box_.x = 1;
+		// TODO : log cfg error
+	}
+
+	if (0 == num_space_box_.y)
+	{
+		num_space_box_.y = 1;
+		// TODO : log cfg error
+	}
+
+	if (0 == num_space_box_.z)
+	{
+		num_space_box_.z = 1;
+		// TODO : log cfg error
+	}
 
 	size_space_box_.x = space_size_.x / num_space_box_.x;
 	size_space_box_.y = space_size_.y / num_space_box_.y;
 	size_space_box_.z = space_size_.z / num_space_box_.z;
+
+	cells_num_.x = space_cfg.space_cell_num().x();
+	cells_num_.y = space_cfg.space_cell_num().y();
+	cells_num_.z = space_cfg.space_cell_num().z();
+
+	if (0 == cells_num_.x)
+	{
+		cells_num_.x = 1;
+		// TODO : log cfg error
+	}
+
+	if (0 == cells_num_.z)
+	{
+		cells_num_.z = 1;
+		// TODO : log cfg error
+	}
+
+	cell_.w = space_size_.x / cells_num_.x;
+	cell_.h = space_size_.z / cells_num_.z;
 
 	space_partition_ = new graph::SpacePartition3D(space_size_.x,
 		space_size_.y,
@@ -127,13 +153,13 @@ void GamingScene::initVars()
 		num_space_box_.y,
 		num_space_box_.z,
 		cocos2d::Vec3(space_ori_.x, space_ori_.y, space_ori_.z),
-		4);
+		20); // TODO : read from cfg
 }
 
 void GamingScene::initListeners()
 {
 	auto listener = EventListener::create(
-		EventIDs::EVENT_ID_ACTORS_CREATED,
+		EventIDs::EVENT_ACTORS_CREATED,
 		CALLBACK_SELECTOR_1(GamingScene::onEventActorsCreated, this),
 		"GamingScene::onEventActorsCreated",
 		1);
@@ -192,7 +218,7 @@ void GamingScene::initGraphAlgorithms()
 		for (int col = 0; col < cells_num_.x; col++)
 		{
 			//auto pos = cocos2d::Vec3();
-			gamer::utils_graph::addAllEdgesToNode(*sparse_graph_,
+			gamer::util_graph::addAllEdgesToNode(*sparse_graph_,
 				//pos,
 				row,
 				col,
@@ -312,10 +338,10 @@ void GamingScene::onEventActorsCreated(gamer::Event* event)
 	//draw_node_->drawCube(corners, cocos2d::Color4F(0, 0, 1, 1));
 
 	// test
-	source_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(-100, 0, 0));
-	target_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(100, 0, 0));
+	//source_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(-100, 0, 0));
+	//target_ = utils_graph::getNodeIndexByPos(cocos2d::Vec3(100, 0, 0));
 
-	drawPathOfAStarAlgorithms();
+	//drawPathOfAStarAlgorithms();
 
 	//int obstacle = utils_graph::getNodeIndexByPos(cocos2d::Vec3(0, 0, 0));
 	//auto graph = PathFinder::getInstance()->graph();
@@ -374,7 +400,7 @@ void GamingScene::drawGrids()
 	auto draw_node = cocos2d::DrawNode3D::create();
 	draw_node->setName("2017");
 	this->addChild(draw_node);
-
+	/*
 	// draw x
 	for (int j = -20; j <= 20; j++)
 	{
@@ -385,11 +411,30 @@ void GamingScene::drawGrids()
 	{
 		draw_node->drawLine(cocos2d::Vec3(5 * j, 0, -100), cocos2d::Vec3(5 * j, 0, 100), cocos2d::Color4F(0, 0, 1, 1));
 	}
+	*/
+	// draw x
+	for (int i = 0; i <= cells_num_.z; i++)
+	{
+		draw_node->drawLine(cocos2d::Vec3(space_ori_.x, 0, space_ori_.z - cell_.h * i),
+							cocos2d::Vec3(space_ori_.x + space_size_.x, 
+                                          0, 
+                                          space_ori_.z - cell_.h * i),
+							cocos2d::Color4F(1, 0, 0, 1));
+	}
+	// draw z
+	for (int i = 0; i <= cells_num_.x; i++)
+	{
+		draw_node->drawLine(cocos2d::Vec3(space_ori_.x + cell_.w * i, 0, space_ori_.z), 
+                            cocos2d::Vec3(space_ori_.x + cell_.w * i, 
+                                          0, 
+                                          space_ori_.z - space_size_.z),
+                            cocos2d::Color4F(0, 0, 1, 1));
+	}
 }
 
 void GamingScene::drawPath()
 {
-	gamer::utils_graph::drawPath(path_,
+	gamer::util_graph::drawPath(path_,
 		*sparse_graph_,
 		*draw_node_,
 		cocos2d::Color4F::GREEN);
@@ -430,35 +475,7 @@ void GamingScene::initCamera()
 
 void GamingScene::initActors()
 {
-	gamer::Actor<cocos2d::Sprite3D>* actor = gamer::Actor<cocos2d::Sprite3D>::create("model/archer/archer.c3b");
-	if (nullptr != actor && actor->entity())
-	{
-		this->addChild(actor->entity());
-		//actor->entity()->setScale(10);
-		actor->entity()->setPosition3D(cocos2d::Vec3(0, 0, 0));
-		actor->entity()->setRotation3D(cocos2d::Vec3(0, 90, 0));
 
-		std::string action = std::string("walk");
-		std::string model = std::string("model/archer/archer.c3b");
-		actor->addAction(action,
-			model,
-			float(110.0 / 30.0),
-			float(20.0 / 30.0),
-			0.7f);
-		actor->playAction(model, true);
-	}
-
-	//auto actor2 = gamer::Actor<cocos2d::Sprite3D>::create("model/knight/knight.c3b");
-	//if (nullptr != actor2 && actor2->entity())
-	//{
-	//    this->addChild(actor2->entity());
-	//    actor2->entity()->setScale(20);
-	//    actor2->entity()->setPosition3D(cocos2d::Vec3(100, 0, 100));
-	//    actor2->entity()->setRotation3D(cocos2d::Vec3(0, 90, 0));
-
-	//    actor2->addAnimation(std::string("walk"), std::string("model/knight/knight.c3b"), 227 / 30.0, 19 / 30.0, 0.7f);
-	//    actor2->playAnimation(std::string("walk"), true);
-	//}
 }
 
 void GamingScene::drawSpace()

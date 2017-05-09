@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<State actor_type="0" state_id="2" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="3" state_change_requirement="0" />
+	</State>
+	<State actor_type="0" state_id="3" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="4" state_change_requirement="0" />
+	</State>
+	<State actor_type="0" state_id="4" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="6" state_change_requirement="0" />
+	</State>	
+	<State actor_type="0" state_id="5" enter_audio="" update_audio="" enter_action="16">
+		<NextState state_id="4" state_change_requirement="0" />
+	</State>
+	<State actor_type="0" state_id="6" enter_audio="" update_audio="" enter_action="18">
+		<NextState state_id="4" state_change_requirement="0" />
+	</State>
+
+	<State actor_type="1" state_id="1" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="6" state_change_requirement="0" />
+	</State>
+	<State actor_type="1" state_id="4" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="6" state_change_requirement="4" />
+	<State actor_type="1" state_id="5" enter_audio="" update_audio="" enter_action="16">
+		<NextState state_id="4" state_change_requirement="0" />
+	</State>
+	<State actor_type="1" state_id="6" enter_audio="" update_audio="" enter_action="18">
+		<NextState state_id="4" state_change_requirement="0" />
+	</State>
+<!--
+	<State actor_type="2" state_id="1" enter_audio="" update_audio="" enter_action="">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="6" state_change_requirement="4" />
+	</State>
+	<State actor_type="2" state_id="5" enter_audio="audio/effects/mage/hurt.mp3" update_audio="" enter_action="knocked">
+		<NextState state_id="6" state_change_requirement="3" />
+		<NextState state_id="4" state_change_requirement="4" />
+	</State>
+	<State actor_type="2" state_id="6" enter_audio="" update_audio="" enter_action="defend">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="4" state_change_requirement="4" />
+	</State>
+	<State actor_type="2" state_id="4" enter_audio="audio/effects/mage/ice_1.mp3" update_audio="" enter_action="normal_atk1">
+		<NextState state_id="5" state_change_requirement="3" />
+		<NextState state_id="6" state_change_requirement="4" />
+	</State>
+-->
+</Root>

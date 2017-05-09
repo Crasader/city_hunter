@@ -15,6 +15,11 @@
 #ifndef CITY_HUNTER_SRC_CAMERA_MANAGER_H_
 #define CITY_HUNTER_SRC_CAMERA_MANAGER_H_
 
+namespace cocos2d
+{
+class Camera;
+}
+
 namespace gamer
 {
 
@@ -30,6 +35,8 @@ public:
     static void destoryInstance();    
 
     bool init();
+
+    cocos2d::Camera* camera() const;
 
 private:
     CameraManager();    

@@ -246,7 +246,8 @@ public:
                     pq.insert(edge->node_to());
 
                     search_frontier_[edge->node_to()] = edge;
-                    
+                    /*
+                    test
                     auto npos1 = graph_.getNode(edge->node_from()).position();
                     auto npos2 = graph_.getNode(edge->node_to()).position();
                     if (scene)
@@ -259,6 +260,7 @@ public:
                             //draw_node->drawLine(npos1, npos2, cocos2d::Color4F(0, 1, 0, 1));
                         }
                     }
+                    */
                 }
                 // if this node is already on the frontier but the cost to get here
                 // is cheaper than has been found previously, update the node

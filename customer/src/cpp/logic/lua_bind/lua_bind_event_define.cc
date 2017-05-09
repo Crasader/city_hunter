@@ -13,7 +13,7 @@
 /* Exported function */
 TOLUA_API int  tolua_event_define_open (lua_State* tolua_S);
 
-#include "event_define.h"
+#include "event_constants.h"
 
 /* function to register type */
 static void tolua_reg_types (lua_State* tolua_S)
@@ -29,9 +29,9 @@ TOLUA_API int tolua_event_define_open (lua_State* tolua_S)
  tolua_beginmodule(tolua_S,NULL);
   tolua_module(tolua_S,"gamer",0);
   tolua_beginmodule(tolua_S,"gamer");
-   tolua_constant(tolua_S,"INVALID",gamer::INVALID);
-   tolua_constant(tolua_S,"HERO_UNDER_ATTACK",gamer::HERO_UNDER_ATTACK);
-   tolua_constant(tolua_S,"HERO_DEAD",gamer::HERO_DEAD);
+   tolua_constant(tolua_S,"INVALID",gamer::EVENT_INVALID);
+   tolua_constant(tolua_S,"HERO_UNDER_ATTACK",gamer::EVENT_HERO_UNDER_ATTACK);
+   tolua_constant(tolua_S,"HERO_DEAD",gamer::EVENT_HERO_DEAD);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);
  return 1;

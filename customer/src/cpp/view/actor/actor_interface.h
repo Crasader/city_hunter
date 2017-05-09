@@ -25,35 +25,16 @@ class Actor_Interface
 public:
     virtual ~Actor_Interface() {}
 
-    virtual void addAction(const std::string& action_name, 
+    virtual void addAction(int action_id, 
                            const std::string& file, 
                            float from_time, 
                            float duration, float speed) = 0;
 
-    virtual void playAction(const std::string& action_name, bool loop) = 0;
+    virtual void playAction(int action_id, bool loop) = 0;
 
-    // direction > 0 mean set the direction to right,
-    // direction < 0 mean set the direction to left.
-    //virtual void set_direction(float direction) = 0;
+    virtual void set_actor_type(int actor_type) = 0;
 
-    // return value > 0 mean the direction is right,
-    // return value < 0 mean the direction is left.
-    //virtual float direction() const = 0;
-
-    // toggle direction of role
-    //virtual void toggle_direction() = 0;
-
-    // move role to left by increasing positionX
-    //virtual void move_to_left(float distance) = 0;
-
-    // move role to left by decreasing positionX
-    // void move_to_right(float distance) = 0;
-
-    // set max health point of role
-    //virtual void set_max_hp(int hp) = 0;
-
-    // get max health point of role
-    //virtual int max_hp() const = 0;
+    virtual int actor_type() const = 0;
 
     // set health point of role
     virtual void set_hp(int hp) = 0;

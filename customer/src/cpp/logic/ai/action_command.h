@@ -32,34 +32,34 @@ class ActionCommand : public Command
 {
 public:
     ActionCommand() 
-        :initiator_(nullptr) 
-        ,acceptor_(nullptr)
+        :attacker_(nullptr) 
+        ,target_(nullptr)
     {
     }
 
     ActionCommand(int cmd_id) 
         :Command(cmd_id) 
-        ,initiator_(nullptr) 
-        ,acceptor_(nullptr)
+        ,attacker_(nullptr) 
+        ,target_(nullptr)
     {
     }
 
     ~ActionCommand() {}
 
-    inline void set_initiator(Actor* actor) { initiator_ = actor; }
+    inline void set_attacker(Actor* actor) { attacker_ = actor; }
 
-    inline Actor* initiator() const { return initiator_; }
+    inline Actor* attacker() const { return attacker_; }
 
-    inline void set_acceptor(Actor* actor) { acceptor_ = actor; }
+    inline void set_target(Actor* actor) { target_ = actor; }
 
-    inline Actor* acceptor() const { return acceptor_; }
+    inline Actor* target() const { return target_; }
 
 private:
-    Actor* initiator_;
-    Actor* acceptor_;
+    Actor* attacker_;
+    Actor* target_;
 
-    ActionParam initiator_action_;
-    ActionParam acceptor_action_;
+    ActionParam attacker_action_;
+    ActionParam target_action_;
 };
 
 } // namespace gamer

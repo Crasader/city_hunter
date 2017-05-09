@@ -23,9 +23,17 @@ namespace gamer
 class PBCreator
 {
 public:
-    static void creatActorCfg();
+    static void createMapCfg();
 
-	static void creatSpaceCfg();
+	static void createCameraCfg();
+
+    static void createActorStateCfg();
+
+    static void createModelCfg();
+
+    static void createAudioCfg();
+
+    static void createActionCfg();
 
     static const std::string dir_cfg;
 };

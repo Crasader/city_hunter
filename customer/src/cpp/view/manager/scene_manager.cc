@@ -22,7 +22,7 @@
 #include "command_manager.h"
 #include "event.h"
 #include "gaming_scene.h"
-#include "gaming_hud.h"
+#include "gaming_hud_layer.h"
 #include "scene_constants.h"
 #include "space_partition_test_scene.h" // test
 #include "macros.h"
@@ -60,7 +60,7 @@ SceneManager* SceneManager::getInstance()
 bool SceneManager::initListeners()
 {
     auto listener = gamer::CommandListener::create(
-        CommandIDs::CMD_ID_CREATE_SCENE, 
+        CommandIDs::CMD_CREATE_SCENE, 
         std::bind(&SceneManager::onCommandCreateScene, this, std::placeholders::_1),
         "SceneManager::onCommandCreateScene", 
         1);
@@ -101,11 +101,8 @@ int SceneManager::getCurrentSceneID()
 
 cocos2d::Scene* SceneManager::createGamingScene()
 {
-    auto scene = GamingScene::createScene();
-    
-    scene->set_scene_id(SceneIDs::SCENE_ID_GAME_MAIN_SCENE);
-    //set_cur_scene(scene);
-    
+    auto scene = GamingScene::createScene();    
+    scene->set_scene_id(SceneIDs::SCENE_ID_GAME_MAIN_SCENE);    
     return scene;
 }
 
@@ -116,7 +113,7 @@ bool SceneManager::init()
 
 cocos2d::Layer* SceneManager::createGamingHUD()
 {
-    return GamingHUD::create();
+    return GamingHUDLayer::create();
 }
     
 graph::Size SceneManager::getNumOfSpaceBox() const
@@ -234,7 +231,9 @@ void SceneManager::onCommandReplaceScene(gamer::Event* event)
     cocos2d::log("[SceneManager::onCommandReplaceScene] end");
 }
 
-void SceneManager::replaceSceneWithTransitionStyle(cocos2d::Scene* scene, int transition_style, float time)
+void SceneManager::replaceSceneWithTransitionStyle(cocos2d::Scene* scene, 
+												   int transition_style, 
+												   float time)
 {
     if (nullptr == scene)
         return;

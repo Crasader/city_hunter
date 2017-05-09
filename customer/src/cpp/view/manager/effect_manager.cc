@@ -16,22 +16,15 @@
 
 #include <algorithm>
 
-#include "cocos/2d/CCActionEase.h"
-#include "cocos/2d/CCActionInstant.h"
-#include "cocos/2d/CCActionInterval.h"
-#include "cocos/2d/CCLabel.h"
+#include "cocos2d.h"
 #include "cocos/3d/CCBillBoard.h"
 
-#include "attack_command.h"
 #include "actor.h"
 #include "actor_typedef.h"
-#include "command.h"
-#include "command_constants.h"
-#include "command_listener.h"
-#include "command_manager.h"
+#include "command_headers.h"
 #include "macros.h"
 #include "scene_manager.h"
-#include "utils.h"
+#include "util.h"
 
 namespace gamer
 {
@@ -80,10 +73,10 @@ bool EffectManager::init()
 bool EffectManager::initListeners()
 {
     auto listener = gamer::CommandListener::create(
-        CommandIDs::CMD_ID_NORMAL_ATTACK, 
+        CommandIDs::CMD_ATTACK, 
         CALLBACK_SELECTOR_1(EffectManager::onCommandAttack, this),
         "EffectManager::onCommandAttack", 
-        1);
+        (int)Listener::ListenerPriorities::NORMAL);
     CommandManager::getInstance()->addCmdListener(listener);
 
     return true;
@@ -92,22 +85,21 @@ bool EffectManager::initListeners()
 // show attack effect, such as blood effect
 void EffectManager::onCommandAttack(gamer::Command* cmd)
 {
-    auto att_cmd  = static_cast<AttackCommand<ActorType>*>(cmd);
-    auto attacker = att_cmd->attacker();
-    auto target   = att_cmd->target(); 
+    auto actor = static_cast<gamer::ActorType*>(cmd->user_data());
+    auto target = actor->target();
     if (nullptr != target)
     {       
         BloodEffect* blood_eff = nullptr;
         if (created_blood_effects_.size() >= num_blood_effects_)
         {
-            blood_eff = getBloodEffect(attacker->damage());
+            blood_eff = this->getBloodEffect(actor->damage());
             blood_eff->action = createBloodAction();
             blood_eff->blood_node->setOpacity(255);
             blood_eff->blood_node->setPosition3D(cocos2d::Vec3(0, 0, 0));
         }
         else
         {
-            blood_eff = createBloodEffect(attacker->damage());
+            blood_eff = this->createBloodEffect(actor->damage());
             auto scene = gamer::SceneManager::getInstance()->getRunningScene();
             scene->addChild(blood_eff->root_node);
 
@@ -130,7 +122,7 @@ gamer::EffectManager::BloodEffect* EffectManager::createBloodEffect(int blood_lo
     ttfconfig.fontFilePath = "fonts/britanic bold.ttf";
     auto blood = cocos2d::Label::createWithTTF(ttfconfig, 
                                                //std::to_string(blood_loss), // to_string() is C++11 feature
-		                                       utils::to_string(blood_loss),
+		                                       util::to_string(blood_loss),
                                                cocos2d::TextHAlignment::CENTER, 
                                                400);
     blood->setTag(BloodTags::NORMAL);
@@ -188,7 +180,7 @@ gamer::EffectManager::BloodEffect* EffectManager::getBloodEffect(int blood_loss)
     if (created_blood_effects_.end() != blood)
     {
         //(*blood)->blood_node->setString(std::to_string(blood_loss));
-		(*blood)->blood_node->setString(utils::to_string(blood_loss));
+		(*blood)->blood_node->setString(util::to_string(blood_loss));
         (*blood)->available = false;
         ret = *blood;
     }
@@ -202,7 +194,7 @@ gamer::EffectManager::BloodEffect* EffectManager::getBloodEffect(int blood_loss)
                       });
         blood = created_blood_effects_.begin();  
         //(*blood)->blood_node->setString(std::to_string(blood_loss));
-		(*blood)->blood_node->setString(utils::to_string(blood_loss));
+		(*blood)->blood_node->setString(util::to_string(blood_loss));
         (*blood)->available = false;
         ret = *blood;
     }

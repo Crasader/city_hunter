@@ -16,302 +16,117 @@
 
 #include <cassert>
 #include <fstream>
+#include <string>
+
+#include "cocos2d.h"
+#include "tinyxml2/tinyxml2.h"
 
 #include "actor_cfg.pb.h"
+#include "action_cfg.pb.h"
+#include "actor_state_cfg.pb.h"
+#include "audio_cfg.pb.h"
+#include "camera_cfg.pb.h"
+#include "map_cfg.pb.h"
+#include "model_cfg.pb.h"
 #include "space_cfg.pb.h"
+
+using namespace tinyxml2;
 
 namespace gamer
 {
 
 const std::string PBCreator::dir_cfg = "E:\\gamer\\cocos2d-x\\project\\city_hunter\\cocos\\res\\cfg\\";
 
-void PBCreator::creatActorCfg()
+void PBCreator::createMapCfg()
 {
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-    gamer::ActorCfg actor_cfg;
-    auto actor_audio1 = actor_cfg.add_actor_audio();
-    auto actor_audio2 = actor_cfg.add_actor_audio();
-    auto actor_audio3 = actor_cfg.add_actor_audio();
-    auto actor_model1 = actor_cfg.add_actor_model();
-    auto actor_model2 = actor_cfg.add_actor_model();
-    auto actor_model3 = actor_cfg.add_actor_model();
+    gamer::cfg::MapCfg map_cfg;   
+    gamer::cfg::ActorCfg actor_cfg;
 
-    // knight
-    actor_audio1->set_id(1000);
-    actor_audio1->set_normal_atk1("audio/effects/knight/swish-1.mp3");
-    actor_audio1->set_normal_atk2("audio/effects/knight/swish-2.mp3");
-    actor_audio1->set_hurt("audio/effects/knight/wounded.mp3");
-    actor_audio1->set_normal_atk_shout("audio/effects/knight/normalAttackShout.mp3");
-    actor_audio1->set_special_atk_shout("audio/effects/knight/specialAttackShout.mp3");
-    actor_audio1->set_dead("audio/effects/knight/dead.mp3");
-
-    actor_model1->set_id(1000);
-    actor_model1->set_model_file("model/knight/knight.c3b");
+	auto tile_map     = cocos2d::TMXTiledMap::create("map/normal.tmx");
+	auto object_group = tile_map->getObjectGroup("objlayer");
+    map_cfg.set_map_width(tile_map->getTileSize().width * tile_map->getMapSize().width);
+    map_cfg.set_map_height(tile_map->getTileSize().height * tile_map->getMapSize().height);
     
-    auto vec1 = new ActorModelCfg::Vec3();
-    auto vec1_1 = new ActorModelCfg::Vec3();
+	for (auto& obj : object_group->getObjects())
+	{
+        auto actor = actor_cfg.add_actor();
+
+		auto dict = obj.asValueMap();        
+        // id
+        actor->set_id(dict["actor_id"].asInt());
+
+        // actor type
+        actor->set_actor_type((gamer::cfg::ActorTypes)dict["actor_type"].asInt());
+
+        // model
+        actor->set_model_id((gamer::cfg::ActorTypes)dict["model_id"].asInt());
+
+        // pos rotation
+		auto x = dict["x"].asFloat() - 200;
+		auto y = map_cfg.map_height() - dict["y"].asFloat() - 200;
+		auto pos = new gamer::cfg::Vec3();
+		auto rotation = new gamer::cfg::Vec3();
+		pos->set_x(x);
+		pos->set_y(0);
+		pos->set_z(y);
+		rotation->set_x(dict["rotation_x"].asFloat());
+		rotation->set_y(dict["rotation_y"].asFloat());
+		rotation->set_z(dict["rotation_z"].asFloat());
+        actor->set_allocated_position(pos);
+        actor->set_allocated_rotation(rotation);
+		
+        // scale
+        actor->set_scale(dict["scale"].asFloat());
+
+        // ai
+        actor->set_ai_update_interval(dict["ai_update_interval"].asFloat());
+        actor->set_first_state_id(dict["first_state_id"].asFloat());
+	}
     
-    vec1->set_x(-100);
-    vec1->set_y(0);
-    vec1->set_z(0);    
-    vec1_1->set_x(0);
-    vec1_1->set_y(90);
-    vec1_1->set_z(0);
+    // space ori
+    auto space_cfg = new gamer::cfg::SpaceCfg();
+    auto vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_ori_x").asFloat());
+    vec->set_y(tile_map->getProperty("space_ori_y").asFloat());
+    vec->set_z(tile_map->getProperty("space_ori_z").asFloat());
+    space_cfg->set_allocated_space_ori(vec);
 
-    actor_model1->set_allocated_position(vec1);
-    actor_model1->set_allocated_rotation(vec1_1);
-    actor_model1->set_scale(10);
+    // space box num
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_box_num_x").asInt());
+    vec->set_y(tile_map->getProperty("space_box_num_y").asInt());
+    vec->set_z(tile_map->getProperty("space_box_num_z").asInt());
+    space_cfg->set_allocated_space_box_num(vec);
 
-    auto action = actor_model1->add_action();
-    action->set_id(1000);
-    action->set_name("attack1");
-    action->set_from_time(103 / 30.0f);
-    action->set_duration(26 / 30.0f);
-    action->set_speed(0.7f);
+    // space size
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_size_x").asFloat());
+    vec->set_y(tile_map->getProperty("space_size_y").asFloat());
+    vec->set_z(tile_map->getProperty("space_size_z").asFloat());
+    space_cfg->set_allocated_space_size(vec);
 
-    action = actor_model1->add_action();
-    action->set_id(1001);
-    action->set_name("attack2");
-    action->set_from_time(130 / 30.0f);
-    action->set_duration(24 / 30.0f);
-    action->set_speed(0.7f);
+    // cell num
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_cell_num_x").asInt());
+    vec->set_y(tile_map->getProperty("space_cell_num_y").asInt());
+    vec->set_z(tile_map->getProperty("space_cell_num_z").asInt());
+    space_cfg->set_allocated_space_cell_num(vec);
 
-    action = actor_model1->add_action();
-    action->set_id(1002);
-    action->set_name("specail_atk1");
-    action->set_from_time(160 / 30.0f);
-    action->set_duration(30 / 30.0f);
-    action->set_speed(1);
+    map_cfg.set_allocated_space_cfg(space_cfg);
 
-    action = actor_model1->add_action();
-    action->set_id(1003);
-    action->set_name("specail_atk2");
-    action->set_from_time(191 / 30.0f);
-    action->set_duration(29 / 30.0f);
-    action->set_speed(1);
-
-    action = actor_model1->add_action();
-    action->set_id(1004);
-    action->set_name("idle");
-    action->set_from_time(267 / 30.0f);
-    action->set_duration(16 / 30.0f);
-    action->set_speed(0.7f);
-    
-    action = actor_model1->add_action();
-    action->set_id(1005);
-    action->set_name("walk");
-    action->set_from_time(227 / 30.0f);
-    action->set_duration(19 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model1->add_action();
-    action->set_id(1006);
-    action->set_name("defend");
-    action->set_from_time(92 / 30.0f);
-    action->set_duration(4 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model1->add_action();
-    action->set_id(1007);
-    action->set_name("knocked");
-    action->set_from_time(254 / 30.0f);
-    action->set_duration(6 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model1->add_action();
-    action->set_id(1008);
-    action->set_name("dead");
-    action->set_from_time(0 / 30.0f);
-    action->set_duration(77 / 30.0f);
-    action->set_speed(1);
-    
-    // archer
-    actor_audio2->set_id(1001);
-    actor_audio2->set_normal_atk1("audio/effects/archer/swish-3.mp3");
-    actor_audio2->set_normal_atk2("audio/effects/archer/swish-4.mp3");
-    actor_audio2->set_hurt("audio/effects/archer/hurt.mp3");
-    actor_audio2->set_normal_atk_shout("audio/effects/archer/normalAttackShout.mp3");
-    actor_audio2->set_special_atk_shout("audio/effects/archer/specialAttackShout.mp3");
-    actor_audio2->set_dead("audio/effects/archer/dead.mp3");
-
-    actor_model2->set_id(1001);
-    actor_model2->set_model_file("model/archer/archer.c3b");
-
-    auto vec2 = new ActorModelCfg::Vec3();
-    auto vec2_1 = new ActorModelCfg::Vec3();
-    vec2->set_x(0);
-    vec2->set_y(0);
-    vec2->set_z(0);
-    vec2_1->set_x(0);
-    vec2_1->set_y(90);
-    vec2_1->set_z(0);
-    actor_model2->set_allocated_position(vec2);
-    actor_model2->set_allocated_rotation(vec2_1);
-    
-    action = actor_model2->add_action();  
-    action->set_id(1000);
-    action->set_name("attack1");
-    action->set_from_time(0 / 30.0f);
-    action->set_duration(12 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();  
-    action->set_id(1001);
-    action->set_name("attack2");
-    action->set_from_time(12 / 30.0f);
-    action->set_duration(12 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();
-    action->set_id(1002);
-    action->set_name("specail_atk1");
-    action->set_from_time(30 / 30.0f);
-    action->set_duration(13 / 30.0f);
-    action->set_speed(1);
-
-    action = actor_model2->add_action();
-    action->set_id(1003);
-    action->set_name("specail_atk2");
-    action->set_from_time(44 / 30.0f);
-    action->set_duration(12 / 30.0f);
-    action->set_speed(1);
-
-    action = actor_model2->add_action();
-    action->set_id(1004);
-    action->set_name("idle");
-    action->set_from_time(208 / 30.0f);
-    action->set_duration(45/30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();
-    action->set_id(1005);
-    action->set_name("walk");
-    action->set_from_time(110 / 30.0f);
-    action->set_duration(20 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();
-    action->set_id(1006);
-    action->set_name("defend");
-    action->set_from_time(70 / 30.0f);
-    action->set_duration(25 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();
-    action->set_id(1007);
-    action->set_name("knocked");
-    action->set_from_time(135 / 30.0f);
-    action->set_duration(10 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model2->add_action();
-    action->set_id(1008);
-    action->set_name("dead");
-    action->set_from_time(150 / 30.0f);
-    action->set_duration(46 / 30.0f);
-    action->set_speed(0.7f);
-
-    // mage
-    actor_audio3->set_id(1002);
-    actor_audio3->set_normal_atk1("audio/effects/mage/ice_1.mp3");
-    actor_audio3->set_normal_atk2("audio/effects/mage/ice_2.mp3");
-    actor_audio3->set_hurt("audio/effects/mage/hurt.mp3");
-    actor_audio3->set_normal_atk_shout("audio/effects/mage/normalAttack.mp3");
-    actor_audio3->set_special_atk_shout("audio/effects/mage/specialAttack.mp3");
-    actor_audio3->set_dead("audio/effects/mage/dead.mp3");
-
-    actor_model3->set_id(1002);
-    actor_model3->set_model_file("model/mage/mage.c3b");
-    
-    auto vec3 = new ActorModelCfg::Vec3();
-    auto vec3_1 = new ActorModelCfg::Vec3();
-    vec3->set_x(100);
-    vec3->set_y(0);
-    vec3->set_z(0);
-    vec3_1->set_x(0);
-    vec3_1->set_y(90);
-    vec3_1->set_z(0);
-    actor_model3->set_allocated_position(vec3);
-    actor_model3->set_allocated_rotation(vec3_1);
-
-    action = actor_model3->add_action();
-    action->set_id(1000);
-    action->set_name("attack1");
-    action->set_from_time(12 / 30.0f);
-    action->set_duration(18 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1001);
-    action->set_name("attack2");
-    action->set_from_time(31 / 30.0f);
-    action->set_duration(49 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1002);
-    action->set_name("specail_atk1");
-    action->set_from_time(56 / 30.0f);
-    action->set_duration(18 / 30.0f);
-    action->set_speed(1);
-
-    action = actor_model3->add_action();
-    action->set_id(1003);
-    action->set_name("specail_atk2");
-    action->set_from_time(75 / 30.0f);
-    action->set_duration(17 / 30.0f);
-    action->set_speed(1);
-
-    action = actor_model3->add_action();
-    action->set_id(1004);
-    action->set_name("idle");
-    action->set_from_time(206 / 30.0f);
-    action->set_duration(23 /30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1005);
-    action->set_name("walk");
-    action->set_from_time(99 / 30.0f);
-    action->set_duration(20 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1006);
-    action->set_name("defend");
-    action->set_from_time(1 / 30.0f);
-    action->set_duration(4 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1007);
-    action->set_name("knocked");
-    action->set_from_time(126 / 30.0f);
-    action->set_duration(6 / 30.0f);
-    action->set_speed(0.7f);
-
-    action = actor_model3->add_action();
-    action->set_id(1008);
-    action->set_name("dead");
-    action->set_from_time(139 / 30.0f);
-    action->set_duration(60 / 30.0f);
-    action->set_speed(0.7f);
-
-    // common action
-    auto common_action = new gamer::CommonAction();
-    //auto common_action = actor_cfg.common_action();
-    common_action->set_idle("idle");
-    common_action->set_walk("walk");
-    common_action->set_dead("dead");
-    actor_cfg.set_allocated_common_action(common_action);
-    //
-
-    std::string path = dir_cfg + "actor_cfg.pb";
+    auto path = dir_cfg + "map_cfg.pb";
     std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if ( !map_cfg.SerializeToOstream(&output) )
+    {
+        assert("creatMapCfg failed !");
+    }
 
-    if (!actor_cfg.SerializeToOstream(&output)) 
-    {        
+    path = dir_cfg + "actor_cfg.pb";
+    std::fstream output2(path.c_str(), std::ios::out | std::ios::binary);
+    if (!actor_cfg.SerializeToOstream(&output2))
+    {
         assert("creatActorCfg failed !");
     }
 
@@ -320,52 +135,349 @@ void PBCreator::creatActorCfg()
     google::protobuf::ShutdownProtobufLibrary();
 }
 
-void PBCreator::creatSpaceCfg()
+/*
+void PBCreator::createMapCfg()
 {
-	GOOGLE_PROTOBUF_VERIFY_VERSION;
+   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-	gamer::cfg::SpaceCfg space_cfg;
-	// space ori
-	auto vec = new gamer::cfg::Vec();
-	vec->set_x(-100);
-	vec->set_y(0);
-	vec->set_z(100);
-	space_cfg.set_allocated_space_ori(vec);
-	// space box num
-	vec = new gamer::cfg::Vec();
-	vec->set_x(2);
-	vec->set_y(1);
-	vec->set_z(2);
-	space_cfg.set_allocated_space_box_num(vec);
-	// space size
-	vec = new gamer::cfg::Vec();
-	vec->set_x(200);
-	vec->set_y(100);
-	vec->set_z(200);
-	space_cfg.set_allocated_space_size(vec);
-	// cell size
-	vec = new gamer::cfg::Vec();
-	vec->set_x(5);
-	vec->set_y(5);
-	space_cfg.set_allocated_cell_size(vec);
-	// cell num
-	vec = new gamer::cfg::Vec();
-	vec->set_x(40);
-	vec->set_y(0);
-	vec->set_z(40);
-	space_cfg.set_allocated_cell_num(vec);
+    gamer::cfg::MapCfg map_cfg;
+    auto actor_cfg = new gamer::cfg::ActorCfg();
+    auto space_cfg = new gamer::cfg::SpaceCfg();
 
-	std::string path = dir_cfg + "space_cfg.pb";
-	std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    auto tile_map     = cocos2d::TMXTiledMap::create("map/normal.tmx");
+    auto object_group = tile_map->getObjectGroup("objlayer");
+    map_cfg.set_map_width(tile_map->getTileSize().width * tile_map->getMapSize().width);
+    map_cfg.set_map_height(tile_map->getTileSize().height * tile_map->getMapSize().height);
 
-	if ( !space_cfg.SerializeToOstream(&output) )
+    for (auto& obj : object_group->getObjects())
+    {
+    // model
+    auto dict = obj.asValueMap();
+    auto x = dict["x"].asFloat() - 200;
+    auto y = map_cfg.map_height() - dict["y"].asFloat() - 200;
+
+    auto actor_model = actor_cfg->add_actor_model();
+    actor_model->set_id(dict["actor_id"].asInt());
+    actor_model->set_model_file(dict["model_file"].asString());
+    actor_model->set_scale(dict["scale"].asFloat());
+    actor_model->set_is_ai_enabled(dict["is_ai_enabled"].asBool());
+
+    auto pos = new gamer::cfg::Vec3();
+    auto rotation = new gamer::cfg::Vec3();
+    pos->set_x(x);
+    pos->set_y(0);
+    pos->set_z(y);
+    rotation->set_x(dict["rotation_x"].asFloat());
+    rotation->set_y(dict["rotation_y"].asFloat());
+    rotation->set_z(dict["rotation_z"].asFloat());
+    actor_model->set_allocated_position(pos);
+    actor_model->set_allocated_rotation(rotation);
+
+    // audio
+    auto actor_audio = actor_cfg->add_actor_audio();
+    actor_audio->set_id(dict["audio_id"].asInt());
+    actor_audio->set_normal_atk1(dict["audio_normal_atk1"].asString());
+    actor_audio->set_normal_atk2(dict["audio_normal_atk2"].asString());
+    actor_audio->set_hurt(dict["audio_normal_hurt1"].asString());
+    actor_audio->set_normal_atk_shout(dict["audio_special_atk1"].asString());
+    actor_audio->set_special_atk_shout(dict["audio_special_atk2"].asString());
+    actor_audio->set_dead(dict["audio_dead"].asString());
+
+    // action
+    int i = 1;
+    while (true)
+    {
+    // TODO : use common string format func
+    char buf[64];
+    snprintf(buf, sizeof("action_%d_id"), "action_%d_id", i);
+    std::string s(buf);
+    if (dict[s].isNull())
+    {
+    break;
+    }
+
+    auto action = actor_model->add_action();
+    action->set_id(dict[s].asInt());
+
+    snprintf(buf, sizeof("action_%d_name"), "action_%d_name", i);
+    s = buf;
+    action->set_name(dict[s].asString());
+
+    snprintf(buf, sizeof("action_%d_speed"), "action_%d_speed", i);
+    s = buf;
+    action->set_speed(dict[s].asFloat());
+
+    snprintf(buf, sizeof("action_%d_duration"), "action_%d_duration", i);
+    s = buf;
+    action->set_duration(dict[s].asFloat());
+
+    snprintf(buf, sizeof("action_%d_from_time"), "action_%d_from_time", i);
+    s = buf;
+    action->set_from_time(dict[s].asFloat());
+
+    ++i;
+    }
+    }
+
+    // common action
+    auto common_action = new gamer::cfg::CommonAction();
+    common_action->set_idle("idle");
+    common_action->set_walk("walk");
+    common_action->set_dead("dead");
+    actor_cfg->set_allocated_common_action(common_action);
+
+    // space ori
+    auto vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_ori_x").asFloat());
+    vec->set_y(tile_map->getProperty("space_ori_y").asFloat());
+    vec->set_z(tile_map->getProperty("space_ori_z").asFloat());
+    space_cfg->set_allocated_space_ori(vec);
+
+    // space box num
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_box_num_x").asInt());
+    vec->set_y(tile_map->getProperty("space_box_num_y").asInt());
+    vec->set_z(tile_map->getProperty("space_box_num_z").asInt());
+    space_cfg->set_allocated_space_box_num(vec);
+
+    // space size
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_size_x").asFloat());
+    vec->set_y(tile_map->getProperty("space_size_y").asFloat());
+    vec->set_z(tile_map->getProperty("space_size_z").asFloat());
+    space_cfg->set_allocated_space_size(vec);
+
+    // cell num
+    vec = new gamer::cfg::Vec3();
+    vec->set_x(tile_map->getProperty("space_cell_num_x").asInt());
+    vec->set_y(tile_map->getProperty("space_cell_num_y").asInt());
+    vec->set_z(tile_map->getProperty("space_cell_num_z").asInt());
+    space_cfg->set_allocated_space_cell_num(vec);
+
+    map_cfg.set_allocated_actor_cfg(actor_cfg);
+    map_cfg.set_allocated_space_cfg(space_cfg);
+
+    //std::string path = dir_cfg + "actor_cfg.pb";
+    //std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    //if (!actor_cfg.SerializeToOstream(&output))
+    //{
+    //    assert("creatActorCfg failed !");
+    //}
+
+    auto path = dir_cfg + "map_cfg.pb";
+    std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if ( !map_cfg.SerializeToOstream(&output) )
+    {
+    assert("creatMapCfg failed !");
+    }
+
+    output.close();
+    //output2.close();
+    google::protobuf::ShutdownProtobufLibrary();
+}
+*/
+
+void PBCreator::createCameraCfg()
+{
+	std::string path = dir_cfg + "camera_cfg.xml";
+	auto xmldoc = new tinyxml2::XMLDocument();
+	if (xmldoc->LoadFile(path.c_str()) != 0)
 	{
-		assert("creatActorCfg failed !");
+		// TODO : log cfg error
+		return;
+	}
+	auto root = xmldoc->RootElement();
+
+	GOOGLE_PROTOBUF_VERIFY_VERSION;
+	gamer::cfg::CameraCfg camera_cfg;
+
+	auto pos = new gamer::cfg::Vec3();
+	auto lookat = new gamer::cfg::Vec3();
+	pos->set_x(root->FloatAttribute("pos_x"));
+	pos->set_y(root->FloatAttribute("pos_y"));
+	pos->set_z(root->FloatAttribute("pos_z"));
+	lookat->set_x(root->FloatAttribute("lookat_x"));
+	lookat->set_y(root->FloatAttribute("lookat_y"));
+	lookat->set_z(root->FloatAttribute("lookat_z"));
+	camera_cfg.set_allocated_camera_pos(pos);
+	camera_cfg.set_allocated_camera_lookat(lookat);
+
+	path = dir_cfg + "camera_cfg.pb";
+	std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+	if (!camera_cfg.SerializeToOstream(&output))
+	{
+		assert("creatCameraCfg failed !");
 	}
 
 	output.close();
 
 	google::protobuf::ShutdownProtobufLibrary();
+}
+
+void PBCreator::createActorStateCfg()
+{
+    std::string path = dir_cfg + "actor_state_cfg.xml";
+    auto xmldoc = new tinyxml2::XMLDocument();
+    if (xmldoc->LoadFile(path.c_str()) != 0)
+    {
+        // TODO : log cfg error
+        return;
+    }
+    auto root = xmldoc->RootElement();
+
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+    gamer::cfg::ActorStateCfg actor_state_cfg;
+
+    auto xml_ele = root->FirstChildElement();
+    while (xml_ele)
+    {
+        auto state = actor_state_cfg.add_state_cfg();
+        state->set_actor_type(xml_ele->IntAttribute("actor_type"));
+        state->set_state_id(xml_ele->IntAttribute("state_id"));
+        state->set_enter_action(xml_ele->IntAttribute("enter_action"));
+        state->set_enter_audio(xml_ele->IntAttribute("enter_audio"));
+
+        auto ele = xml_ele->FirstChildElement();
+        while (ele)
+        {
+            auto next_state = state->add_next_state();
+            next_state->set_state_id(ele->IntAttribute("state_id"));
+            next_state->set_state_change_requirement(ele->IntAttribute("state_change_requirement"));
+
+            ele = ele->NextSiblingElement();
+        }
+
+        xml_ele = xml_ele->NextSiblingElement();
+    }
+
+    path = dir_cfg + "actor_state_cfg.pb";
+    std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if (!actor_state_cfg.SerializeToOstream(&output))
+    {
+        assert("creatActorStateCfg failed !");
+    }
+    output.close();
+
+    google::protobuf::ShutdownProtobufLibrary();
+}
+
+void PBCreator::createModelCfg()
+{
+    std::string path = dir_cfg + "model_cfg.xml";
+    auto xmldoc = new tinyxml2::XMLDocument();
+    if (xmldoc->LoadFile(path.c_str()) != 0)
+    {
+        // TODO : log cfg error
+        return;
+    }
+    auto root = xmldoc->RootElement();
+
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+    gamer::cfg::ModelCfg model_cfg;
+
+    auto xml_ele = root->FirstChildElement();
+    while (xml_ele)
+    {
+        auto model = model_cfg.add_model();
+        model->set_id(xml_ele->IntAttribute("id"));
+        model->set_file(xml_ele->Attribute("file"));
+
+        xml_ele = xml_ele->NextSiblingElement();
+    }
+
+    path = dir_cfg + "model_cfg.pb";
+    std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if (!model_cfg.SerializeToOstream(&output))
+    {
+        assert("creatModelCfg failed !");
+    }
+    output.close();
+
+    google::protobuf::ShutdownProtobufLibrary();
+}
+
+void PBCreator::createAudioCfg()
+{
+    std::string path = dir_cfg + "audio_cfg.xml";
+    auto xmldoc = new tinyxml2::XMLDocument();
+    if (xmldoc->LoadFile(path.c_str()) != 0)
+    {
+        // TODO : log cfg error
+        return;
+    }
+    auto root = xmldoc->RootElement();
+
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+    gamer::cfg::AudioCfg audio_cfg;
+
+    auto xml_ele = root->FirstChildElement();
+    while (xml_ele)
+    {
+        auto audio = audio_cfg.add_audio();
+        audio->set_id((gamer::cfg::AudioIDs)xml_ele->IntAttribute("id"));
+        audio->set_file(xml_ele->Attribute("file"));
+
+        xml_ele = xml_ele->NextSiblingElement();
+    }
+
+    path = dir_cfg + "audio_cfg.pb";
+    std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if (!audio_cfg.SerializeToOstream(&output))
+    {
+        assert("creatAudioCfg failed !");
+    }
+    output.close();
+
+    google::protobuf::ShutdownProtobufLibrary();
+}
+
+void PBCreator::createActionCfg()
+{
+    std::string path = dir_cfg + "action_cfg.xml";
+    auto xmldoc = new tinyxml2::XMLDocument();
+    if (xmldoc->LoadFile(path.c_str()) != 0)
+    {
+        // TODO : log cfg error
+        return;
+    }
+    auto root = xmldoc->RootElement();
+
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+    gamer::cfg::ActionCfg action_cfg;
+
+    auto xml_ele = root->FirstChildElement();
+    auto last_actor_type = (gamer::cfg::ActorTypes)xml_ele->IntAttribute("actor_type");
+    auto actor_action = action_cfg.add_actor_action();
+    actor_action->set_actor_type(last_actor_type);
+    while (xml_ele)
+    {
+        auto actor_type = (gamer::cfg::ActorTypes)xml_ele->IntAttribute("actor_type");
+        if (last_actor_type != actor_type)
+        {
+            actor_action = action_cfg.add_actor_action();
+            actor_action->set_actor_type(actor_type);
+            last_actor_type = actor_type;
+        }
+        
+        auto action = actor_action->add_action();
+        action->set_id((gamer::cfg::ActionIDs)xml_ele->IntAttribute("id"));
+        action->set_name(xml_ele->Attribute("name"));
+        action->set_from_time(xml_ele->FloatAttribute("from_time"));
+        action->set_duration(xml_ele->FloatAttribute("duration"));
+        action->set_speed(xml_ele->FloatAttribute("speed"));
+
+        xml_ele = xml_ele->NextSiblingElement();
+    }
+
+    path = dir_cfg + "action_cfg.pb";
+    std::fstream output(path.c_str(), std::ios::out | std::ios::binary);
+    if (!action_cfg.SerializeToOstream(&output))
+    {
+        assert("creatActionCfg failed !");
+    }
+    output.close();
+
+    google::protobuf::ShutdownProtobufLibrary();
 }
 
 } // namespace gamer 

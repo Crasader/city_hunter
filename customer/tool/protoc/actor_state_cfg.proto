@@ -1,0 +1,28 @@
+package gamer.cfg;
+
+enum StateChangeRequirements {
+    NO_REQUIREMENT = 0;
+    HP_LOW1        = 1;
+    HP_LOW2        = 2;
+    RANDOM1        = 3;
+    RANDOM2        = 4;
+  }
+
+message NextStateCfg {
+  required int32 state_id                 = 1;
+  required int32 state_change_requirement = 2;
+}
+
+message StateCfg {
+  required int32 actor_type                = 1;
+  required int32 state_id                  = 2;
+  repeated NextStateCfg next_state         = 3;
+  required int32 enter_action             = 4;
+  optional int32 update_action            = 5[default = 1];
+  optional int32 enter_audio              = 6[default = 1];
+  optional int32 update_audio             = 7[default = 1];
+}
+
+message ActorStateCfg {
+  repeated StateCfg state_cfg = 1;
+}

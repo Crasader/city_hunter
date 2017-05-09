@@ -14,7 +14,7 @@
 
 #include "ui_test.h"
 
-#include "utils_test.h"
+#include "util_test.h"
 
 namespace gamer 
 {
@@ -93,7 +93,7 @@ void UITest::onBtnCloseTouch(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEve
 
 void UITest::onBtnDrawSpaceTouch(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
 {
-    utils_test::drawSpace();
+    util_test::drawSpace();
 }
 
 } // namespace gamer 

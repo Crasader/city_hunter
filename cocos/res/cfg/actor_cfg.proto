@@ -1,46 +1,18 @@
-package gamer;
+package gamer.cfg;
+import "actor_type_cfg.proto";
+import "common_cfg.proto";
 
-message ActorAudioCfg {
-  required int32  id                = 1;
-  required string normal_atk1       = 2;
-  required string normal_atk2       = 3;
-  required string hurt              = 4;
-  required string normal_atk_shout  = 5;
-  required string special_atk_shout = 6;
-  required string dead              = 7;
-}
-
-message ActorModelCfg {  
-  message Vec3 {
-    required float x = 1;
-    required float y = 2;
-    required float z = 3;
-  }
-
-  message Action {
-    required int32  id       = 1;
-    optional string name     = 2;
-    required float from_time = 3;
-    required float duration  = 4;
-    required float speed     = 5;
-  }
-
-  required int32  id         = 1;
-  required string model_file = 2;
-  required Vec3 position     = 3;
-  required Vec3 rotation     = 4;
-  optional float scale       = 5[default = 1];
-  repeated Action action     = 6;
-}
-
-message CommonAction {
-  required string idle = 1;
-  required string walk = 2;
-  required string dead = 3;
+message Actor {  
+  required int32 id                  = 1;
+  required ActorTypes actor_type     = 2;
+  required int32 model_id            = 3;
+  required Vec3 position             = 4;
+  required Vec3 rotation             = 5;
+  optional float scale               = 6[default = 1];
+  required float ai_update_interval  = 7;
+  required int32 first_state_id      = 8;
 }
 
 message ActorCfg {
-  repeated ActorModelCfg actor_model  = 1;
-  repeated ActorAudioCfg actor_audio  = 2;
-  required CommonAction common_action = 3;
+  repeated Actor actor = 1;
 }

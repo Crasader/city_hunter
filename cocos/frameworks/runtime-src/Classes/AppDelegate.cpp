@@ -85,23 +85,28 @@ bool AppDelegate::applicationDidFinishLaunching()
 	engine->addSearchPath("../src/lua/provider");
 	engine->addSearchPath("../src/lua/ui");
 
-	gamer::ModuleManager::getInstance()->initAllModules();
+	//gamer::PBCreator::createMapCfg();
+	//gamer::PBCreator::createCameraCfg();
+    //gamer::PBCreator::createActorStateCfg();
+    //gamer::PBCreator::createActionCfg();
+    //gamer::PBCreator::createAudioCfg();
+    //gamer::PBCreator::createModelCfg();
+	
+    gamer::ModuleManager::getInstance()->initAllModules();
 
-	gamer::CommandManager::getInstance()->sendCmd(
-		gamer::CommandIDs::CMD_ID_CREATE_SCENE, nullptr);
+    gamer::CommandManager::getInstance()->sendCmd(
+        gamer::CommandIDs::CMD_CREATE_SCENE, nullptr);
 
-	gamer::CommandManager::getInstance()->sendCmd(
-		gamer::CommandIDs::CMD_ID_CREATE_ACTORS, nullptr);
+    gamer::CommandManager::getInstance()->sendCmd(
+        gamer::CommandIDs::CMD_CREATE_ACTORS, nullptr);
 
-	gamer::CommandManager::getInstance()->sendCmd(
-		gamer::CommandIDs::CMD_ID_INIT_CAMERA, nullptr);
+    gamer::CommandManager::getInstance()->sendCmd(
+        gamer::CommandIDs::CMD_INIT_CAMERA, nullptr);
 
     if (engine->executeScriptFile("main.lua"))
     {
         return false;
     }
-
-	gamer::PBCreator::creatSpaceCfg();
 
     return true;
 }

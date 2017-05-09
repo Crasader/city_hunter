@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<!--knight-->
+	<Action id="0" actor_type="0" name="idle" from_time="8.9" duration="0.533333" speed="0.7" />
+	<Action id="1" actor_type="0" name="walk" from_time="7.566666" duration="0.633333" speed="0.7" />
+	<Action id="2" actor_type="0" name="normal_atk1" from_time="3.433333" duration="0.866666" speed="0.7" />
+	<Action id="3" actor_type="0" name="normal_atk2" from_time="4.333333" duration="0.8" speed="0.7" />
+	<Action id="4" actor_type="0" name="special_atk1" from_time="5.333333" duration="1.0" speed="1.0" />
+	<Action id="5" actor_type="0" name="special_atk2" from_time="6.366666" duration="0.966666" speed="0.7" />
+	<Action id="6" actor_type="0" name="knocked" from_time="8.466666" duration="0.2" speed="0.7" />
+	<Action id="7" actor_type="0" name="" from_time="" duration="" speed="" />
+	<Action id="8" actor_type="0" name="defend" from_time="3.066666" duration="0.133333" speed="0.7" />
+    <Action id="9" actor_type="0" name="dead" from_time="0" duration="2.566666" speed="1.0" />
+
+    <!--archer-->
+	<Action id="10" actor_type="1" name="idle" from_time="6.933333" duration="1.5" speed="0.7" />
+	<Action id="11" actor_type="1" name="walk" from_time="3.666666" duration="0.666666" speed="0.7" />
+	<Action id="12" actor_type="1" name="normal_atk1" from_time="0.0" duration="0.4" speed="0.7" />
+	<Action id="13" actor_type="1" name="normal_atk2" from_time="0.4" duration="0.4" speed="0.7" />
+	<Action id="14" actor_type="1" name="special_atk1" from_time="1.0" duration="0.433333" speed="1.0" />
+	<Action id="15" actor_type="1" name="special_atk2" from_time="1.466666" duration="0.4" speed="1.0" />
+	<Action id="16" actor_type="1" name="knocked" from_time="4.5" duration="0.333333" speed="0.7" />
+	<Action id="17" actor_type="1" name="" from_time="" duration="" speed="" />
+	<Action id="18" actor_type="1" name="defend" from_time="2.333333" duration="0.833333" speed="0.7" />
+	<Action id="19" actor_type="1" name="dead" from_time="5.0" duration="1.533333" speed="0.7" />
+
+    <!--mage-->
+	<Action id="20" actor_type="2" name="idle" from_time="6.866666" duration="0.766666" speed="0.7" />
+	<Action id="21" actor_type="2" name="walk" from_time="3.3" duration="0.666666" speed="0.7" />
+    <Action id="22" actor_type="2" name="normal_atk1" from_time="0.4" duration="0.6" speed="0.7" />
+	<Action id="23" actor_type="2" name="normal_atk2" from_time="1.033333" duration="1.633333" speed="0.7" />
+	<Action id="24" actor_type="2" name="special_atk1" from_time="1.866666" duration="0.6" speed="1.0" />
+	<Action id="25" actor_type="2" name="special_atk2" from_time="2.5" duration="0.566666" speed="1.0" />
+	<Action id="26" actor_type="2" name="knocked" from_time="4.2" duration="0.2" speed="0.7" />
+	<Action id="27" actor_type="2" name="" from_time="" duration="" speed="" />
+	<Action id="28" actor_type="2" name="defend" from_time="0.033333" duration="0.133333" speed="0.7" />
+	<Action id="29" actor_type="2" name="dead" from_time="4.63" duration="2.0" speed="0.7" />
+</Root>

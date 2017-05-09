@@ -1,0 +1,16 @@
+package gamer.cfg;
+
+enum ModelIDs {
+  MODEL_HERO_KNIGHT          = 0;
+  MODEL_HERO_ARCHER          = 1;
+  MODEL_HERO_MAGE            = 2;
+}
+
+message Model { 
+  required int32  id   = 1;
+  required string file = 2;
+}
+
+message ModelCfg { 
+  repeated Model model = 1;
+}

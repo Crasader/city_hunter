@@ -17,18 +17,13 @@
 #include <string>
 
 #include "cocos2d.h"
-#include "cocos/3d/CCSprite3D.h"
 
 #include "actor.h"
-#include "command.h"
-#include "command_constants.h"
-#include "command_listener.h"
-#include "command_manager.h"
-#include "event_define.h"
-#include "event_manager.h"
-#include "macros.h"
+#include "command_headers.h"
+#include "event_headers.h"
 #include "data_manager.h"
-#include "actor_cfg.pb.h"
+#include "macros.h"
+#include "map_cfg.pb.h"
 #include "scene_manager.h"
 
 namespace gamer
@@ -61,7 +56,7 @@ ActorManager* ActorManager::getInstance()
 bool ActorManager::initListeners()
 {
     auto listener = gamer::CommandListener::create(
-        CommandIDs::CMD_ID_CREATE_ACTORS, 
+        CommandIDs::CMD_CREATE_ACTORS, 
         std::bind(&ActorManager::onCommandCreateActors, this, std::placeholders::_1),
         "ActorManager::onCommandCreateActors", 
         1);
@@ -75,45 +70,41 @@ void ActorManager::onCommandCreateActors(gamer::Command* cmd)
     auto scene = SceneManager::getInstance()->cur_scene();
     if (nullptr == scene)
         return;
-    
+
     auto actor_cfg = DataManager::getInstance()->actor_cfg();
-    for (int i = 0; i < actor_cfg.actor_model_size(); i++)
+    auto model_cfg = DataManager::getInstance()->model_cfg();
+    auto action_cfg = DataManager::getInstance()->action_cfg();
+    for (auto i = 0; i < actor_cfg.actor_size(); i++)
     {
-        auto actor_model = actor_cfg.actor_model(i);
-        auto model_fiel  = actor_model.model_file();
-        auto pos         = actor_model.position();
-        auto rotation    = actor_model.rotation();
-        auto actor       = ActorType::create(model_fiel);
+        auto actorcfg = actor_cfg.actor(i);
+        auto model_file  = model_cfg.model(actorcfg.model_id()).file();
+        auto pos         = actorcfg.position();
+        auto rotation    = actorcfg.rotation();
+        auto actor       = ActorType::create(model_file);
         if (nullptr != actor && actor->entity())
         {
             scene->addChild(actor->entity());
             
-            actor->set_id(actor_model.id());                    
-
-            actor->entity()->setScale(actor_model.scale());
+            actor->set_id(actorcfg.id());
+            actor->set_actor_type(actorcfg.actor_type());
+            actor->entity()->setScale(actorcfg.scale());
             actor->entity()->setPosition3D(cocos2d::Vec3(pos.x(), pos.y(), pos.z()));
             actor->entity()->setRotation3D(cocos2d::Vec3(rotation.x(), rotation.y(), rotation.z()));
-
-            for (int j = 0; j < actor_model.action_size(); j++)
+            // TODO : cfg ai update interval
+            auto actions = action_cfg.actor_action(actorcfg.actor_type());
+            for (int j = 0; j < actions.action_size(); j++)
             {
-                actor->addAction(actor_model.action(j).name(), 
-                                 model_fiel, 
-                                 actor_model.action(j).from_time(), 
-                                 actor_model.action(j).duration(), 
-                                 actor_model.action(j).speed());
+                actor->addAction((int)actions.action(j).id(),
+                                 model_file, 
+                                 actions.action(j).from_time(),
+                                 actions.action(j).duration(),
+                                 actions.action(j).speed());
             }
 
             created_actors_.insert(std::make_pair(actor->id(), actor));
         }
 
-        if (0 == i)
-        {
-            actor->state_machine()->changeState(StateIDs::FINDING_TARGET_STATE);
-        }
-        else
-        {
-            actor->state_machine()->changeState(StateIDs::IDLE_STATE);
-        }
+        actor->state_machine()->changeState(actorcfg.first_state_id());
     }
     
     // add actors to space
@@ -128,7 +119,7 @@ void ActorManager::onCommandCreateActors(gamer::Command* cmd)
                       });
     }
     
-    EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ID_ACTORS_CREATED);
+    EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTORS_CREATED);
 }
 
 bool ActorManager::init()

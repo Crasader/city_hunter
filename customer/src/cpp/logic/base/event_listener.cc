@@ -17,7 +17,7 @@
 #include <cassert>
 #include <stdint.h>
 
-#include "event_define.h"
+#include "event_constants.h"
 #include "lua_bind_helper.h"
 #include "macros.h"
 

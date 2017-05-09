@@ -23,20 +23,18 @@ namespace gamer
 class Listener 
 {
 public:
-    typedef int LuaFunction;
+    enum class ListenerPriorities
+    {
+        SENIOR,
+        JUNIOR,
+        NORMAL
+    };
 
-    //Listener();
+    typedef int LuaFunction;
 
     virtual ~Listener() {};
 
-    //virtual void execute_callback() = 0;
-
     virtual bool checkValidity() const = 0 ;
-
-    //// the target id may be a event id, a command id, or other id that the listener listen.
-    //inline int target_id() const { 
-    //    return target_id_; 
-    //};
 
     inline void set_listener_name(const std::string& listener_name) 
     { 

@@ -24,32 +24,31 @@
 #include <google/protobuf/repeated_field.h>
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "actor_type_cfg.pb.h"
+#include "common_cfg.pb.h"
 // @@protoc_insertion_point(includes)
 
 namespace gamer {
+namespace cfg {
 
 // Internal implementation detail -- do not call these.
 void  protobuf_AddDesc_actor_5fcfg_2eproto();
 void protobuf_AssignDesc_actor_5fcfg_2eproto();
 void protobuf_ShutdownFile_actor_5fcfg_2eproto();
 
-class ActorAudioCfg;
-class ActorModelCfg;
-class ActorModelCfg_Vec3;
-class ActorModelCfg_Action;
-class CommonAction;
+class Actor;
 class ActorCfg;
 
 // ===================================================================
 
-class ActorAudioCfg : public ::google::protobuf::Message {
+class Actor : public ::google::protobuf::Message {
  public:
-  ActorAudioCfg();
-  virtual ~ActorAudioCfg();
+  Actor();
+  virtual ~Actor();
 
-  ActorAudioCfg(const ActorAudioCfg& from);
+  Actor(const Actor& from);
 
-  inline ActorAudioCfg& operator=(const ActorAudioCfg& from) {
+  inline Actor& operator=(const Actor& from) {
     CopyFrom(from);
     return *this;
   }
@@ -63,17 +62,17 @@ class ActorAudioCfg : public ::google::protobuf::Message {
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const ActorAudioCfg& default_instance();
+  static const Actor& default_instance();
 
-  void Swap(ActorAudioCfg* other);
+  void Swap(Actor* other);
 
   // implements Message ----------------------------------------------
 
-  ActorAudioCfg* New() const;
+  Actor* New() const;
   void CopyFrom(const ::google::protobuf::Message& from);
   void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActorAudioCfg& from);
-  void MergeFrom(const ActorAudioCfg& from);
+  void CopyFrom(const Actor& from);
+  void MergeFrom(const Actor& from);
   void Clear();
   bool IsInitialized() const;
 
@@ -102,593 +101,96 @@ class ActorAudioCfg : public ::google::protobuf::Message {
   inline ::google::protobuf::int32 id() const;
   inline void set_id(::google::protobuf::int32 value);
 
-  // required string normal_atk1 = 2;
-  inline bool has_normal_atk1() const;
-  inline void clear_normal_atk1();
-  static const int kNormalAtk1FieldNumber = 2;
-  inline const ::std::string& normal_atk1() const;
-  inline void set_normal_atk1(const ::std::string& value);
-  inline void set_normal_atk1(const char* value);
-  inline void set_normal_atk1(const char* value, size_t size);
-  inline ::std::string* mutable_normal_atk1();
-  inline ::std::string* release_normal_atk1();
-  inline void set_allocated_normal_atk1(::std::string* normal_atk1);
-
-  // required string normal_atk2 = 3;
-  inline bool has_normal_atk2() const;
-  inline void clear_normal_atk2();
-  static const int kNormalAtk2FieldNumber = 3;
-  inline const ::std::string& normal_atk2() const;
-  inline void set_normal_atk2(const ::std::string& value);
-  inline void set_normal_atk2(const char* value);
-  inline void set_normal_atk2(const char* value, size_t size);
-  inline ::std::string* mutable_normal_atk2();
-  inline ::std::string* release_normal_atk2();
-  inline void set_allocated_normal_atk2(::std::string* normal_atk2);
-
-  // required string hurt = 4;
-  inline bool has_hurt() const;
-  inline void clear_hurt();
-  static const int kHurtFieldNumber = 4;
-  inline const ::std::string& hurt() const;
-  inline void set_hurt(const ::std::string& value);
-  inline void set_hurt(const char* value);
-  inline void set_hurt(const char* value, size_t size);
-  inline ::std::string* mutable_hurt();
-  inline ::std::string* release_hurt();
-  inline void set_allocated_hurt(::std::string* hurt);
-
-  // required string normal_atk_shout = 5;
-  inline bool has_normal_atk_shout() const;
-  inline void clear_normal_atk_shout();
-  static const int kNormalAtkShoutFieldNumber = 5;
-  inline const ::std::string& normal_atk_shout() const;
-  inline void set_normal_atk_shout(const ::std::string& value);
-  inline void set_normal_atk_shout(const char* value);
-  inline void set_normal_atk_shout(const char* value, size_t size);
-  inline ::std::string* mutable_normal_atk_shout();
-  inline ::std::string* release_normal_atk_shout();
-  inline void set_allocated_normal_atk_shout(::std::string* normal_atk_shout);
-
-  // required string special_atk_shout = 6;
-  inline bool has_special_atk_shout() const;
-  inline void clear_special_atk_shout();
-  static const int kSpecialAtkShoutFieldNumber = 6;
-  inline const ::std::string& special_atk_shout() const;
-  inline void set_special_atk_shout(const ::std::string& value);
-  inline void set_special_atk_shout(const char* value);
-  inline void set_special_atk_shout(const char* value, size_t size);
-  inline ::std::string* mutable_special_atk_shout();
-  inline ::std::string* release_special_atk_shout();
-  inline void set_allocated_special_atk_shout(::std::string* special_atk_shout);
-
-  // required string dead = 7;
-  inline bool has_dead() const;
-  inline void clear_dead();
-  static const int kDeadFieldNumber = 7;
-  inline const ::std::string& dead() const;
-  inline void set_dead(const ::std::string& value);
-  inline void set_dead(const char* value);
-  inline void set_dead(const char* value, size_t size);
-  inline ::std::string* mutable_dead();
-  inline ::std::string* release_dead();
-  inline void set_allocated_dead(::std::string* dead);
-
-  // @@protoc_insertion_point(class_scope:gamer.ActorAudioCfg)
- private:
-  inline void set_has_id();
-  inline void clear_has_id();
-  inline void set_has_normal_atk1();
-  inline void clear_has_normal_atk1();
-  inline void set_has_normal_atk2();
-  inline void clear_has_normal_atk2();
-  inline void set_has_hurt();
-  inline void clear_has_hurt();
-  inline void set_has_normal_atk_shout();
-  inline void clear_has_normal_atk_shout();
-  inline void set_has_special_atk_shout();
-  inline void clear_has_special_atk_shout();
-  inline void set_has_dead();
-  inline void clear_has_dead();
-
-  ::google::protobuf::UnknownFieldSet _unknown_fields_;
-
-  ::google::protobuf::uint32 _has_bits_[1];
-  mutable int _cached_size_;
-  ::std::string* normal_atk1_;
-  ::std::string* normal_atk2_;
-  ::std::string* hurt_;
-  ::std::string* normal_atk_shout_;
-  ::std::string* special_atk_shout_;
-  ::std::string* dead_;
-  ::google::protobuf::int32 id_;
-  friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
-  friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
-  friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
-
-  void InitAsDefaultInstance();
-  static ActorAudioCfg* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class ActorModelCfg_Vec3 : public ::google::protobuf::Message {
- public:
-  ActorModelCfg_Vec3();
-  virtual ~ActorModelCfg_Vec3();
-
-  ActorModelCfg_Vec3(const ActorModelCfg_Vec3& from);
-
-  inline ActorModelCfg_Vec3& operator=(const ActorModelCfg_Vec3& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _unknown_fields_;
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return &_unknown_fields_;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ActorModelCfg_Vec3& default_instance();
-
-  void Swap(ActorModelCfg_Vec3* other);
-
-  // implements Message ----------------------------------------------
-
-  ActorModelCfg_Vec3* New() const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActorModelCfg_Vec3& from);
-  void MergeFrom(const ActorModelCfg_Vec3& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  public:
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required float x = 1;
-  inline bool has_x() const;
-  inline void clear_x();
-  static const int kXFieldNumber = 1;
-  inline float x() const;
-  inline void set_x(float value);
-
-  // required float y = 2;
-  inline bool has_y() const;
-  inline void clear_y();
-  static const int kYFieldNumber = 2;
-  inline float y() const;
-  inline void set_y(float value);
-
-  // required float z = 3;
-  inline bool has_z() const;
-  inline void clear_z();
-  static const int kZFieldNumber = 3;
-  inline float z() const;
-  inline void set_z(float value);
-
-  // @@protoc_insertion_point(class_scope:gamer.ActorModelCfg.Vec3)
- private:
-  inline void set_has_x();
-  inline void clear_has_x();
-  inline void set_has_y();
-  inline void clear_has_y();
-  inline void set_has_z();
-  inline void clear_has_z();
-
-  ::google::protobuf::UnknownFieldSet _unknown_fields_;
-
-  ::google::protobuf::uint32 _has_bits_[1];
-  mutable int _cached_size_;
-  float x_;
-  float y_;
-  float z_;
-  friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
-  friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
-  friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
-
-  void InitAsDefaultInstance();
-  static ActorModelCfg_Vec3* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class ActorModelCfg_Action : public ::google::protobuf::Message {
- public:
-  ActorModelCfg_Action();
-  virtual ~ActorModelCfg_Action();
-
-  ActorModelCfg_Action(const ActorModelCfg_Action& from);
-
-  inline ActorModelCfg_Action& operator=(const ActorModelCfg_Action& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _unknown_fields_;
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return &_unknown_fields_;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ActorModelCfg_Action& default_instance();
-
-  void Swap(ActorModelCfg_Action* other);
-
-  // implements Message ----------------------------------------------
-
-  ActorModelCfg_Action* New() const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActorModelCfg_Action& from);
-  void MergeFrom(const ActorModelCfg_Action& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  public:
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required int32 id = 1;
-  inline bool has_id() const;
-  inline void clear_id();
-  static const int kIdFieldNumber = 1;
-  inline ::google::protobuf::int32 id() const;
-  inline void set_id(::google::protobuf::int32 value);
-
-  // optional string name = 2;
-  inline bool has_name() const;
-  inline void clear_name();
-  static const int kNameFieldNumber = 2;
-  inline const ::std::string& name() const;
-  inline void set_name(const ::std::string& value);
-  inline void set_name(const char* value);
-  inline void set_name(const char* value, size_t size);
-  inline ::std::string* mutable_name();
-  inline ::std::string* release_name();
-  inline void set_allocated_name(::std::string* name);
-
-  // required float from_time = 3;
-  inline bool has_from_time() const;
-  inline void clear_from_time();
-  static const int kFromTimeFieldNumber = 3;
-  inline float from_time() const;
-  inline void set_from_time(float value);
-
-  // required float duration = 4;
-  inline bool has_duration() const;
-  inline void clear_duration();
-  static const int kDurationFieldNumber = 4;
-  inline float duration() const;
-  inline void set_duration(float value);
-
-  // required float speed = 5;
-  inline bool has_speed() const;
-  inline void clear_speed();
-  static const int kSpeedFieldNumber = 5;
-  inline float speed() const;
-  inline void set_speed(float value);
-
-  // @@protoc_insertion_point(class_scope:gamer.ActorModelCfg.Action)
- private:
-  inline void set_has_id();
-  inline void clear_has_id();
-  inline void set_has_name();
-  inline void clear_has_name();
-  inline void set_has_from_time();
-  inline void clear_has_from_time();
-  inline void set_has_duration();
-  inline void clear_has_duration();
-  inline void set_has_speed();
-  inline void clear_has_speed();
-
-  ::google::protobuf::UnknownFieldSet _unknown_fields_;
-
-  ::google::protobuf::uint32 _has_bits_[1];
-  mutable int _cached_size_;
-  ::std::string* name_;
-  ::google::protobuf::int32 id_;
-  float from_time_;
-  float duration_;
-  float speed_;
-  friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
-  friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
-  friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
-
-  void InitAsDefaultInstance();
-  static ActorModelCfg_Action* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class ActorModelCfg : public ::google::protobuf::Message {
- public:
-  ActorModelCfg();
-  virtual ~ActorModelCfg();
-
-  ActorModelCfg(const ActorModelCfg& from);
-
-  inline ActorModelCfg& operator=(const ActorModelCfg& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _unknown_fields_;
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return &_unknown_fields_;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const ActorModelCfg& default_instance();
-
-  void Swap(ActorModelCfg* other);
-
-  // implements Message ----------------------------------------------
-
-  ActorModelCfg* New() const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const ActorModelCfg& from);
-  void MergeFrom(const ActorModelCfg& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  public:
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  typedef ActorModelCfg_Vec3 Vec3;
-  typedef ActorModelCfg_Action Action;
-
-  // accessors -------------------------------------------------------
-
-  // required int32 id = 1;
-  inline bool has_id() const;
-  inline void clear_id();
-  static const int kIdFieldNumber = 1;
-  inline ::google::protobuf::int32 id() const;
-  inline void set_id(::google::protobuf::int32 value);
-
-  // required string model_file = 2;
-  inline bool has_model_file() const;
-  inline void clear_model_file();
-  static const int kModelFileFieldNumber = 2;
-  inline const ::std::string& model_file() const;
-  inline void set_model_file(const ::std::string& value);
-  inline void set_model_file(const char* value);
-  inline void set_model_file(const char* value, size_t size);
-  inline ::std::string* mutable_model_file();
-  inline ::std::string* release_model_file();
-  inline void set_allocated_model_file(::std::string* model_file);
-
-  // required .gamer.ActorModelCfg.Vec3 position = 3;
+  // required .gamer.cfg.ActorTypes actor_type = 2;
+  inline bool has_actor_type() const;
+  inline void clear_actor_type();
+  static const int kActorTypeFieldNumber = 2;
+  inline ::gamer::cfg::ActorTypes actor_type() const;
+  inline void set_actor_type(::gamer::cfg::ActorTypes value);
+
+  // required int32 model_id = 3;
+  inline bool has_model_id() const;
+  inline void clear_model_id();
+  static const int kModelIdFieldNumber = 3;
+  inline ::google::protobuf::int32 model_id() const;
+  inline void set_model_id(::google::protobuf::int32 value);
+
+  // required .gamer.cfg.Vec3 position = 4;
   inline bool has_position() const;
   inline void clear_position();
-  static const int kPositionFieldNumber = 3;
-  inline const ::gamer::ActorModelCfg_Vec3& position() const;
-  inline ::gamer::ActorModelCfg_Vec3* mutable_position();
-  inline ::gamer::ActorModelCfg_Vec3* release_position();
-  inline void set_allocated_position(::gamer::ActorModelCfg_Vec3* position);
+  static const int kPositionFieldNumber = 4;
+  inline const ::gamer::cfg::Vec3& position() const;
+  inline ::gamer::cfg::Vec3* mutable_position();
+  inline ::gamer::cfg::Vec3* release_position();
+  inline void set_allocated_position(::gamer::cfg::Vec3* position);
 
-  // required .gamer.ActorModelCfg.Vec3 rotation = 4;
+  // required .gamer.cfg.Vec3 rotation = 5;
   inline bool has_rotation() const;
   inline void clear_rotation();
-  static const int kRotationFieldNumber = 4;
-  inline const ::gamer::ActorModelCfg_Vec3& rotation() const;
-  inline ::gamer::ActorModelCfg_Vec3* mutable_rotation();
-  inline ::gamer::ActorModelCfg_Vec3* release_rotation();
-  inline void set_allocated_rotation(::gamer::ActorModelCfg_Vec3* rotation);
+  static const int kRotationFieldNumber = 5;
+  inline const ::gamer::cfg::Vec3& rotation() const;
+  inline ::gamer::cfg::Vec3* mutable_rotation();
+  inline ::gamer::cfg::Vec3* release_rotation();
+  inline void set_allocated_rotation(::gamer::cfg::Vec3* rotation);
 
-  // optional float scale = 5 [default = 1];
+  // optional float scale = 6 [default = 1];
   inline bool has_scale() const;
   inline void clear_scale();
-  static const int kScaleFieldNumber = 5;
+  static const int kScaleFieldNumber = 6;
   inline float scale() const;
   inline void set_scale(float value);
 
-  // repeated .gamer.ActorModelCfg.Action action = 6;
-  inline int action_size() const;
-  inline void clear_action();
-  static const int kActionFieldNumber = 6;
-  inline const ::gamer::ActorModelCfg_Action& action(int index) const;
-  inline ::gamer::ActorModelCfg_Action* mutable_action(int index);
-  inline ::gamer::ActorModelCfg_Action* add_action();
-  inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg_Action >&
-      action() const;
-  inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg_Action >*
-      mutable_action();
+  // required float ai_update_interval = 7;
+  inline bool has_ai_update_interval() const;
+  inline void clear_ai_update_interval();
+  static const int kAiUpdateIntervalFieldNumber = 7;
+  inline float ai_update_interval() const;
+  inline void set_ai_update_interval(float value);
 
-  // @@protoc_insertion_point(class_scope:gamer.ActorModelCfg)
+  // required int32 first_state_id = 8;
+  inline bool has_first_state_id() const;
+  inline void clear_first_state_id();
+  static const int kFirstStateIdFieldNumber = 8;
+  inline ::google::protobuf::int32 first_state_id() const;
+  inline void set_first_state_id(::google::protobuf::int32 value);
+
+  // @@protoc_insertion_point(class_scope:gamer.cfg.Actor)
  private:
   inline void set_has_id();
   inline void clear_has_id();
-  inline void set_has_model_file();
-  inline void clear_has_model_file();
+  inline void set_has_actor_type();
+  inline void clear_has_actor_type();
+  inline void set_has_model_id();
+  inline void clear_has_model_id();
   inline void set_has_position();
   inline void clear_has_position();
   inline void set_has_rotation();
   inline void clear_has_rotation();
   inline void set_has_scale();
   inline void clear_has_scale();
+  inline void set_has_ai_update_interval();
+  inline void clear_has_ai_update_interval();
+  inline void set_has_first_state_id();
+  inline void clear_has_first_state_id();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::uint32 _has_bits_[1];
   mutable int _cached_size_;
-  ::std::string* model_file_;
-  ::gamer::ActorModelCfg_Vec3* position_;
   ::google::protobuf::int32 id_;
+  int actor_type_;
+  ::gamer::cfg::Vec3* position_;
+  ::google::protobuf::int32 model_id_;
   float scale_;
-  ::gamer::ActorModelCfg_Vec3* rotation_;
-  ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg_Action > action_;
+  ::gamer::cfg::Vec3* rotation_;
+  float ai_update_interval_;
+  ::google::protobuf::int32 first_state_id_;
   friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
   friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
   friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
 
   void InitAsDefaultInstance();
-  static ActorModelCfg* default_instance_;
-};
-// -------------------------------------------------------------------
-
-class CommonAction : public ::google::protobuf::Message {
- public:
-  CommonAction();
-  virtual ~CommonAction();
-
-  CommonAction(const CommonAction& from);
-
-  inline CommonAction& operator=(const CommonAction& from) {
-    CopyFrom(from);
-    return *this;
-  }
-
-  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
-    return _unknown_fields_;
-  }
-
-  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
-    return &_unknown_fields_;
-  }
-
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const CommonAction& default_instance();
-
-  void Swap(CommonAction* other);
-
-  // implements Message ----------------------------------------------
-
-  CommonAction* New() const;
-  void CopyFrom(const ::google::protobuf::Message& from);
-  void MergeFrom(const ::google::protobuf::Message& from);
-  void CopyFrom(const CommonAction& from);
-  void MergeFrom(const CommonAction& from);
-  void Clear();
-  bool IsInitialized() const;
-
-  int ByteSize() const;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input);
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const;
-  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output) const;
-  int GetCachedSize() const { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const;
-  public:
-  ::google::protobuf::Metadata GetMetadata() const;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // required string idle = 1;
-  inline bool has_idle() const;
-  inline void clear_idle();
-  static const int kIdleFieldNumber = 1;
-  inline const ::std::string& idle() const;
-  inline void set_idle(const ::std::string& value);
-  inline void set_idle(const char* value);
-  inline void set_idle(const char* value, size_t size);
-  inline ::std::string* mutable_idle();
-  inline ::std::string* release_idle();
-  inline void set_allocated_idle(::std::string* idle);
-
-  // required string walk = 2;
-  inline bool has_walk() const;
-  inline void clear_walk();
-  static const int kWalkFieldNumber = 2;
-  inline const ::std::string& walk() const;
-  inline void set_walk(const ::std::string& value);
-  inline void set_walk(const char* value);
-  inline void set_walk(const char* value, size_t size);
-  inline ::std::string* mutable_walk();
-  inline ::std::string* release_walk();
-  inline void set_allocated_walk(::std::string* walk);
-
-  // required string dead = 3;
-  inline bool has_dead() const;
-  inline void clear_dead();
-  static const int kDeadFieldNumber = 3;
-  inline const ::std::string& dead() const;
-  inline void set_dead(const ::std::string& value);
-  inline void set_dead(const char* value);
-  inline void set_dead(const char* value, size_t size);
-  inline ::std::string* mutable_dead();
-  inline ::std::string* release_dead();
-  inline void set_allocated_dead(::std::string* dead);
-
-  // @@protoc_insertion_point(class_scope:gamer.CommonAction)
- private:
-  inline void set_has_idle();
-  inline void clear_has_idle();
-  inline void set_has_walk();
-  inline void clear_has_walk();
-  inline void set_has_dead();
-  inline void clear_has_dead();
-
-  ::google::protobuf::UnknownFieldSet _unknown_fields_;
-
-  ::google::protobuf::uint32 _has_bits_[1];
-  mutable int _cached_size_;
-  ::std::string* idle_;
-  ::std::string* walk_;
-  ::std::string* dead_;
-  friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
-  friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
-  friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
-
-  void InitAsDefaultInstance();
-  static CommonAction* default_instance_;
+  static Actor* default_instance_;
 };
 // -------------------------------------------------------------------
 
@@ -745,51 +247,26 @@ class ActorCfg : public ::google::protobuf::Message {
 
   // accessors -------------------------------------------------------
 
-  // repeated .gamer.ActorModelCfg actor_model = 1;
-  inline int actor_model_size() const;
-  inline void clear_actor_model();
-  static const int kActorModelFieldNumber = 1;
-  inline const ::gamer::ActorModelCfg& actor_model(int index) const;
-  inline ::gamer::ActorModelCfg* mutable_actor_model(int index);
-  inline ::gamer::ActorModelCfg* add_actor_model();
-  inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg >&
-      actor_model() const;
-  inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg >*
-      mutable_actor_model();
+  // repeated .gamer.cfg.Actor actor = 1;
+  inline int actor_size() const;
+  inline void clear_actor();
+  static const int kActorFieldNumber = 1;
+  inline const ::gamer::cfg::Actor& actor(int index) const;
+  inline ::gamer::cfg::Actor* mutable_actor(int index);
+  inline ::gamer::cfg::Actor* add_actor();
+  inline const ::google::protobuf::RepeatedPtrField< ::gamer::cfg::Actor >&
+      actor() const;
+  inline ::google::protobuf::RepeatedPtrField< ::gamer::cfg::Actor >*
+      mutable_actor();
 
-  // repeated .gamer.ActorAudioCfg actor_audio = 2;
-  inline int actor_audio_size() const;
-  inline void clear_actor_audio();
-  static const int kActorAudioFieldNumber = 2;
-  inline const ::gamer::ActorAudioCfg& actor_audio(int index) const;
-  inline ::gamer::ActorAudioCfg* mutable_actor_audio(int index);
-  inline ::gamer::ActorAudioCfg* add_actor_audio();
-  inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorAudioCfg >&
-      actor_audio() const;
-  inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorAudioCfg >*
-      mutable_actor_audio();
-
-  // required .gamer.CommonAction common_action = 3;
-  inline bool has_common_action() const;
-  inline void clear_common_action();
-  static const int kCommonActionFieldNumber = 3;
-  inline const ::gamer::CommonAction& common_action() const;
-  inline ::gamer::CommonAction* mutable_common_action();
-  inline ::gamer::CommonAction* release_common_action();
-  inline void set_allocated_common_action(::gamer::CommonAction* common_action);
-
-  // @@protoc_insertion_point(class_scope:gamer.ActorCfg)
+  // @@protoc_insertion_point(class_scope:gamer.cfg.ActorCfg)
  private:
-  inline void set_has_common_action();
-  inline void clear_has_common_action();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
   ::google::protobuf::uint32 _has_bits_[1];
   mutable int _cached_size_;
-  ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg > actor_model_;
-  ::google::protobuf::RepeatedPtrField< ::gamer::ActorAudioCfg > actor_audio_;
-  ::gamer::CommonAction* common_action_;
+  ::google::protobuf::RepeatedPtrField< ::gamer::cfg::Actor > actor_;
   friend void  protobuf_AddDesc_actor_5fcfg_2eproto();
   friend void protobuf_AssignDesc_actor_5fcfg_2eproto();
   friend void protobuf_ShutdownFile_actor_5fcfg_2eproto();
@@ -802,875 +279,112 @@ class ActorCfg : public ::google::protobuf::Message {
 
 // ===================================================================
 
-// ActorAudioCfg
+// Actor
 
 // required int32 id = 1;
-inline bool ActorAudioCfg::has_id() const {
+inline bool Actor::has_id() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void ActorAudioCfg::set_has_id() {
+inline void Actor::set_has_id() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void ActorAudioCfg::clear_has_id() {
+inline void Actor::clear_has_id() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void ActorAudioCfg::clear_id() {
+inline void Actor::clear_id() {
   id_ = 0;
   clear_has_id();
 }
-inline ::google::protobuf::int32 ActorAudioCfg::id() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.id)
+inline ::google::protobuf::int32 Actor::id() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.id)
   return id_;
 }
-inline void ActorAudioCfg::set_id(::google::protobuf::int32 value) {
+inline void Actor::set_id(::google::protobuf::int32 value) {
   set_has_id();
   id_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.id)
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.id)
 }
 
-// required string normal_atk1 = 2;
-inline bool ActorAudioCfg::has_normal_atk1() const {
+// required .gamer.cfg.ActorTypes actor_type = 2;
+inline bool Actor::has_actor_type() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void ActorAudioCfg::set_has_normal_atk1() {
+inline void Actor::set_has_actor_type() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void ActorAudioCfg::clear_has_normal_atk1() {
+inline void Actor::clear_has_actor_type() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void ActorAudioCfg::clear_normal_atk1() {
-  if (normal_atk1_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk1_->clear();
-  }
-  clear_has_normal_atk1();
+inline void Actor::clear_actor_type() {
+  actor_type_ = 0;
+  clear_has_actor_type();
 }
-inline const ::std::string& ActorAudioCfg::normal_atk1() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.normal_atk1)
-  return *normal_atk1_;
+inline ::gamer::cfg::ActorTypes Actor::actor_type() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.actor_type)
+  return static_cast< ::gamer::cfg::ActorTypes >(actor_type_);
 }
-inline void ActorAudioCfg::set_normal_atk1(const ::std::string& value) {
-  set_has_normal_atk1();
-  if (normal_atk1_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk1_ = new ::std::string;
-  }
-  normal_atk1_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.normal_atk1)
-}
-inline void ActorAudioCfg::set_normal_atk1(const char* value) {
-  set_has_normal_atk1();
-  if (normal_atk1_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk1_ = new ::std::string;
-  }
-  normal_atk1_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.normal_atk1)
-}
-inline void ActorAudioCfg::set_normal_atk1(const char* value, size_t size) {
-  set_has_normal_atk1();
-  if (normal_atk1_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk1_ = new ::std::string;
-  }
-  normal_atk1_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.normal_atk1)
-}
-inline ::std::string* ActorAudioCfg::mutable_normal_atk1() {
-  set_has_normal_atk1();
-  if (normal_atk1_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk1_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.normal_atk1)
-  return normal_atk1_;
-}
-inline ::std::string* ActorAudioCfg::release_normal_atk1() {
-  clear_has_normal_atk1();
-  if (normal_atk1_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = normal_atk1_;
-    normal_atk1_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_normal_atk1(::std::string* normal_atk1) {
-  if (normal_atk1_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk1_;
-  }
-  if (normal_atk1) {
-    set_has_normal_atk1();
-    normal_atk1_ = normal_atk1;
-  } else {
-    clear_has_normal_atk1();
-    normal_atk1_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.normal_atk1)
+inline void Actor::set_actor_type(::gamer::cfg::ActorTypes value) {
+  assert(::gamer::cfg::ActorTypes_IsValid(value));
+  set_has_actor_type();
+  actor_type_ = value;
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.actor_type)
 }
 
-// required string normal_atk2 = 3;
-inline bool ActorAudioCfg::has_normal_atk2() const {
+// required int32 model_id = 3;
+inline bool Actor::has_model_id() const {
   return (_has_bits_[0] & 0x00000004u) != 0;
 }
-inline void ActorAudioCfg::set_has_normal_atk2() {
+inline void Actor::set_has_model_id() {
   _has_bits_[0] |= 0x00000004u;
 }
-inline void ActorAudioCfg::clear_has_normal_atk2() {
+inline void Actor::clear_has_model_id() {
   _has_bits_[0] &= ~0x00000004u;
 }
-inline void ActorAudioCfg::clear_normal_atk2() {
-  if (normal_atk2_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk2_->clear();
-  }
-  clear_has_normal_atk2();
+inline void Actor::clear_model_id() {
+  model_id_ = 0;
+  clear_has_model_id();
 }
-inline const ::std::string& ActorAudioCfg::normal_atk2() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.normal_atk2)
-  return *normal_atk2_;
+inline ::google::protobuf::int32 Actor::model_id() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.model_id)
+  return model_id_;
 }
-inline void ActorAudioCfg::set_normal_atk2(const ::std::string& value) {
-  set_has_normal_atk2();
-  if (normal_atk2_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk2_ = new ::std::string;
-  }
-  normal_atk2_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.normal_atk2)
-}
-inline void ActorAudioCfg::set_normal_atk2(const char* value) {
-  set_has_normal_atk2();
-  if (normal_atk2_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk2_ = new ::std::string;
-  }
-  normal_atk2_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.normal_atk2)
-}
-inline void ActorAudioCfg::set_normal_atk2(const char* value, size_t size) {
-  set_has_normal_atk2();
-  if (normal_atk2_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk2_ = new ::std::string;
-  }
-  normal_atk2_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.normal_atk2)
-}
-inline ::std::string* ActorAudioCfg::mutable_normal_atk2() {
-  set_has_normal_atk2();
-  if (normal_atk2_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk2_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.normal_atk2)
-  return normal_atk2_;
-}
-inline ::std::string* ActorAudioCfg::release_normal_atk2() {
-  clear_has_normal_atk2();
-  if (normal_atk2_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = normal_atk2_;
-    normal_atk2_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_normal_atk2(::std::string* normal_atk2) {
-  if (normal_atk2_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk2_;
-  }
-  if (normal_atk2) {
-    set_has_normal_atk2();
-    normal_atk2_ = normal_atk2;
-  } else {
-    clear_has_normal_atk2();
-    normal_atk2_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.normal_atk2)
+inline void Actor::set_model_id(::google::protobuf::int32 value) {
+  set_has_model_id();
+  model_id_ = value;
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.model_id)
 }
 
-// required string hurt = 4;
-inline bool ActorAudioCfg::has_hurt() const {
+// required .gamer.cfg.Vec3 position = 4;
+inline bool Actor::has_position() const {
   return (_has_bits_[0] & 0x00000008u) != 0;
 }
-inline void ActorAudioCfg::set_has_hurt() {
+inline void Actor::set_has_position() {
   _has_bits_[0] |= 0x00000008u;
 }
-inline void ActorAudioCfg::clear_has_hurt() {
+inline void Actor::clear_has_position() {
   _has_bits_[0] &= ~0x00000008u;
 }
-inline void ActorAudioCfg::clear_hurt() {
-  if (hurt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    hurt_->clear();
-  }
-  clear_has_hurt();
-}
-inline const ::std::string& ActorAudioCfg::hurt() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.hurt)
-  return *hurt_;
-}
-inline void ActorAudioCfg::set_hurt(const ::std::string& value) {
-  set_has_hurt();
-  if (hurt_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    hurt_ = new ::std::string;
-  }
-  hurt_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.hurt)
-}
-inline void ActorAudioCfg::set_hurt(const char* value) {
-  set_has_hurt();
-  if (hurt_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    hurt_ = new ::std::string;
-  }
-  hurt_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.hurt)
-}
-inline void ActorAudioCfg::set_hurt(const char* value, size_t size) {
-  set_has_hurt();
-  if (hurt_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    hurt_ = new ::std::string;
-  }
-  hurt_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.hurt)
-}
-inline ::std::string* ActorAudioCfg::mutable_hurt() {
-  set_has_hurt();
-  if (hurt_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    hurt_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.hurt)
-  return hurt_;
-}
-inline ::std::string* ActorAudioCfg::release_hurt() {
-  clear_has_hurt();
-  if (hurt_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = hurt_;
-    hurt_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_hurt(::std::string* hurt) {
-  if (hurt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete hurt_;
-  }
-  if (hurt) {
-    set_has_hurt();
-    hurt_ = hurt;
-  } else {
-    clear_has_hurt();
-    hurt_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.hurt)
-}
-
-// required string normal_atk_shout = 5;
-inline bool ActorAudioCfg::has_normal_atk_shout() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void ActorAudioCfg::set_has_normal_atk_shout() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void ActorAudioCfg::clear_has_normal_atk_shout() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void ActorAudioCfg::clear_normal_atk_shout() {
-  if (normal_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk_shout_->clear();
-  }
-  clear_has_normal_atk_shout();
-}
-inline const ::std::string& ActorAudioCfg::normal_atk_shout() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.normal_atk_shout)
-  return *normal_atk_shout_;
-}
-inline void ActorAudioCfg::set_normal_atk_shout(const ::std::string& value) {
-  set_has_normal_atk_shout();
-  if (normal_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk_shout_ = new ::std::string;
-  }
-  normal_atk_shout_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.normal_atk_shout)
-}
-inline void ActorAudioCfg::set_normal_atk_shout(const char* value) {
-  set_has_normal_atk_shout();
-  if (normal_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk_shout_ = new ::std::string;
-  }
-  normal_atk_shout_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.normal_atk_shout)
-}
-inline void ActorAudioCfg::set_normal_atk_shout(const char* value, size_t size) {
-  set_has_normal_atk_shout();
-  if (normal_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk_shout_ = new ::std::string;
-  }
-  normal_atk_shout_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.normal_atk_shout)
-}
-inline ::std::string* ActorAudioCfg::mutable_normal_atk_shout() {
-  set_has_normal_atk_shout();
-  if (normal_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    normal_atk_shout_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.normal_atk_shout)
-  return normal_atk_shout_;
-}
-inline ::std::string* ActorAudioCfg::release_normal_atk_shout() {
-  clear_has_normal_atk_shout();
-  if (normal_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = normal_atk_shout_;
-    normal_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_normal_atk_shout(::std::string* normal_atk_shout) {
-  if (normal_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk_shout_;
-  }
-  if (normal_atk_shout) {
-    set_has_normal_atk_shout();
-    normal_atk_shout_ = normal_atk_shout;
-  } else {
-    clear_has_normal_atk_shout();
-    normal_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.normal_atk_shout)
-}
-
-// required string special_atk_shout = 6;
-inline bool ActorAudioCfg::has_special_atk_shout() const {
-  return (_has_bits_[0] & 0x00000020u) != 0;
-}
-inline void ActorAudioCfg::set_has_special_atk_shout() {
-  _has_bits_[0] |= 0x00000020u;
-}
-inline void ActorAudioCfg::clear_has_special_atk_shout() {
-  _has_bits_[0] &= ~0x00000020u;
-}
-inline void ActorAudioCfg::clear_special_atk_shout() {
-  if (special_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    special_atk_shout_->clear();
-  }
-  clear_has_special_atk_shout();
-}
-inline const ::std::string& ActorAudioCfg::special_atk_shout() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.special_atk_shout)
-  return *special_atk_shout_;
-}
-inline void ActorAudioCfg::set_special_atk_shout(const ::std::string& value) {
-  set_has_special_atk_shout();
-  if (special_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    special_atk_shout_ = new ::std::string;
-  }
-  special_atk_shout_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.special_atk_shout)
-}
-inline void ActorAudioCfg::set_special_atk_shout(const char* value) {
-  set_has_special_atk_shout();
-  if (special_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    special_atk_shout_ = new ::std::string;
-  }
-  special_atk_shout_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.special_atk_shout)
-}
-inline void ActorAudioCfg::set_special_atk_shout(const char* value, size_t size) {
-  set_has_special_atk_shout();
-  if (special_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    special_atk_shout_ = new ::std::string;
-  }
-  special_atk_shout_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.special_atk_shout)
-}
-inline ::std::string* ActorAudioCfg::mutable_special_atk_shout() {
-  set_has_special_atk_shout();
-  if (special_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    special_atk_shout_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.special_atk_shout)
-  return special_atk_shout_;
-}
-inline ::std::string* ActorAudioCfg::release_special_atk_shout() {
-  clear_has_special_atk_shout();
-  if (special_atk_shout_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = special_atk_shout_;
-    special_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_special_atk_shout(::std::string* special_atk_shout) {
-  if (special_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete special_atk_shout_;
-  }
-  if (special_atk_shout) {
-    set_has_special_atk_shout();
-    special_atk_shout_ = special_atk_shout;
-  } else {
-    clear_has_special_atk_shout();
-    special_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.special_atk_shout)
-}
-
-// required string dead = 7;
-inline bool ActorAudioCfg::has_dead() const {
-  return (_has_bits_[0] & 0x00000040u) != 0;
-}
-inline void ActorAudioCfg::set_has_dead() {
-  _has_bits_[0] |= 0x00000040u;
-}
-inline void ActorAudioCfg::clear_has_dead() {
-  _has_bits_[0] &= ~0x00000040u;
-}
-inline void ActorAudioCfg::clear_dead() {
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_->clear();
-  }
-  clear_has_dead();
-}
-inline const ::std::string& ActorAudioCfg::dead() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorAudioCfg.dead)
-  return *dead_;
-}
-inline void ActorAudioCfg::set_dead(const ::std::string& value) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorAudioCfg.dead)
-}
-inline void ActorAudioCfg::set_dead(const char* value) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorAudioCfg.dead)
-}
-inline void ActorAudioCfg::set_dead(const char* value, size_t size) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorAudioCfg.dead)
-}
-inline ::std::string* ActorAudioCfg::mutable_dead() {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorAudioCfg.dead)
-  return dead_;
-}
-inline ::std::string* ActorAudioCfg::release_dead() {
-  clear_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = dead_;
-    dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorAudioCfg::set_allocated_dead(::std::string* dead) {
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete dead_;
-  }
-  if (dead) {
-    set_has_dead();
-    dead_ = dead;
-  } else {
-    clear_has_dead();
-    dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorAudioCfg.dead)
-}
-
-// -------------------------------------------------------------------
-
-// ActorModelCfg_Vec3
-
-// required float x = 1;
-inline bool ActorModelCfg_Vec3::has_x() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void ActorModelCfg_Vec3::set_has_x() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void ActorModelCfg_Vec3::clear_has_x() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void ActorModelCfg_Vec3::clear_x() {
-  x_ = 0;
-  clear_has_x();
-}
-inline float ActorModelCfg_Vec3::x() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Vec3.x)
-  return x_;
-}
-inline void ActorModelCfg_Vec3::set_x(float value) {
-  set_has_x();
-  x_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Vec3.x)
-}
-
-// required float y = 2;
-inline bool ActorModelCfg_Vec3::has_y() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void ActorModelCfg_Vec3::set_has_y() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void ActorModelCfg_Vec3::clear_has_y() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void ActorModelCfg_Vec3::clear_y() {
-  y_ = 0;
-  clear_has_y();
-}
-inline float ActorModelCfg_Vec3::y() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Vec3.y)
-  return y_;
-}
-inline void ActorModelCfg_Vec3::set_y(float value) {
-  set_has_y();
-  y_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Vec3.y)
-}
-
-// required float z = 3;
-inline bool ActorModelCfg_Vec3::has_z() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void ActorModelCfg_Vec3::set_has_z() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void ActorModelCfg_Vec3::clear_has_z() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void ActorModelCfg_Vec3::clear_z() {
-  z_ = 0;
-  clear_has_z();
-}
-inline float ActorModelCfg_Vec3::z() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Vec3.z)
-  return z_;
-}
-inline void ActorModelCfg_Vec3::set_z(float value) {
-  set_has_z();
-  z_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Vec3.z)
-}
-
-// -------------------------------------------------------------------
-
-// ActorModelCfg_Action
-
-// required int32 id = 1;
-inline bool ActorModelCfg_Action::has_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void ActorModelCfg_Action::set_has_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void ActorModelCfg_Action::clear_has_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void ActorModelCfg_Action::clear_id() {
-  id_ = 0;
-  clear_has_id();
-}
-inline ::google::protobuf::int32 ActorModelCfg_Action::id() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Action.id)
-  return id_;
-}
-inline void ActorModelCfg_Action::set_id(::google::protobuf::int32 value) {
-  set_has_id();
-  id_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Action.id)
-}
-
-// optional string name = 2;
-inline bool ActorModelCfg_Action::has_name() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void ActorModelCfg_Action::set_has_name() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void ActorModelCfg_Action::clear_has_name() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void ActorModelCfg_Action::clear_name() {
-  if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    name_->clear();
-  }
-  clear_has_name();
-}
-inline const ::std::string& ActorModelCfg_Action::name() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Action.name)
-  return *name_;
-}
-inline void ActorModelCfg_Action::set_name(const ::std::string& value) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    name_ = new ::std::string;
-  }
-  name_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Action.name)
-}
-inline void ActorModelCfg_Action::set_name(const char* value) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    name_ = new ::std::string;
-  }
-  name_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorModelCfg.Action.name)
-}
-inline void ActorModelCfg_Action::set_name(const char* value, size_t size) {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    name_ = new ::std::string;
-  }
-  name_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorModelCfg.Action.name)
-}
-inline ::std::string* ActorModelCfg_Action::mutable_name() {
-  set_has_name();
-  if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    name_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorModelCfg.Action.name)
-  return name_;
-}
-inline ::std::string* ActorModelCfg_Action::release_name() {
-  clear_has_name();
-  if (name_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = name_;
-    name_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorModelCfg_Action::set_allocated_name(::std::string* name) {
-  if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete name_;
-  }
-  if (name) {
-    set_has_name();
-    name_ = name;
-  } else {
-    clear_has_name();
-    name_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorModelCfg.Action.name)
-}
-
-// required float from_time = 3;
-inline bool ActorModelCfg_Action::has_from_time() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void ActorModelCfg_Action::set_has_from_time() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void ActorModelCfg_Action::clear_has_from_time() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void ActorModelCfg_Action::clear_from_time() {
-  from_time_ = 0;
-  clear_has_from_time();
-}
-inline float ActorModelCfg_Action::from_time() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Action.from_time)
-  return from_time_;
-}
-inline void ActorModelCfg_Action::set_from_time(float value) {
-  set_has_from_time();
-  from_time_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Action.from_time)
-}
-
-// required float duration = 4;
-inline bool ActorModelCfg_Action::has_duration() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
-}
-inline void ActorModelCfg_Action::set_has_duration() {
-  _has_bits_[0] |= 0x00000008u;
-}
-inline void ActorModelCfg_Action::clear_has_duration() {
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline void ActorModelCfg_Action::clear_duration() {
-  duration_ = 0;
-  clear_has_duration();
-}
-inline float ActorModelCfg_Action::duration() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Action.duration)
-  return duration_;
-}
-inline void ActorModelCfg_Action::set_duration(float value) {
-  set_has_duration();
-  duration_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Action.duration)
-}
-
-// required float speed = 5;
-inline bool ActorModelCfg_Action::has_speed() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
-}
-inline void ActorModelCfg_Action::set_has_speed() {
-  _has_bits_[0] |= 0x00000010u;
-}
-inline void ActorModelCfg_Action::clear_has_speed() {
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline void ActorModelCfg_Action::clear_speed() {
-  speed_ = 0;
-  clear_has_speed();
-}
-inline float ActorModelCfg_Action::speed() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.Action.speed)
-  return speed_;
-}
-inline void ActorModelCfg_Action::set_speed(float value) {
-  set_has_speed();
-  speed_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.Action.speed)
-}
-
-// -------------------------------------------------------------------
-
-// ActorModelCfg
-
-// required int32 id = 1;
-inline bool ActorModelCfg::has_id() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
-inline void ActorModelCfg::set_has_id() {
-  _has_bits_[0] |= 0x00000001u;
-}
-inline void ActorModelCfg::clear_has_id() {
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline void ActorModelCfg::clear_id() {
-  id_ = 0;
-  clear_has_id();
-}
-inline ::google::protobuf::int32 ActorModelCfg::id() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.id)
-  return id_;
-}
-inline void ActorModelCfg::set_id(::google::protobuf::int32 value) {
-  set_has_id();
-  id_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.id)
-}
-
-// required string model_file = 2;
-inline bool ActorModelCfg::has_model_file() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void ActorModelCfg::set_has_model_file() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void ActorModelCfg::clear_has_model_file() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void ActorModelCfg::clear_model_file() {
-  if (model_file_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    model_file_->clear();
-  }
-  clear_has_model_file();
-}
-inline const ::std::string& ActorModelCfg::model_file() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.model_file)
-  return *model_file_;
-}
-inline void ActorModelCfg::set_model_file(const ::std::string& value) {
-  set_has_model_file();
-  if (model_file_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    model_file_ = new ::std::string;
-  }
-  model_file_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.model_file)
-}
-inline void ActorModelCfg::set_model_file(const char* value) {
-  set_has_model_file();
-  if (model_file_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    model_file_ = new ::std::string;
-  }
-  model_file_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.ActorModelCfg.model_file)
-}
-inline void ActorModelCfg::set_model_file(const char* value, size_t size) {
-  set_has_model_file();
-  if (model_file_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    model_file_ = new ::std::string;
-  }
-  model_file_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.ActorModelCfg.model_file)
-}
-inline ::std::string* ActorModelCfg::mutable_model_file() {
-  set_has_model_file();
-  if (model_file_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    model_file_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.ActorModelCfg.model_file)
-  return model_file_;
-}
-inline ::std::string* ActorModelCfg::release_model_file() {
-  clear_has_model_file();
-  if (model_file_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = model_file_;
-    model_file_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void ActorModelCfg::set_allocated_model_file(::std::string* model_file) {
-  if (model_file_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete model_file_;
-  }
-  if (model_file) {
-    set_has_model_file();
-    model_file_ = model_file;
-  } else {
-    clear_has_model_file();
-    model_file_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorModelCfg.model_file)
-}
-
-// required .gamer.ActorModelCfg.Vec3 position = 3;
-inline bool ActorModelCfg::has_position() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void ActorModelCfg::set_has_position() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void ActorModelCfg::clear_has_position() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void ActorModelCfg::clear_position() {
-  if (position_ != NULL) position_->::gamer::ActorModelCfg_Vec3::Clear();
+inline void Actor::clear_position() {
+  if (position_ != NULL) position_->::gamer::cfg::Vec3::Clear();
   clear_has_position();
 }
-inline const ::gamer::ActorModelCfg_Vec3& ActorModelCfg::position() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.position)
+inline const ::gamer::cfg::Vec3& Actor::position() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.position)
   return position_ != NULL ? *position_ : *default_instance_->position_;
 }
-inline ::gamer::ActorModelCfg_Vec3* ActorModelCfg::mutable_position() {
+inline ::gamer::cfg::Vec3* Actor::mutable_position() {
   set_has_position();
-  if (position_ == NULL) position_ = new ::gamer::ActorModelCfg_Vec3;
-  // @@protoc_insertion_point(field_mutable:gamer.ActorModelCfg.position)
+  if (position_ == NULL) position_ = new ::gamer::cfg::Vec3;
+  // @@protoc_insertion_point(field_mutable:gamer.cfg.Actor.position)
   return position_;
 }
-inline ::gamer::ActorModelCfg_Vec3* ActorModelCfg::release_position() {
+inline ::gamer::cfg::Vec3* Actor::release_position() {
   clear_has_position();
-  ::gamer::ActorModelCfg_Vec3* temp = position_;
+  ::gamer::cfg::Vec3* temp = position_;
   position_ = NULL;
   return temp;
 }
-inline void ActorModelCfg::set_allocated_position(::gamer::ActorModelCfg_Vec3* position) {
+inline void Actor::set_allocated_position(::gamer::cfg::Vec3* position) {
   delete position_;
   position_ = position;
   if (position) {
@@ -1678,40 +392,40 @@ inline void ActorModelCfg::set_allocated_position(::gamer::ActorModelCfg_Vec3* p
   } else {
     clear_has_position();
   }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorModelCfg.position)
+  // @@protoc_insertion_point(field_set_allocated:gamer.cfg.Actor.position)
 }
 
-// required .gamer.ActorModelCfg.Vec3 rotation = 4;
-inline bool ActorModelCfg::has_rotation() const {
-  return (_has_bits_[0] & 0x00000008u) != 0;
+// required .gamer.cfg.Vec3 rotation = 5;
+inline bool Actor::has_rotation() const {
+  return (_has_bits_[0] & 0x00000010u) != 0;
 }
-inline void ActorModelCfg::set_has_rotation() {
-  _has_bits_[0] |= 0x00000008u;
+inline void Actor::set_has_rotation() {
+  _has_bits_[0] |= 0x00000010u;
 }
-inline void ActorModelCfg::clear_has_rotation() {
-  _has_bits_[0] &= ~0x00000008u;
+inline void Actor::clear_has_rotation() {
+  _has_bits_[0] &= ~0x00000010u;
 }
-inline void ActorModelCfg::clear_rotation() {
-  if (rotation_ != NULL) rotation_->::gamer::ActorModelCfg_Vec3::Clear();
+inline void Actor::clear_rotation() {
+  if (rotation_ != NULL) rotation_->::gamer::cfg::Vec3::Clear();
   clear_has_rotation();
 }
-inline const ::gamer::ActorModelCfg_Vec3& ActorModelCfg::rotation() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.rotation)
+inline const ::gamer::cfg::Vec3& Actor::rotation() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.rotation)
   return rotation_ != NULL ? *rotation_ : *default_instance_->rotation_;
 }
-inline ::gamer::ActorModelCfg_Vec3* ActorModelCfg::mutable_rotation() {
+inline ::gamer::cfg::Vec3* Actor::mutable_rotation() {
   set_has_rotation();
-  if (rotation_ == NULL) rotation_ = new ::gamer::ActorModelCfg_Vec3;
-  // @@protoc_insertion_point(field_mutable:gamer.ActorModelCfg.rotation)
+  if (rotation_ == NULL) rotation_ = new ::gamer::cfg::Vec3;
+  // @@protoc_insertion_point(field_mutable:gamer.cfg.Actor.rotation)
   return rotation_;
 }
-inline ::gamer::ActorModelCfg_Vec3* ActorModelCfg::release_rotation() {
+inline ::gamer::cfg::Vec3* Actor::release_rotation() {
   clear_has_rotation();
-  ::gamer::ActorModelCfg_Vec3* temp = rotation_;
+  ::gamer::cfg::Vec3* temp = rotation_;
   rotation_ = NULL;
   return temp;
 }
-inline void ActorModelCfg::set_allocated_rotation(::gamer::ActorModelCfg_Vec3* rotation) {
+inline void Actor::set_allocated_rotation(::gamer::cfg::Vec3* rotation) {
   delete rotation_;
   rotation_ = rotation;
   if (rotation) {
@@ -1719,403 +433,119 @@ inline void ActorModelCfg::set_allocated_rotation(::gamer::ActorModelCfg_Vec3* r
   } else {
     clear_has_rotation();
   }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorModelCfg.rotation)
+  // @@protoc_insertion_point(field_set_allocated:gamer.cfg.Actor.rotation)
 }
 
-// optional float scale = 5 [default = 1];
-inline bool ActorModelCfg::has_scale() const {
-  return (_has_bits_[0] & 0x00000010u) != 0;
+// optional float scale = 6 [default = 1];
+inline bool Actor::has_scale() const {
+  return (_has_bits_[0] & 0x00000020u) != 0;
 }
-inline void ActorModelCfg::set_has_scale() {
-  _has_bits_[0] |= 0x00000010u;
+inline void Actor::set_has_scale() {
+  _has_bits_[0] |= 0x00000020u;
 }
-inline void ActorModelCfg::clear_has_scale() {
-  _has_bits_[0] &= ~0x00000010u;
+inline void Actor::clear_has_scale() {
+  _has_bits_[0] &= ~0x00000020u;
 }
-inline void ActorModelCfg::clear_scale() {
+inline void Actor::clear_scale() {
   scale_ = 1;
   clear_has_scale();
 }
-inline float ActorModelCfg::scale() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.scale)
+inline float Actor::scale() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.scale)
   return scale_;
 }
-inline void ActorModelCfg::set_scale(float value) {
+inline void Actor::set_scale(float value) {
   set_has_scale();
   scale_ = value;
-  // @@protoc_insertion_point(field_set:gamer.ActorModelCfg.scale)
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.scale)
 }
 
-// repeated .gamer.ActorModelCfg.Action action = 6;
-inline int ActorModelCfg::action_size() const {
-  return action_.size();
+// required float ai_update_interval = 7;
+inline bool Actor::has_ai_update_interval() const {
+  return (_has_bits_[0] & 0x00000040u) != 0;
 }
-inline void ActorModelCfg::clear_action() {
-  action_.Clear();
+inline void Actor::set_has_ai_update_interval() {
+  _has_bits_[0] |= 0x00000040u;
 }
-inline const ::gamer::ActorModelCfg_Action& ActorModelCfg::action(int index) const {
-  // @@protoc_insertion_point(field_get:gamer.ActorModelCfg.action)
-  return action_.Get(index);
+inline void Actor::clear_has_ai_update_interval() {
+  _has_bits_[0] &= ~0x00000040u;
 }
-inline ::gamer::ActorModelCfg_Action* ActorModelCfg::mutable_action(int index) {
-  // @@protoc_insertion_point(field_mutable:gamer.ActorModelCfg.action)
-  return action_.Mutable(index);
+inline void Actor::clear_ai_update_interval() {
+  ai_update_interval_ = 0;
+  clear_has_ai_update_interval();
 }
-inline ::gamer::ActorModelCfg_Action* ActorModelCfg::add_action() {
-  // @@protoc_insertion_point(field_add:gamer.ActorModelCfg.action)
-  return action_.Add();
+inline float Actor::ai_update_interval() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.ai_update_interval)
+  return ai_update_interval_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg_Action >&
-ActorModelCfg::action() const {
-  // @@protoc_insertion_point(field_list:gamer.ActorModelCfg.action)
-  return action_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg_Action >*
-ActorModelCfg::mutable_action() {
-  // @@protoc_insertion_point(field_mutable_list:gamer.ActorModelCfg.action)
-  return &action_;
+inline void Actor::set_ai_update_interval(float value) {
+  set_has_ai_update_interval();
+  ai_update_interval_ = value;
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.ai_update_interval)
 }
 
-// -------------------------------------------------------------------
-
-// CommonAction
-
-// required string idle = 1;
-inline bool CommonAction::has_idle() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
+// required int32 first_state_id = 8;
+inline bool Actor::has_first_state_id() const {
+  return (_has_bits_[0] & 0x00000080u) != 0;
 }
-inline void CommonAction::set_has_idle() {
-  _has_bits_[0] |= 0x00000001u;
+inline void Actor::set_has_first_state_id() {
+  _has_bits_[0] |= 0x00000080u;
 }
-inline void CommonAction::clear_has_idle() {
-  _has_bits_[0] &= ~0x00000001u;
+inline void Actor::clear_has_first_state_id() {
+  _has_bits_[0] &= ~0x00000080u;
 }
-inline void CommonAction::clear_idle() {
-  if (idle_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    idle_->clear();
-  }
-  clear_has_idle();
+inline void Actor::clear_first_state_id() {
+  first_state_id_ = 0;
+  clear_has_first_state_id();
 }
-inline const ::std::string& CommonAction::idle() const {
-  // @@protoc_insertion_point(field_get:gamer.CommonAction.idle)
-  return *idle_;
+inline ::google::protobuf::int32 Actor::first_state_id() const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.Actor.first_state_id)
+  return first_state_id_;
 }
-inline void CommonAction::set_idle(const ::std::string& value) {
-  set_has_idle();
-  if (idle_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    idle_ = new ::std::string;
-  }
-  idle_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.CommonAction.idle)
-}
-inline void CommonAction::set_idle(const char* value) {
-  set_has_idle();
-  if (idle_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    idle_ = new ::std::string;
-  }
-  idle_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.CommonAction.idle)
-}
-inline void CommonAction::set_idle(const char* value, size_t size) {
-  set_has_idle();
-  if (idle_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    idle_ = new ::std::string;
-  }
-  idle_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.CommonAction.idle)
-}
-inline ::std::string* CommonAction::mutable_idle() {
-  set_has_idle();
-  if (idle_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    idle_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.CommonAction.idle)
-  return idle_;
-}
-inline ::std::string* CommonAction::release_idle() {
-  clear_has_idle();
-  if (idle_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = idle_;
-    idle_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void CommonAction::set_allocated_idle(::std::string* idle) {
-  if (idle_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete idle_;
-  }
-  if (idle) {
-    set_has_idle();
-    idle_ = idle;
-  } else {
-    clear_has_idle();
-    idle_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.CommonAction.idle)
-}
-
-// required string walk = 2;
-inline bool CommonAction::has_walk() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
-inline void CommonAction::set_has_walk() {
-  _has_bits_[0] |= 0x00000002u;
-}
-inline void CommonAction::clear_has_walk() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline void CommonAction::clear_walk() {
-  if (walk_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    walk_->clear();
-  }
-  clear_has_walk();
-}
-inline const ::std::string& CommonAction::walk() const {
-  // @@protoc_insertion_point(field_get:gamer.CommonAction.walk)
-  return *walk_;
-}
-inline void CommonAction::set_walk(const ::std::string& value) {
-  set_has_walk();
-  if (walk_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    walk_ = new ::std::string;
-  }
-  walk_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.CommonAction.walk)
-}
-inline void CommonAction::set_walk(const char* value) {
-  set_has_walk();
-  if (walk_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    walk_ = new ::std::string;
-  }
-  walk_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.CommonAction.walk)
-}
-inline void CommonAction::set_walk(const char* value, size_t size) {
-  set_has_walk();
-  if (walk_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    walk_ = new ::std::string;
-  }
-  walk_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.CommonAction.walk)
-}
-inline ::std::string* CommonAction::mutable_walk() {
-  set_has_walk();
-  if (walk_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    walk_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.CommonAction.walk)
-  return walk_;
-}
-inline ::std::string* CommonAction::release_walk() {
-  clear_has_walk();
-  if (walk_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = walk_;
-    walk_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void CommonAction::set_allocated_walk(::std::string* walk) {
-  if (walk_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete walk_;
-  }
-  if (walk) {
-    set_has_walk();
-    walk_ = walk;
-  } else {
-    clear_has_walk();
-    walk_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.CommonAction.walk)
-}
-
-// required string dead = 3;
-inline bool CommonAction::has_dead() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void CommonAction::set_has_dead() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void CommonAction::clear_has_dead() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void CommonAction::clear_dead() {
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_->clear();
-  }
-  clear_has_dead();
-}
-inline const ::std::string& CommonAction::dead() const {
-  // @@protoc_insertion_point(field_get:gamer.CommonAction.dead)
-  return *dead_;
-}
-inline void CommonAction::set_dead(const ::std::string& value) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(value);
-  // @@protoc_insertion_point(field_set:gamer.CommonAction.dead)
-}
-inline void CommonAction::set_dead(const char* value) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(value);
-  // @@protoc_insertion_point(field_set_char:gamer.CommonAction.dead)
-}
-inline void CommonAction::set_dead(const char* value, size_t size) {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  dead_->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:gamer.CommonAction.dead)
-}
-inline ::std::string* CommonAction::mutable_dead() {
-  set_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    dead_ = new ::std::string;
-  }
-  // @@protoc_insertion_point(field_mutable:gamer.CommonAction.dead)
-  return dead_;
-}
-inline ::std::string* CommonAction::release_dead() {
-  clear_has_dead();
-  if (dead_ == &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    return NULL;
-  } else {
-    ::std::string* temp = dead_;
-    dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-    return temp;
-  }
-}
-inline void CommonAction::set_allocated_dead(::std::string* dead) {
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete dead_;
-  }
-  if (dead) {
-    set_has_dead();
-    dead_ = dead;
-  } else {
-    clear_has_dead();
-    dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.CommonAction.dead)
+inline void Actor::set_first_state_id(::google::protobuf::int32 value) {
+  set_has_first_state_id();
+  first_state_id_ = value;
+  // @@protoc_insertion_point(field_set:gamer.cfg.Actor.first_state_id)
 }
 
 // -------------------------------------------------------------------
 
 // ActorCfg
 
-// repeated .gamer.ActorModelCfg actor_model = 1;
-inline int ActorCfg::actor_model_size() const {
-  return actor_model_.size();
+// repeated .gamer.cfg.Actor actor = 1;
+inline int ActorCfg::actor_size() const {
+  return actor_.size();
 }
-inline void ActorCfg::clear_actor_model() {
-  actor_model_.Clear();
+inline void ActorCfg::clear_actor() {
+  actor_.Clear();
 }
-inline const ::gamer::ActorModelCfg& ActorCfg::actor_model(int index) const {
-  // @@protoc_insertion_point(field_get:gamer.ActorCfg.actor_model)
-  return actor_model_.Get(index);
+inline const ::gamer::cfg::Actor& ActorCfg::actor(int index) const {
+  // @@protoc_insertion_point(field_get:gamer.cfg.ActorCfg.actor)
+  return actor_.Get(index);
 }
-inline ::gamer::ActorModelCfg* ActorCfg::mutable_actor_model(int index) {
-  // @@protoc_insertion_point(field_mutable:gamer.ActorCfg.actor_model)
-  return actor_model_.Mutable(index);
+inline ::gamer::cfg::Actor* ActorCfg::mutable_actor(int index) {
+  // @@protoc_insertion_point(field_mutable:gamer.cfg.ActorCfg.actor)
+  return actor_.Mutable(index);
 }
-inline ::gamer::ActorModelCfg* ActorCfg::add_actor_model() {
-  // @@protoc_insertion_point(field_add:gamer.ActorCfg.actor_model)
-  return actor_model_.Add();
+inline ::gamer::cfg::Actor* ActorCfg::add_actor() {
+  // @@protoc_insertion_point(field_add:gamer.cfg.ActorCfg.actor)
+  return actor_.Add();
 }
-inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg >&
-ActorCfg::actor_model() const {
-  // @@protoc_insertion_point(field_list:gamer.ActorCfg.actor_model)
-  return actor_model_;
+inline const ::google::protobuf::RepeatedPtrField< ::gamer::cfg::Actor >&
+ActorCfg::actor() const {
+  // @@protoc_insertion_point(field_list:gamer.cfg.ActorCfg.actor)
+  return actor_;
 }
-inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorModelCfg >*
-ActorCfg::mutable_actor_model() {
-  // @@protoc_insertion_point(field_mutable_list:gamer.ActorCfg.actor_model)
-  return &actor_model_;
-}
-
-// repeated .gamer.ActorAudioCfg actor_audio = 2;
-inline int ActorCfg::actor_audio_size() const {
-  return actor_audio_.size();
-}
-inline void ActorCfg::clear_actor_audio() {
-  actor_audio_.Clear();
-}
-inline const ::gamer::ActorAudioCfg& ActorCfg::actor_audio(int index) const {
-  // @@protoc_insertion_point(field_get:gamer.ActorCfg.actor_audio)
-  return actor_audio_.Get(index);
-}
-inline ::gamer::ActorAudioCfg* ActorCfg::mutable_actor_audio(int index) {
-  // @@protoc_insertion_point(field_mutable:gamer.ActorCfg.actor_audio)
-  return actor_audio_.Mutable(index);
-}
-inline ::gamer::ActorAudioCfg* ActorCfg::add_actor_audio() {
-  // @@protoc_insertion_point(field_add:gamer.ActorCfg.actor_audio)
-  return actor_audio_.Add();
-}
-inline const ::google::protobuf::RepeatedPtrField< ::gamer::ActorAudioCfg >&
-ActorCfg::actor_audio() const {
-  // @@protoc_insertion_point(field_list:gamer.ActorCfg.actor_audio)
-  return actor_audio_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::gamer::ActorAudioCfg >*
-ActorCfg::mutable_actor_audio() {
-  // @@protoc_insertion_point(field_mutable_list:gamer.ActorCfg.actor_audio)
-  return &actor_audio_;
-}
-
-// required .gamer.CommonAction common_action = 3;
-inline bool ActorCfg::has_common_action() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void ActorCfg::set_has_common_action() {
-  _has_bits_[0] |= 0x00000004u;
-}
-inline void ActorCfg::clear_has_common_action() {
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline void ActorCfg::clear_common_action() {
-  if (common_action_ != NULL) common_action_->::gamer::CommonAction::Clear();
-  clear_has_common_action();
-}
-inline const ::gamer::CommonAction& ActorCfg::common_action() const {
-  // @@protoc_insertion_point(field_get:gamer.ActorCfg.common_action)
-  return common_action_ != NULL ? *common_action_ : *default_instance_->common_action_;
-}
-inline ::gamer::CommonAction* ActorCfg::mutable_common_action() {
-  set_has_common_action();
-  if (common_action_ == NULL) common_action_ = new ::gamer::CommonAction;
-  // @@protoc_insertion_point(field_mutable:gamer.ActorCfg.common_action)
-  return common_action_;
-}
-inline ::gamer::CommonAction* ActorCfg::release_common_action() {
-  clear_has_common_action();
-  ::gamer::CommonAction* temp = common_action_;
-  common_action_ = NULL;
-  return temp;
-}
-inline void ActorCfg::set_allocated_common_action(::gamer::CommonAction* common_action) {
-  delete common_action_;
-  common_action_ = common_action;
-  if (common_action) {
-    set_has_common_action();
-  } else {
-    clear_has_common_action();
-  }
-  // @@protoc_insertion_point(field_set_allocated:gamer.ActorCfg.common_action)
+inline ::google::protobuf::RepeatedPtrField< ::gamer::cfg::Actor >*
+ActorCfg::mutable_actor() {
+  // @@protoc_insertion_point(field_mutable_list:gamer.cfg.ActorCfg.actor)
+  return &actor_;
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace cfg
 }  // namespace gamer
 
 #ifndef SWIG

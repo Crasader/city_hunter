@@ -1,0 +1,39 @@
+package gamer.cfg;
+
+enum AudioIDs {
+  AUDIO_HERO_KNIGHT_NORMAL_ATK1     = 0;
+  AUDIO_HERO_KNIGHT_NORMAL_ATK2     = 1;
+  AUDIO_HERO_KNIGHT_SPECIAL_ATK1    = 2;
+  AUDIO_HERO_KNIGHT_SPECIAL_ATK2    = 3;
+  AUDIO_HERO_KNIGHT_HURT1           = 4;
+  AUDIO_HERO_KNIGHT_HURT2           = 5;
+  AUDIO_HERO_KNIGHT_DEFEND          = 6;
+  AUDIO_HERO_KNIGHT_DEAD            = 7;
+
+  AUDIO_HERO_ARCHER_NORMAL_ATK1     = 8;
+  AUDIO_HERO_ARCHER_NORMAL_ATK2     = 9;
+  AUDIO_HERO_ARCHER_SPECIAL_ATK1    = 10;
+  AUDIO_HERO_ARCHER_SPECIAL_ATK2    = 11;
+  AUDIO_HERO_ARCHER_HURT1           = 12;
+  AUDIO_HERO_ARCHER_HURT2           = 13;
+  AUDIO_HERO_ARCHER_DEFEND          = 14;
+  AUDIO_HERO_ARCHER_DEAD            = 15;
+
+  AUDIO_HERO_MAGE_NORMAL_ATK1       = 16;
+  AUDIO_HERO_MAGE_NORMAL_ATK2       = 17;
+  AUDIO_HERO_MAGE_SPECIAL_ATK1      = 18;
+  AUDIO_HERO_MAGE_SPECIAL_ATK2      = 19;
+  AUDIO_HERO_MAGE_HURT1             = 20;
+  AUDIO_HERO_MAGE_HURT2             = 21;
+  AUDIO_HERO_MAGE_DEFEND            = 22;
+  AUDIO_HERO_MAGE_DEAD              = 23;
+}
+
+message Audio {
+  required AudioIDs id   = 1;
+  required string file   = 2;
+}
+
+message AudioCfg {
+  repeated Audio audio = 1;
+}

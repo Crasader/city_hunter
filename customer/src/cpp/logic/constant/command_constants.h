@@ -20,24 +20,25 @@ namespace gamer
 
 enum CommandIDs 
 {
-    CMD_ID_INVALID               = 0,
-    CMD_ID_CREATE_SCENE,
-    CMD_ID_CHANGE_SCENE,
-    CMD_ID_CREATE_ACTORS,
-    CMD_ID_INIT_CAMERA,
+    CMD_INVALID               = 0,
+    CMD_CREATE_SCENE,
+    CMD_CHANGE_SCENE,
+    CMD_CREATE_ACTORS,
+    CMD_INIT_CAMERA,
 
     // attack cmd
-    CMD_ID_NORMAL_ATTACK         = 1000,
-    CMD_ID_NORMAL_ATTACK2,
-    CMD_ID_SPECAIL_ATTACK,
-    CMD_ID_SPECAIL_ATTACK2,
+    CMD_ATTACK                = 999,
+    CMD_NORMAL_ATTACK,         
+    CMD_NORMAL_ATTACK2,
+    CMD_SPECAIL_ATTACK,
+    CMD_SPECAIL_ATTACK2,
 
-    CMD_ID_PLAY_ACTION           = 2000,
-    CMD_ID_PLAY_IDLE_ACTION      = 2001,
-    CMD_ID_PLAY_WALK_ACTION      = 2002,
-    CMD_ID_PLAY_DEAD_ACTION      = 2003,
+    CMD_PLAY_ACTION           = 2000,
+    CMD_PLAY_IDLE_ACTION,
+    CMD_PLAY_WALK_ACTION,
+    CMD_PLAY_DEAD_ACTION,
 
-    CMD_ID_DRAW_PATH,
+    CMD_DRAW_PATH, // test
 };
 
 } // namespace gamer

@@ -109,6 +109,9 @@
     <Filter Include="classes\cpp\logic\test">
       <UniqueIdentifier>{8844da40-b8df-4003-a453-a3190159c5cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="classes\cpp\data\pb">
+      <UniqueIdentifier>{95fe2b28-beb5-4124-9b34-0783569b3ff3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -125,13 +128,7 @@
     <ClInclude Include="targetver.h">
       <Filter>win32</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.h">
-      <Filter>classes\cpp\data</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\data_manager.h">
-      <Filter>classes\cpp\data</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\data\pb_creator.h">
       <Filter>classes\cpp\data</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.h">
@@ -350,9 +347,6 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event.h">
       <Filter>classes\cpp\logic\base</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event_define.h">
-      <Filter>classes\cpp\logic\base</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event_listener.h">
       <Filter>classes\cpp\logic\base</Filter>
     </ClInclude>
@@ -419,18 +413,6 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\tolua_include\tolua++.h">
       <Filter>classes\cpp\logic\tolua_include</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils.h">
-      <Filter>classes\cpp\logic\util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_float.h">
-      <Filter>classes\cpp\logic\util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_graph.h">
-      <Filter>classes\cpp\logic\util</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\utils_test.h">
-      <Filter>classes\cpp\logic\util</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\logic\test\space_partition_test_scene.h">
       <Filter>classes\cpp\logic\test</Filter>
     </ClInclude>
@@ -467,14 +449,68 @@
     <ClInclude Include="..\..\..\..\customer\src\cpp\view\test\ui_test.h">
       <Filter>classes\cpp\view\test</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud.h">
+    <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud_layer.h">
       <Filter>classes\cpp\view\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.h">
-      <Filter>classes\cpp\view\ui</Filter>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\util.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\util_float.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\util_graph.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\util_test.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\util\util_actor.h">
+      <Filter>classes\cpp\logic\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\manager\battle_manager.h">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\command_headers.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\base\event_headers.h">
+      <Filter>classes\cpp\logic\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\logic\constant\event_constants.h">
+      <Filter>classes\cpp\logic\constant</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\action_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_state_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\audio_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\camera_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\common_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\map_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\model_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.h">
-      <Filter>classes\cpp\data</Filter>
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\pb_creator.h">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\customer\src\cpp\data\actor_type_cfg.pb.h">
+      <Filter>classes\cpp\data\pb</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -488,13 +524,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.cc">
-      <Filter>classes\cpp\data</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\data_manager.cc">
-      <Filter>classes\cpp\data</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\data\pb_creator.cc">
       <Filter>classes\cpp\data</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\3rd_party\google\protobuf\descriptor.cc">
@@ -683,14 +713,44 @@
     <ClCompile Include="..\..\..\..\customer\src\cpp\view\test\ui_test.cc">
       <Filter>classes\cpp\view\test</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud.cc">
+    <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\gaming_hud_layer.cc">
       <Filter>classes\cpp\view\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\customer\src\cpp\view\ui\hall_hud.cc">
-      <Filter>classes\cpp\view\ui</Filter>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\logic\manager\battle_manager.cc">
+      <Filter>classes\cpp\logic\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\action_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_state_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\audio_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\camera_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\common_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\map_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\model_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\customer\src\cpp\data\space_cfg.pb.cc">
-      <Filter>classes\cpp\data</Filter>
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\pb_creator.cc">
+      <Filter>classes\cpp\data\pb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\customer\src\cpp\data\actor_type_cfg.pb.cc">
+      <Filter>classes\cpp\data\pb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

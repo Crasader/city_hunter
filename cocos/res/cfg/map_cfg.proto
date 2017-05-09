@@ -1,0 +1,8 @@
+package gamer.cfg;
+import "space_cfg.proto";
+
+message MapCfg {
+  required float map_width    = 1;
+  required float map_height   = 2;
+  required SpaceCfg space_cfg = 3;
+}

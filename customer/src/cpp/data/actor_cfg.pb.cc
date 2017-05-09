@@ -17,24 +17,13 @@
 // @@protoc_insertion_point(includes)
 
 namespace gamer {
+namespace cfg {
 
 namespace {
 
-const ::google::protobuf::Descriptor* ActorAudioCfg_descriptor_ = NULL;
+const ::google::protobuf::Descriptor* Actor_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
-  ActorAudioCfg_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ActorModelCfg_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ActorModelCfg_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ActorModelCfg_Vec3_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ActorModelCfg_Vec3_reflection_ = NULL;
-const ::google::protobuf::Descriptor* ActorModelCfg_Action_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  ActorModelCfg_Action_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CommonAction_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CommonAction_reflection_ = NULL;
+  Actor_reflection_ = NULL;
 const ::google::protobuf::Descriptor* ActorCfg_descriptor_ = NULL;
 const ::google::protobuf::internal::GeneratedMessageReflection*
   ActorCfg_reflection_ = NULL;
@@ -48,105 +37,31 @@ void protobuf_AssignDesc_actor_5fcfg_2eproto() {
     ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
       "actor_cfg.proto");
   GOOGLE_CHECK(file != NULL);
-  ActorAudioCfg_descriptor_ = file->message_type(0);
-  static const int ActorAudioCfg_offsets_[7] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, normal_atk1_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, normal_atk2_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, hurt_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, normal_atk_shout_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, special_atk_shout_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, dead_),
+  Actor_descriptor_ = file->message_type(0);
+  static const int Actor_offsets_[8] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, actor_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, model_id_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, position_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, rotation_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, scale_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, ai_update_interval_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, first_state_id_),
   };
-  ActorAudioCfg_reflection_ =
+  Actor_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
-      ActorAudioCfg_descriptor_,
-      ActorAudioCfg::default_instance_,
-      ActorAudioCfg_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorAudioCfg, _unknown_fields_),
+      Actor_descriptor_,
+      Actor::default_instance_,
+      Actor_offsets_,
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, _has_bits_[0]),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Actor, _unknown_fields_),
       -1,
       ::google::protobuf::DescriptorPool::generated_pool(),
       ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ActorAudioCfg));
-  ActorModelCfg_descriptor_ = file->message_type(1);
-  static const int ActorModelCfg_offsets_[6] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, model_file_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, position_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, rotation_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, scale_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, action_),
-  };
-  ActorModelCfg_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ActorModelCfg_descriptor_,
-      ActorModelCfg::default_instance_,
-      ActorModelCfg_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ActorModelCfg));
-  ActorModelCfg_Vec3_descriptor_ = ActorModelCfg_descriptor_->nested_type(0);
-  static const int ActorModelCfg_Vec3_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Vec3, x_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Vec3, y_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Vec3, z_),
-  };
-  ActorModelCfg_Vec3_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ActorModelCfg_Vec3_descriptor_,
-      ActorModelCfg_Vec3::default_instance_,
-      ActorModelCfg_Vec3_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Vec3, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Vec3, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ActorModelCfg_Vec3));
-  ActorModelCfg_Action_descriptor_ = ActorModelCfg_descriptor_->nested_type(1);
-  static const int ActorModelCfg_Action_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, from_time_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, duration_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, speed_),
-  };
-  ActorModelCfg_Action_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      ActorModelCfg_Action_descriptor_,
-      ActorModelCfg_Action::default_instance_,
-      ActorModelCfg_Action_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorModelCfg_Action, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(ActorModelCfg_Action));
-  CommonAction_descriptor_ = file->message_type(2);
-  static const int CommonAction_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommonAction, idle_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommonAction, walk_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommonAction, dead_),
-  };
-  CommonAction_reflection_ =
-    new ::google::protobuf::internal::GeneratedMessageReflection(
-      CommonAction_descriptor_,
-      CommonAction::default_instance_,
-      CommonAction_offsets_,
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommonAction, _has_bits_[0]),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommonAction, _unknown_fields_),
-      -1,
-      ::google::protobuf::DescriptorPool::generated_pool(),
-      ::google::protobuf::MessageFactory::generated_factory(),
-      sizeof(CommonAction));
-  ActorCfg_descriptor_ = file->message_type(3);
-  static const int ActorCfg_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorCfg, actor_model_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorCfg, actor_audio_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorCfg, common_action_),
+      sizeof(Actor));
+  ActorCfg_descriptor_ = file->message_type(1);
+  static const int ActorCfg_offsets_[1] = {
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ActorCfg, actor_),
   };
   ActorCfg_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -172,15 +87,7 @@ inline void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ActorAudioCfg_descriptor_, &ActorAudioCfg::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ActorModelCfg_descriptor_, &ActorModelCfg::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ActorModelCfg_Vec3_descriptor_, &ActorModelCfg_Vec3::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    ActorModelCfg_Action_descriptor_, &ActorModelCfg_Action::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-    CommonAction_descriptor_, &CommonAction::default_instance());
+    Actor_descriptor_, &Actor::default_instance());
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
     ActorCfg_descriptor_, &ActorCfg::default_instance());
 }
@@ -188,16 +95,8 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }  // namespace
 
 void protobuf_ShutdownFile_actor_5fcfg_2eproto() {
-  delete ActorAudioCfg::default_instance_;
-  delete ActorAudioCfg_reflection_;
-  delete ActorModelCfg::default_instance_;
-  delete ActorModelCfg_reflection_;
-  delete ActorModelCfg_Vec3::default_instance_;
-  delete ActorModelCfg_Vec3_reflection_;
-  delete ActorModelCfg_Action::default_instance_;
-  delete ActorModelCfg_Action_reflection_;
-  delete CommonAction::default_instance_;
-  delete CommonAction_reflection_;
+  delete Actor::default_instance_;
+  delete Actor_reflection_;
   delete ActorCfg::default_instance_;
   delete ActorCfg_reflection_;
 }
@@ -208,38 +107,23 @@ void protobuf_AddDesc_actor_5fcfg_2eproto() {
   already_here = true;
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::gamer::cfg::protobuf_AddDesc_actor_5ftype_5fcfg_2eproto();
+  ::gamer::cfg::protobuf_AddDesc_common_5fcfg_2eproto();
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\017actor_cfg.proto\022\005gamer\"\226\001\n\rActorAudioC"
-    "fg\022\n\n\002id\030\001 \002(\005\022\023\n\013normal_atk1\030\002 \002(\t\022\023\n\013n"
-    "ormal_atk2\030\003 \002(\t\022\014\n\004hurt\030\004 \002(\t\022\030\n\020normal"
-    "_atk_shout\030\005 \002(\t\022\031\n\021special_atk_shout\030\006 "
-    "\002(\t\022\014\n\004dead\030\007 \002(\t\"\311\002\n\rActorModelCfg\022\n\n\002i"
-    "d\030\001 \002(\005\022\022\n\nmodel_file\030\002 \002(\t\022+\n\010position\030"
-    "\003 \002(\0132\031.gamer.ActorModelCfg.Vec3\022+\n\010rota"
-    "tion\030\004 \002(\0132\031.gamer.ActorModelCfg.Vec3\022\020\n"
-    "\005scale\030\005 \001(\002:\0011\022+\n\006action\030\006 \003(\0132\033.gamer."
-    "ActorModelCfg.Action\032\'\n\004Vec3\022\t\n\001x\030\001 \002(\002\022"
-    "\t\n\001y\030\002 \002(\002\022\t\n\001z\030\003 \002(\002\032V\n\006Action\022\n\n\002id\030\001 "
-    "\002(\005\022\014\n\004name\030\002 \001(\t\022\021\n\tfrom_time\030\003 \002(\002\022\020\n\010"
-    "duration\030\004 \002(\002\022\r\n\005speed\030\005 \002(\002\"8\n\014CommonA"
-    "ction\022\014\n\004idle\030\001 \002(\t\022\014\n\004walk\030\002 \002(\t\022\014\n\004dea"
-    "d\030\003 \002(\t\"\214\001\n\010ActorCfg\022)\n\013actor_model\030\001 \003("
-    "\0132\024.gamer.ActorModelCfg\022)\n\013actor_audio\030\002"
-    " \003(\0132\024.gamer.ActorAudioCfg\022*\n\rcommon_act"
-    "ion\030\003 \002(\0132\023.gamer.CommonAction", 710);
+    "\n\017actor_cfg.proto\022\tgamer.cfg\032\024actor_type"
+    "_cfg.proto\032\020common_cfg.proto\"\334\001\n\005Actor\022\n"
+    "\n\002id\030\001 \002(\005\022)\n\nactor_type\030\002 \002(\0162\025.gamer.c"
+    "fg.ActorTypes\022\020\n\010model_id\030\003 \002(\005\022!\n\010posit"
+    "ion\030\004 \002(\0132\017.gamer.cfg.Vec3\022!\n\010rotation\030\005"
+    " \002(\0132\017.gamer.cfg.Vec3\022\020\n\005scale\030\006 \001(\002:\0011\022"
+    "\032\n\022ai_update_interval\030\007 \002(\002\022\026\n\016first_sta"
+    "te_id\030\010 \002(\005\"+\n\010ActorCfg\022\037\n\005actor\030\001 \003(\0132\020"
+    ".gamer.cfg.Actor", 336);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "actor_cfg.proto", &protobuf_RegisterTypes);
-  ActorAudioCfg::default_instance_ = new ActorAudioCfg();
-  ActorModelCfg::default_instance_ = new ActorModelCfg();
-  ActorModelCfg_Vec3::default_instance_ = new ActorModelCfg_Vec3();
-  ActorModelCfg_Action::default_instance_ = new ActorModelCfg_Action();
-  CommonAction::default_instance_ = new CommonAction();
+  Actor::default_instance_ = new Actor();
   ActorCfg::default_instance_ = new ActorCfg();
-  ActorAudioCfg::default_instance_->InitAsDefaultInstance();
-  ActorModelCfg::default_instance_->InitAsDefaultInstance();
-  ActorModelCfg_Vec3::default_instance_->InitAsDefaultInstance();
-  ActorModelCfg_Action::default_instance_->InitAsDefaultInstance();
-  CommonAction::default_instance_->InitAsDefaultInstance();
+  Actor::default_instance_->InitAsDefaultInstance();
   ActorCfg::default_instance_->InitAsDefaultInstance();
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_actor_5fcfg_2eproto);
 }
@@ -254,1399 +138,116 @@ struct StaticDescriptorInitializer_actor_5fcfg_2eproto {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int ActorAudioCfg::kIdFieldNumber;
-const int ActorAudioCfg::kNormalAtk1FieldNumber;
-const int ActorAudioCfg::kNormalAtk2FieldNumber;
-const int ActorAudioCfg::kHurtFieldNumber;
-const int ActorAudioCfg::kNormalAtkShoutFieldNumber;
-const int ActorAudioCfg::kSpecialAtkShoutFieldNumber;
-const int ActorAudioCfg::kDeadFieldNumber;
+const int Actor::kIdFieldNumber;
+const int Actor::kActorTypeFieldNumber;
+const int Actor::kModelIdFieldNumber;
+const int Actor::kPositionFieldNumber;
+const int Actor::kRotationFieldNumber;
+const int Actor::kScaleFieldNumber;
+const int Actor::kAiUpdateIntervalFieldNumber;
+const int Actor::kFirstStateIdFieldNumber;
 #endif  // !_MSC_VER
 
-ActorAudioCfg::ActorAudioCfg()
+Actor::Actor()
   : ::google::protobuf::Message() {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.ActorAudioCfg)
+  // @@protoc_insertion_point(constructor:gamer.cfg.Actor)
 }
 
-void ActorAudioCfg::InitAsDefaultInstance() {
+void Actor::InitAsDefaultInstance() {
+  position_ = const_cast< ::gamer::cfg::Vec3*>(&::gamer::cfg::Vec3::default_instance());
+  rotation_ = const_cast< ::gamer::cfg::Vec3*>(&::gamer::cfg::Vec3::default_instance());
 }
 
-ActorAudioCfg::ActorAudioCfg(const ActorAudioCfg& from)
+Actor::Actor(const Actor& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.ActorAudioCfg)
+  // @@protoc_insertion_point(copy_constructor:gamer.cfg.Actor)
 }
 
-void ActorAudioCfg::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
+void Actor::SharedCtor() {
   _cached_size_ = 0;
   id_ = 0;
-  normal_atk1_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  normal_atk2_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  hurt_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  normal_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  special_atk_shout_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-}
-
-ActorAudioCfg::~ActorAudioCfg() {
-  // @@protoc_insertion_point(destructor:gamer.ActorAudioCfg)
-  SharedDtor();
-}
-
-void ActorAudioCfg::SharedDtor() {
-  if (normal_atk1_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk1_;
-  }
-  if (normal_atk2_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk2_;
-  }
-  if (hurt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete hurt_;
-  }
-  if (normal_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete normal_atk_shout_;
-  }
-  if (special_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete special_atk_shout_;
-  }
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete dead_;
-  }
-  if (this != default_instance_) {
-  }
-}
-
-void ActorAudioCfg::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ActorAudioCfg::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ActorAudioCfg_descriptor_;
-}
-
-const ActorAudioCfg& ActorAudioCfg::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_actor_5fcfg_2eproto();
-  return *default_instance_;
-}
-
-ActorAudioCfg* ActorAudioCfg::default_instance_ = NULL;
-
-ActorAudioCfg* ActorAudioCfg::New() const {
-  return new ActorAudioCfg;
-}
-
-void ActorAudioCfg::Clear() {
-  if (_has_bits_[0 / 32] & 127) {
-    id_ = 0;
-    if (has_normal_atk1()) {
-      if (normal_atk1_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        normal_atk1_->clear();
-      }
-    }
-    if (has_normal_atk2()) {
-      if (normal_atk2_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        normal_atk2_->clear();
-      }
-    }
-    if (has_hurt()) {
-      if (hurt_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        hurt_->clear();
-      }
-    }
-    if (has_normal_atk_shout()) {
-      if (normal_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        normal_atk_shout_->clear();
-      }
-    }
-    if (has_special_atk_shout()) {
-      if (special_atk_shout_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        special_atk_shout_->clear();
-      }
-    }
-    if (has_dead()) {
-      if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        dead_->clear();
-      }
-    }
-  }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
-}
-
-bool ActorAudioCfg::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.ActorAudioCfg)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 id = 1;
-      case 1: {
-        if (tag == 8) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &id_)));
-          set_has_id();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(18)) goto parse_normal_atk1;
-        break;
-      }
-
-      // required string normal_atk1 = 2;
-      case 2: {
-        if (tag == 18) {
-         parse_normal_atk1:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_normal_atk1()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->normal_atk1().data(), this->normal_atk1().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "normal_atk1");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(26)) goto parse_normal_atk2;
-        break;
-      }
-
-      // required string normal_atk2 = 3;
-      case 3: {
-        if (tag == 26) {
-         parse_normal_atk2:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_normal_atk2()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->normal_atk2().data(), this->normal_atk2().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "normal_atk2");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(34)) goto parse_hurt;
-        break;
-      }
-
-      // required string hurt = 4;
-      case 4: {
-        if (tag == 34) {
-         parse_hurt:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_hurt()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->hurt().data(), this->hurt().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "hurt");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(42)) goto parse_normal_atk_shout;
-        break;
-      }
-
-      // required string normal_atk_shout = 5;
-      case 5: {
-        if (tag == 42) {
-         parse_normal_atk_shout:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_normal_atk_shout()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->normal_atk_shout().data(), this->normal_atk_shout().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "normal_atk_shout");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(50)) goto parse_special_atk_shout;
-        break;
-      }
-
-      // required string special_atk_shout = 6;
-      case 6: {
-        if (tag == 50) {
-         parse_special_atk_shout:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_special_atk_shout()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->special_atk_shout().data(), this->special_atk_shout().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "special_atk_shout");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(58)) goto parse_dead;
-        break;
-      }
-
-      // required string dead = 7;
-      case 7: {
-        if (tag == 58) {
-         parse_dead:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_dead()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->dead().data(), this->dead().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "dead");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectAtEnd()) goto success;
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:gamer.ActorAudioCfg)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:gamer.ActorAudioCfg)
-  return false;
-#undef DO_
-}
-
-void ActorAudioCfg::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.ActorAudioCfg)
-  // required int32 id = 1;
-  if (has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
-  }
-
-  // required string normal_atk1 = 2;
-  if (has_normal_atk1()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk1().data(), this->normal_atk1().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk1");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->normal_atk1(), output);
-  }
-
-  // required string normal_atk2 = 3;
-  if (has_normal_atk2()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk2().data(), this->normal_atk2().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk2");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->normal_atk2(), output);
-  }
-
-  // required string hurt = 4;
-  if (has_hurt()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->hurt().data(), this->hurt().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "hurt");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->hurt(), output);
-  }
-
-  // required string normal_atk_shout = 5;
-  if (has_normal_atk_shout()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk_shout().data(), this->normal_atk_shout().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk_shout");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->normal_atk_shout(), output);
-  }
-
-  // required string special_atk_shout = 6;
-  if (has_special_atk_shout()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->special_atk_shout().data(), this->special_atk_shout().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "special_atk_shout");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->special_atk_shout(), output);
-  }
-
-  // required string dead = 7;
-  if (has_dead()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->dead().data(), this->dead().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "dead");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->dead(), output);
-  }
-
-  if (!unknown_fields().empty()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:gamer.ActorAudioCfg)
-}
-
-::google::protobuf::uint8* ActorAudioCfg::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.ActorAudioCfg)
-  // required int32 id = 1;
-  if (has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
-  }
-
-  // required string normal_atk1 = 2;
-  if (has_normal_atk1()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk1().data(), this->normal_atk1().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk1");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->normal_atk1(), target);
-  }
-
-  // required string normal_atk2 = 3;
-  if (has_normal_atk2()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk2().data(), this->normal_atk2().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk2");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->normal_atk2(), target);
-  }
-
-  // required string hurt = 4;
-  if (has_hurt()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->hurt().data(), this->hurt().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "hurt");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->hurt(), target);
-  }
-
-  // required string normal_atk_shout = 5;
-  if (has_normal_atk_shout()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->normal_atk_shout().data(), this->normal_atk_shout().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "normal_atk_shout");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->normal_atk_shout(), target);
-  }
-
-  // required string special_atk_shout = 6;
-  if (has_special_atk_shout()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->special_atk_shout().data(), this->special_atk_shout().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "special_atk_shout");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->special_atk_shout(), target);
-  }
-
-  // required string dead = 7;
-  if (has_dead()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->dead().data(), this->dead().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "dead");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->dead(), target);
-  }
-
-  if (!unknown_fields().empty()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.ActorAudioCfg)
-  return target;
-}
-
-int ActorAudioCfg::ByteSize() const {
-  int total_size = 0;
-
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required int32 id = 1;
-    if (has_id()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->id());
-    }
-
-    // required string normal_atk1 = 2;
-    if (has_normal_atk1()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->normal_atk1());
-    }
-
-    // required string normal_atk2 = 3;
-    if (has_normal_atk2()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->normal_atk2());
-    }
-
-    // required string hurt = 4;
-    if (has_hurt()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->hurt());
-    }
-
-    // required string normal_atk_shout = 5;
-    if (has_normal_atk_shout()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->normal_atk_shout());
-    }
-
-    // required string special_atk_shout = 6;
-    if (has_special_atk_shout()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->special_atk_shout());
-    }
-
-    // required string dead = 7;
-    if (has_dead()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->dead());
-    }
-
-  }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void ActorAudioCfg::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  const ActorAudioCfg* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ActorAudioCfg*>(
-      &from);
-  if (source == NULL) {
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-    MergeFrom(*source);
-  }
-}
-
-void ActorAudioCfg::MergeFrom(const ActorAudioCfg& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_id()) {
-      set_id(from.id());
-    }
-    if (from.has_normal_atk1()) {
-      set_normal_atk1(from.normal_atk1());
-    }
-    if (from.has_normal_atk2()) {
-      set_normal_atk2(from.normal_atk2());
-    }
-    if (from.has_hurt()) {
-      set_hurt(from.hurt());
-    }
-    if (from.has_normal_atk_shout()) {
-      set_normal_atk_shout(from.normal_atk_shout());
-    }
-    if (from.has_special_atk_shout()) {
-      set_special_atk_shout(from.special_atk_shout());
-    }
-    if (from.has_dead()) {
-      set_dead(from.dead());
-    }
-  }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void ActorAudioCfg::CopyFrom(const ::google::protobuf::Message& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ActorAudioCfg::CopyFrom(const ActorAudioCfg& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ActorAudioCfg::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000007f) != 0x0000007f) return false;
-
-  return true;
-}
-
-void ActorAudioCfg::Swap(ActorAudioCfg* other) {
-  if (other != this) {
-    std::swap(id_, other->id_);
-    std::swap(normal_atk1_, other->normal_atk1_);
-    std::swap(normal_atk2_, other->normal_atk2_);
-    std::swap(hurt_, other->hurt_);
-    std::swap(normal_atk_shout_, other->normal_atk_shout_);
-    std::swap(special_atk_shout_, other->special_atk_shout_);
-    std::swap(dead_, other->dead_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
-}
-
-::google::protobuf::Metadata ActorAudioCfg::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ActorAudioCfg_descriptor_;
-  metadata.reflection = ActorAudioCfg_reflection_;
-  return metadata;
-}
-
-
-// ===================================================================
-
-#ifndef _MSC_VER
-const int ActorModelCfg_Vec3::kXFieldNumber;
-const int ActorModelCfg_Vec3::kYFieldNumber;
-const int ActorModelCfg_Vec3::kZFieldNumber;
-#endif  // !_MSC_VER
-
-ActorModelCfg_Vec3::ActorModelCfg_Vec3()
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.ActorModelCfg.Vec3)
-}
-
-void ActorModelCfg_Vec3::InitAsDefaultInstance() {
-}
-
-ActorModelCfg_Vec3::ActorModelCfg_Vec3(const ActorModelCfg_Vec3& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.ActorModelCfg.Vec3)
-}
-
-void ActorModelCfg_Vec3::SharedCtor() {
-  _cached_size_ = 0;
-  x_ = 0;
-  y_ = 0;
-  z_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-}
-
-ActorModelCfg_Vec3::~ActorModelCfg_Vec3() {
-  // @@protoc_insertion_point(destructor:gamer.ActorModelCfg.Vec3)
-  SharedDtor();
-}
-
-void ActorModelCfg_Vec3::SharedDtor() {
-  if (this != default_instance_) {
-  }
-}
-
-void ActorModelCfg_Vec3::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ActorModelCfg_Vec3::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ActorModelCfg_Vec3_descriptor_;
-}
-
-const ActorModelCfg_Vec3& ActorModelCfg_Vec3::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_actor_5fcfg_2eproto();
-  return *default_instance_;
-}
-
-ActorModelCfg_Vec3* ActorModelCfg_Vec3::default_instance_ = NULL;
-
-ActorModelCfg_Vec3* ActorModelCfg_Vec3::New() const {
-  return new ActorModelCfg_Vec3;
-}
-
-void ActorModelCfg_Vec3::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<ActorModelCfg_Vec3*>(16)->f) - \
-   reinterpret_cast<char*>(16))
-
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  ZR_(x_, z_);
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
-
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
-}
-
-bool ActorModelCfg_Vec3::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.ActorModelCfg.Vec3)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required float x = 1;
-      case 1: {
-        if (tag == 13) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &x_)));
-          set_has_x();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(21)) goto parse_y;
-        break;
-      }
-
-      // required float y = 2;
-      case 2: {
-        if (tag == 21) {
-         parse_y:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &y_)));
-          set_has_y();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(29)) goto parse_z;
-        break;
-      }
-
-      // required float z = 3;
-      case 3: {
-        if (tag == 29) {
-         parse_z:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &z_)));
-          set_has_z();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectAtEnd()) goto success;
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:gamer.ActorModelCfg.Vec3)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:gamer.ActorModelCfg.Vec3)
-  return false;
-#undef DO_
-}
-
-void ActorModelCfg_Vec3::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.ActorModelCfg.Vec3)
-  // required float x = 1;
-  if (has_x()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->x(), output);
-  }
-
-  // required float y = 2;
-  if (has_y()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->y(), output);
-  }
-
-  // required float z = 3;
-  if (has_z()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->z(), output);
-  }
-
-  if (!unknown_fields().empty()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:gamer.ActorModelCfg.Vec3)
-}
-
-::google::protobuf::uint8* ActorModelCfg_Vec3::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.ActorModelCfg.Vec3)
-  // required float x = 1;
-  if (has_x()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->x(), target);
-  }
-
-  // required float y = 2;
-  if (has_y()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->y(), target);
-  }
-
-  // required float z = 3;
-  if (has_z()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->z(), target);
-  }
-
-  if (!unknown_fields().empty()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.ActorModelCfg.Vec3)
-  return target;
-}
-
-int ActorModelCfg_Vec3::ByteSize() const {
-  int total_size = 0;
-
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required float x = 1;
-    if (has_x()) {
-      total_size += 1 + 4;
-    }
-
-    // required float y = 2;
-    if (has_y()) {
-      total_size += 1 + 4;
-    }
-
-    // required float z = 3;
-    if (has_z()) {
-      total_size += 1 + 4;
-    }
-
-  }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void ActorModelCfg_Vec3::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  const ActorModelCfg_Vec3* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ActorModelCfg_Vec3*>(
-      &from);
-  if (source == NULL) {
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-    MergeFrom(*source);
-  }
-}
-
-void ActorModelCfg_Vec3::MergeFrom(const ActorModelCfg_Vec3& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_x()) {
-      set_x(from.x());
-    }
-    if (from.has_y()) {
-      set_y(from.y());
-    }
-    if (from.has_z()) {
-      set_z(from.z());
-    }
-  }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void ActorModelCfg_Vec3::CopyFrom(const ::google::protobuf::Message& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ActorModelCfg_Vec3::CopyFrom(const ActorModelCfg_Vec3& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ActorModelCfg_Vec3::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
-
-  return true;
-}
-
-void ActorModelCfg_Vec3::Swap(ActorModelCfg_Vec3* other) {
-  if (other != this) {
-    std::swap(x_, other->x_);
-    std::swap(y_, other->y_);
-    std::swap(z_, other->z_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
-}
-
-::google::protobuf::Metadata ActorModelCfg_Vec3::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ActorModelCfg_Vec3_descriptor_;
-  metadata.reflection = ActorModelCfg_Vec3_reflection_;
-  return metadata;
-}
-
-
-// -------------------------------------------------------------------
-
-#ifndef _MSC_VER
-const int ActorModelCfg_Action::kIdFieldNumber;
-const int ActorModelCfg_Action::kNameFieldNumber;
-const int ActorModelCfg_Action::kFromTimeFieldNumber;
-const int ActorModelCfg_Action::kDurationFieldNumber;
-const int ActorModelCfg_Action::kSpeedFieldNumber;
-#endif  // !_MSC_VER
-
-ActorModelCfg_Action::ActorModelCfg_Action()
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.ActorModelCfg.Action)
-}
-
-void ActorModelCfg_Action::InitAsDefaultInstance() {
-}
-
-ActorModelCfg_Action::ActorModelCfg_Action(const ActorModelCfg_Action& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.ActorModelCfg.Action)
-}
-
-void ActorModelCfg_Action::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  id_ = 0;
-  name_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  from_time_ = 0;
-  duration_ = 0;
-  speed_ = 0;
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-}
-
-ActorModelCfg_Action::~ActorModelCfg_Action() {
-  // @@protoc_insertion_point(destructor:gamer.ActorModelCfg.Action)
-  SharedDtor();
-}
-
-void ActorModelCfg_Action::SharedDtor() {
-  if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete name_;
-  }
-  if (this != default_instance_) {
-  }
-}
-
-void ActorModelCfg_Action::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* ActorModelCfg_Action::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return ActorModelCfg_Action_descriptor_;
-}
-
-const ActorModelCfg_Action& ActorModelCfg_Action::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_actor_5fcfg_2eproto();
-  return *default_instance_;
-}
-
-ActorModelCfg_Action* ActorModelCfg_Action::default_instance_ = NULL;
-
-ActorModelCfg_Action* ActorModelCfg_Action::New() const {
-  return new ActorModelCfg_Action;
-}
-
-void ActorModelCfg_Action::Clear() {
-#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
-  &reinterpret_cast<ActorModelCfg_Action*>(16)->f) - \
-   reinterpret_cast<char*>(16))
-
-#define ZR_(first, last) do {                              \
-    size_t f = OFFSET_OF_FIELD_(first);                    \
-    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
-    ::memset(&first, 0, n);                                \
-  } while (0)
-
-  if (_has_bits_[0 / 32] & 31) {
-    ZR_(id_, speed_);
-    if (has_name()) {
-      if (name_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        name_->clear();
-      }
-    }
-  }
-
-#undef OFFSET_OF_FIELD_
-#undef ZR_
-
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
-}
-
-bool ActorModelCfg_Action::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.ActorModelCfg.Action)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 id = 1;
-      case 1: {
-        if (tag == 8) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 input, &id_)));
-          set_has_id();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(18)) goto parse_name;
-        break;
-      }
-
-      // optional string name = 2;
-      case 2: {
-        if (tag == 18) {
-         parse_name:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->name().data(), this->name().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "name");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(29)) goto parse_from_time;
-        break;
-      }
-
-      // required float from_time = 3;
-      case 3: {
-        if (tag == 29) {
-         parse_from_time:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &from_time_)));
-          set_has_from_time();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(37)) goto parse_duration;
-        break;
-      }
-
-      // required float duration = 4;
-      case 4: {
-        if (tag == 37) {
-         parse_duration:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &duration_)));
-          set_has_duration();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(45)) goto parse_speed;
-        break;
-      }
-
-      // required float speed = 5;
-      case 5: {
-        if (tag == 45) {
-         parse_speed:
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
-                 input, &speed_)));
-          set_has_speed();
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectAtEnd()) goto success;
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:gamer.ActorModelCfg.Action)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:gamer.ActorModelCfg.Action)
-  return false;
-#undef DO_
-}
-
-void ActorModelCfg_Action::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.ActorModelCfg.Action)
-  // required int32 id = 1;
-  if (has_id()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
-  }
-
-  // optional string name = 2;
-  if (has_name()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // required float from_time = 3;
-  if (has_from_time()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->from_time(), output);
-  }
-
-  // required float duration = 4;
-  if (has_duration()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->duration(), output);
-  }
-
-  // required float speed = 5;
-  if (has_speed()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->speed(), output);
-  }
-
-  if (!unknown_fields().empty()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:gamer.ActorModelCfg.Action)
-}
-
-::google::protobuf::uint8* ActorModelCfg_Action::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.ActorModelCfg.Action)
-  // required int32 id = 1;
-  if (has_id()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
-  }
-
-  // optional string name = 2;
-  if (has_name()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->name().data(), this->name().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
-  }
-
-  // required float from_time = 3;
-  if (has_from_time()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->from_time(), target);
-  }
-
-  // required float duration = 4;
-  if (has_duration()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->duration(), target);
-  }
-
-  // required float speed = 5;
-  if (has_speed()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->speed(), target);
-  }
-
-  if (!unknown_fields().empty()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.ActorModelCfg.Action)
-  return target;
-}
-
-int ActorModelCfg_Action::ByteSize() const {
-  int total_size = 0;
-
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required int32 id = 1;
-    if (has_id()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-          this->id());
-    }
-
-    // optional string name = 2;
-    if (has_name()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->name());
-    }
-
-    // required float from_time = 3;
-    if (has_from_time()) {
-      total_size += 1 + 4;
-    }
-
-    // required float duration = 4;
-    if (has_duration()) {
-      total_size += 1 + 4;
-    }
-
-    // required float speed = 5;
-    if (has_speed()) {
-      total_size += 1 + 4;
-    }
-
-  }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void ActorModelCfg_Action::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  const ActorModelCfg_Action* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ActorModelCfg_Action*>(
-      &from);
-  if (source == NULL) {
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-    MergeFrom(*source);
-  }
-}
-
-void ActorModelCfg_Action::MergeFrom(const ActorModelCfg_Action& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_id()) {
-      set_id(from.id());
-    }
-    if (from.has_name()) {
-      set_name(from.name());
-    }
-    if (from.has_from_time()) {
-      set_from_time(from.from_time());
-    }
-    if (from.has_duration()) {
-      set_duration(from.duration());
-    }
-    if (from.has_speed()) {
-      set_speed(from.speed());
-    }
-  }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void ActorModelCfg_Action::CopyFrom(const ::google::protobuf::Message& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ActorModelCfg_Action::CopyFrom(const ActorModelCfg_Action& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ActorModelCfg_Action::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000001d) != 0x0000001d) return false;
-
-  return true;
-}
-
-void ActorModelCfg_Action::Swap(ActorModelCfg_Action* other) {
-  if (other != this) {
-    std::swap(id_, other->id_);
-    std::swap(name_, other->name_);
-    std::swap(from_time_, other->from_time_);
-    std::swap(duration_, other->duration_);
-    std::swap(speed_, other->speed_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
-}
-
-::google::protobuf::Metadata ActorModelCfg_Action::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ActorModelCfg_Action_descriptor_;
-  metadata.reflection = ActorModelCfg_Action_reflection_;
-  return metadata;
-}
-
-
-// -------------------------------------------------------------------
-
-#ifndef _MSC_VER
-const int ActorModelCfg::kIdFieldNumber;
-const int ActorModelCfg::kModelFileFieldNumber;
-const int ActorModelCfg::kPositionFieldNumber;
-const int ActorModelCfg::kRotationFieldNumber;
-const int ActorModelCfg::kScaleFieldNumber;
-const int ActorModelCfg::kActionFieldNumber;
-#endif  // !_MSC_VER
-
-ActorModelCfg::ActorModelCfg()
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.ActorModelCfg)
-}
-
-void ActorModelCfg::InitAsDefaultInstance() {
-  position_ = const_cast< ::gamer::ActorModelCfg_Vec3*>(&::gamer::ActorModelCfg_Vec3::default_instance());
-  rotation_ = const_cast< ::gamer::ActorModelCfg_Vec3*>(&::gamer::ActorModelCfg_Vec3::default_instance());
-}
-
-ActorModelCfg::ActorModelCfg(const ActorModelCfg& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.ActorModelCfg)
-}
-
-void ActorModelCfg::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  id_ = 0;
-  model_file_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  actor_type_ = 0;
+  model_id_ = 0;
   position_ = NULL;
   rotation_ = NULL;
   scale_ = 1;
+  ai_update_interval_ = 0;
+  first_state_id_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
-ActorModelCfg::~ActorModelCfg() {
-  // @@protoc_insertion_point(destructor:gamer.ActorModelCfg)
+Actor::~Actor() {
+  // @@protoc_insertion_point(destructor:gamer.cfg.Actor)
   SharedDtor();
 }
 
-void ActorModelCfg::SharedDtor() {
-  if (model_file_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete model_file_;
-  }
+void Actor::SharedDtor() {
   if (this != default_instance_) {
     delete position_;
     delete rotation_;
   }
 }
 
-void ActorModelCfg::SetCachedSize(int size) const {
+void Actor::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* ActorModelCfg::descriptor() {
+const ::google::protobuf::Descriptor* Actor::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return ActorModelCfg_descriptor_;
+  return Actor_descriptor_;
 }
 
-const ActorModelCfg& ActorModelCfg::default_instance() {
+const Actor& Actor::default_instance() {
   if (default_instance_ == NULL) protobuf_AddDesc_actor_5fcfg_2eproto();
   return *default_instance_;
 }
 
-ActorModelCfg* ActorModelCfg::default_instance_ = NULL;
+Actor* Actor::default_instance_ = NULL;
 
-ActorModelCfg* ActorModelCfg::New() const {
-  return new ActorModelCfg;
+Actor* Actor::New() const {
+  return new Actor;
 }
 
-void ActorModelCfg::Clear() {
-  if (_has_bits_[0 / 32] & 31) {
-    id_ = 0;
-    if (has_model_file()) {
-      if (model_file_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        model_file_->clear();
-      }
-    }
+void Actor::Clear() {
+#define OFFSET_OF_FIELD_(f) (reinterpret_cast<char*>(      \
+  &reinterpret_cast<Actor*>(16)->f) - \
+   reinterpret_cast<char*>(16))
+
+#define ZR_(first, last) do {                              \
+    size_t f = OFFSET_OF_FIELD_(first);                    \
+    size_t n = OFFSET_OF_FIELD_(last) - f + sizeof(last);  \
+    ::memset(&first, 0, n);                                \
+  } while (0)
+
+  if (_has_bits_[0 / 32] & 255) {
+    ZR_(id_, actor_type_);
+    ZR_(ai_update_interval_, first_state_id_);
+    model_id_ = 0;
     if (has_position()) {
-      if (position_ != NULL) position_->::gamer::ActorModelCfg_Vec3::Clear();
+      if (position_ != NULL) position_->::gamer::cfg::Vec3::Clear();
     }
     if (has_rotation()) {
-      if (rotation_ != NULL) rotation_->::gamer::ActorModelCfg_Vec3::Clear();
+      if (rotation_ != NULL) rotation_->::gamer::cfg::Vec3::Clear();
     }
     scale_ = 1;
   }
-  action_.Clear();
+
+#undef OFFSET_OF_FIELD_
+#undef ZR_
+
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
 
-bool ActorModelCfg::MergePartialFromCodedStream(
+bool Actor::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(parse_start:gamer.cfg.Actor)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
@@ -1662,56 +263,74 @@ bool ActorModelCfg::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_model_file;
+        if (input->ExpectTag(16)) goto parse_actor_type;
         break;
       }
 
-      // required string model_file = 2;
+      // required .gamer.cfg.ActorTypes actor_type = 2;
       case 2: {
-        if (tag == 18) {
-         parse_model_file:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_model_file()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->model_file().data(), this->model_file().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "model_file");
+        if (tag == 16) {
+         parse_actor_type:
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          if (::gamer::cfg::ActorTypes_IsValid(value)) {
+            set_actor_type(static_cast< ::gamer::cfg::ActorTypes >(value));
+          } else {
+            mutable_unknown_fields()->AddVarint(2, value);
+          }
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_position;
+        if (input->ExpectTag(24)) goto parse_model_id;
         break;
       }
 
-      // required .gamer.ActorModelCfg.Vec3 position = 3;
+      // required int32 model_id = 3;
       case 3: {
-        if (tag == 26) {
+        if (tag == 24) {
+         parse_model_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &model_id_)));
+          set_has_model_id();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_position;
+        break;
+      }
+
+      // required .gamer.cfg.Vec3 position = 4;
+      case 4: {
+        if (tag == 34) {
          parse_position:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_position()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_rotation;
+        if (input->ExpectTag(42)) goto parse_rotation;
         break;
       }
 
-      // required .gamer.ActorModelCfg.Vec3 rotation = 4;
-      case 4: {
-        if (tag == 34) {
+      // required .gamer.cfg.Vec3 rotation = 5;
+      case 5: {
+        if (tag == 42) {
          parse_rotation:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_rotation()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(45)) goto parse_scale;
+        if (input->ExpectTag(53)) goto parse_scale;
         break;
       }
 
-      // optional float scale = 5 [default = 1];
-      case 5: {
-        if (tag == 45) {
+      // optional float scale = 6 [default = 1];
+      case 6: {
+        if (tag == 53) {
          parse_scale:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -1720,20 +339,36 @@ bool ActorModelCfg::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(50)) goto parse_action;
+        if (input->ExpectTag(61)) goto parse_ai_update_interval;
         break;
       }
 
-      // repeated .gamer.ActorModelCfg.Action action = 6;
-      case 6: {
-        if (tag == 50) {
-         parse_action:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                input, add_action()));
+      // required float ai_update_interval = 7;
+      case 7: {
+        if (tag == 61) {
+         parse_ai_update_interval:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &ai_update_interval_)));
+          set_has_ai_update_interval();
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(50)) goto parse_action;
+        if (input->ExpectTag(64)) goto parse_first_state_id;
+        break;
+      }
+
+      // required int32 first_state_id = 8;
+      case 8: {
+        if (tag == 64) {
+         parse_first_state_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &first_state_id_)));
+          set_has_first_state_id();
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -1752,116 +387,124 @@ bool ActorModelCfg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(parse_success:gamer.cfg.Actor)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(parse_failure:gamer.cfg.Actor)
   return false;
 #undef DO_
 }
 
-void ActorModelCfg::SerializeWithCachedSizes(
+void Actor::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(serialize_start:gamer.cfg.Actor)
   // required int32 id = 1;
   if (has_id()) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->id(), output);
   }
 
-  // required string model_file = 2;
-  if (has_model_file()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->model_file().data(), this->model_file().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "model_file");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->model_file(), output);
+  // required .gamer.cfg.ActorTypes actor_type = 2;
+  if (has_actor_type()) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->actor_type(), output);
   }
 
-  // required .gamer.ActorModelCfg.Vec3 position = 3;
+  // required int32 model_id = 3;
+  if (has_model_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->model_id(), output);
+  }
+
+  // required .gamer.cfg.Vec3 position = 4;
   if (has_position()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->position(), output);
+      4, this->position(), output);
   }
 
-  // required .gamer.ActorModelCfg.Vec3 rotation = 4;
+  // required .gamer.cfg.Vec3 rotation = 5;
   if (has_rotation()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->rotation(), output);
+      5, this->rotation(), output);
   }
 
-  // optional float scale = 5 [default = 1];
+  // optional float scale = 6 [default = 1];
   if (has_scale()) {
-    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->scale(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->scale(), output);
   }
 
-  // repeated .gamer.ActorModelCfg.Action action = 6;
-  for (int i = 0; i < this->action_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->action(i), output);
+  // required float ai_update_interval = 7;
+  if (has_ai_update_interval()) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->ai_update_interval(), output);
+  }
+
+  // required int32 first_state_id = 8;
+  if (has_first_state_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(8, this->first_state_id(), output);
   }
 
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(serialize_end:gamer.cfg.Actor)
 }
 
-::google::protobuf::uint8* ActorModelCfg::SerializeWithCachedSizesToArray(
+::google::protobuf::uint8* Actor::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(serialize_to_array_start:gamer.cfg.Actor)
   // required int32 id = 1;
   if (has_id()) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
   }
 
-  // required string model_file = 2;
-  if (has_model_file()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->model_file().data(), this->model_file().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "model_file");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->model_file(), target);
+  // required .gamer.cfg.ActorTypes actor_type = 2;
+  if (has_actor_type()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->actor_type(), target);
   }
 
-  // required .gamer.ActorModelCfg.Vec3 position = 3;
+  // required int32 model_id = 3;
+  if (has_model_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->model_id(), target);
+  }
+
+  // required .gamer.cfg.Vec3 position = 4;
   if (has_position()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        3, this->position(), target);
+        4, this->position(), target);
   }
 
-  // required .gamer.ActorModelCfg.Vec3 rotation = 4;
+  // required .gamer.cfg.Vec3 rotation = 5;
   if (has_rotation()) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        4, this->rotation(), target);
+        5, this->rotation(), target);
   }
 
-  // optional float scale = 5 [default = 1];
+  // optional float scale = 6 [default = 1];
   if (has_scale()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->scale(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->scale(), target);
   }
 
-  // repeated .gamer.ActorModelCfg.Action action = 6;
-  for (int i = 0; i < this->action_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        6, this->action(i), target);
+  // required float ai_update_interval = 7;
+  if (has_ai_update_interval()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->ai_update_interval(), target);
+  }
+
+  // required int32 first_state_id = 8;
+  if (has_first_state_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(8, this->first_state_id(), target);
   }
 
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.ActorModelCfg)
+  // @@protoc_insertion_point(serialize_to_array_end:gamer.cfg.Actor)
   return target;
 }
 
-int ActorModelCfg::ByteSize() const {
+int Actor::ByteSize() const {
   int total_size = 0;
 
   if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
@@ -1872,41 +515,51 @@ int ActorModelCfg::ByteSize() const {
           this->id());
     }
 
-    // required string model_file = 2;
-    if (has_model_file()) {
+    // required .gamer.cfg.ActorTypes actor_type = 2;
+    if (has_actor_type()) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->model_file());
+        ::google::protobuf::internal::WireFormatLite::EnumSize(this->actor_type());
     }
 
-    // required .gamer.ActorModelCfg.Vec3 position = 3;
+    // required int32 model_id = 3;
+    if (has_model_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->model_id());
+    }
+
+    // required .gamer.cfg.Vec3 position = 4;
     if (has_position()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->position());
     }
 
-    // required .gamer.ActorModelCfg.Vec3 rotation = 4;
+    // required .gamer.cfg.Vec3 rotation = 5;
     if (has_rotation()) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->rotation());
     }
 
-    // optional float scale = 5 [default = 1];
+    // optional float scale = 6 [default = 1];
     if (has_scale()) {
       total_size += 1 + 4;
     }
 
-  }
-  // repeated .gamer.ActorModelCfg.Action action = 6;
-  total_size += 1 * this->action_size();
-  for (int i = 0; i < this->action_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->action(i));
-  }
+    // required float ai_update_interval = 7;
+    if (has_ai_update_interval()) {
+      total_size += 1 + 4;
+    }
 
+    // required int32 first_state_id = 8;
+    if (has_first_state_id()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->first_state_id());
+    }
+
+  }
   if (!unknown_fields().empty()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
@@ -1918,10 +571,10 @@ int ActorModelCfg::ByteSize() const {
   return total_size;
 }
 
-void ActorModelCfg::MergeFrom(const ::google::protobuf::Message& from) {
+void Actor::MergeFrom(const ::google::protobuf::Message& from) {
   GOOGLE_CHECK_NE(&from, this);
-  const ActorModelCfg* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const ActorModelCfg*>(
+  const Actor* source =
+    ::google::protobuf::internal::dynamic_cast_if_available<const Actor*>(
       &from);
   if (source == NULL) {
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
@@ -1930,43 +583,51 @@ void ActorModelCfg::MergeFrom(const ::google::protobuf::Message& from) {
   }
 }
 
-void ActorModelCfg::MergeFrom(const ActorModelCfg& from) {
+void Actor::MergeFrom(const Actor& from) {
   GOOGLE_CHECK_NE(&from, this);
-  action_.MergeFrom(from.action_);
   if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
     if (from.has_id()) {
       set_id(from.id());
     }
-    if (from.has_model_file()) {
-      set_model_file(from.model_file());
+    if (from.has_actor_type()) {
+      set_actor_type(from.actor_type());
+    }
+    if (from.has_model_id()) {
+      set_model_id(from.model_id());
     }
     if (from.has_position()) {
-      mutable_position()->::gamer::ActorModelCfg_Vec3::MergeFrom(from.position());
+      mutable_position()->::gamer::cfg::Vec3::MergeFrom(from.position());
     }
     if (from.has_rotation()) {
-      mutable_rotation()->::gamer::ActorModelCfg_Vec3::MergeFrom(from.rotation());
+      mutable_rotation()->::gamer::cfg::Vec3::MergeFrom(from.rotation());
     }
     if (from.has_scale()) {
       set_scale(from.scale());
+    }
+    if (from.has_ai_update_interval()) {
+      set_ai_update_interval(from.ai_update_interval());
+    }
+    if (from.has_first_state_id()) {
+      set_first_state_id(from.first_state_id());
     }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
-void ActorModelCfg::CopyFrom(const ::google::protobuf::Message& from) {
+void Actor::CopyFrom(const ::google::protobuf::Message& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void ActorModelCfg::CopyFrom(const ActorModelCfg& from) {
+void Actor::CopyFrom(const Actor& from) {
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool ActorModelCfg::IsInitialized() const {
-  if ((_has_bits_[0] & 0x0000000f) != 0x0000000f) return false;
+bool Actor::IsInitialized() const {
+  if ((_has_bits_[0] & 0x000000df) != 0x000000df) return false;
 
   if (has_position()) {
     if (!this->position().IsInitialized()) return false;
@@ -1974,29 +635,30 @@ bool ActorModelCfg::IsInitialized() const {
   if (has_rotation()) {
     if (!this->rotation().IsInitialized()) return false;
   }
-  if (!::google::protobuf::internal::AllAreInitialized(this->action())) return false;
   return true;
 }
 
-void ActorModelCfg::Swap(ActorModelCfg* other) {
+void Actor::Swap(Actor* other) {
   if (other != this) {
     std::swap(id_, other->id_);
-    std::swap(model_file_, other->model_file_);
+    std::swap(actor_type_, other->actor_type_);
+    std::swap(model_id_, other->model_id_);
     std::swap(position_, other->position_);
     std::swap(rotation_, other->rotation_);
     std::swap(scale_, other->scale_);
-    action_.Swap(&other->action_);
+    std::swap(ai_update_interval_, other->ai_update_interval_);
+    std::swap(first_state_id_, other->first_state_id_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
   }
 }
 
-::google::protobuf::Metadata ActorModelCfg::GetMetadata() const {
+::google::protobuf::Metadata Actor::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::Metadata metadata;
-  metadata.descriptor = ActorModelCfg_descriptor_;
-  metadata.reflection = ActorModelCfg_reflection_;
+  metadata.descriptor = Actor_descriptor_;
+  metadata.reflection = Actor_reflection_;
   return metadata;
 }
 
@@ -2004,406 +666,37 @@ void ActorModelCfg::Swap(ActorModelCfg* other) {
 // ===================================================================
 
 #ifndef _MSC_VER
-const int CommonAction::kIdleFieldNumber;
-const int CommonAction::kWalkFieldNumber;
-const int CommonAction::kDeadFieldNumber;
-#endif  // !_MSC_VER
-
-CommonAction::CommonAction()
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.CommonAction)
-}
-
-void CommonAction::InitAsDefaultInstance() {
-}
-
-CommonAction::CommonAction(const CommonAction& from)
-  : ::google::protobuf::Message() {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.CommonAction)
-}
-
-void CommonAction::SharedCtor() {
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  idle_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  walk_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  dead_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-}
-
-CommonAction::~CommonAction() {
-  // @@protoc_insertion_point(destructor:gamer.CommonAction)
-  SharedDtor();
-}
-
-void CommonAction::SharedDtor() {
-  if (idle_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete idle_;
-  }
-  if (walk_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete walk_;
-  }
-  if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-    delete dead_;
-  }
-  if (this != default_instance_) {
-  }
-}
-
-void CommonAction::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CommonAction::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CommonAction_descriptor_;
-}
-
-const CommonAction& CommonAction::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_actor_5fcfg_2eproto();
-  return *default_instance_;
-}
-
-CommonAction* CommonAction::default_instance_ = NULL;
-
-CommonAction* CommonAction::New() const {
-  return new CommonAction;
-}
-
-void CommonAction::Clear() {
-  if (_has_bits_[0 / 32] & 7) {
-    if (has_idle()) {
-      if (idle_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        idle_->clear();
-      }
-    }
-    if (has_walk()) {
-      if (walk_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        walk_->clear();
-      }
-    }
-    if (has_dead()) {
-      if (dead_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
-        dead_->clear();
-      }
-    }
-  }
-  ::memset(_has_bits_, 0, sizeof(_has_bits_));
-  mutable_unknown_fields()->Clear();
-}
-
-bool CommonAction::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.CommonAction)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required string idle = 1;
-      case 1: {
-        if (tag == 10) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_idle()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->idle().data(), this->idle().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "idle");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(18)) goto parse_walk;
-        break;
-      }
-
-      // required string walk = 2;
-      case 2: {
-        if (tag == 18) {
-         parse_walk:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_walk()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->walk().data(), this->walk().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "walk");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(26)) goto parse_dead;
-        break;
-      }
-
-      // required string dead = 3;
-      case 3: {
-        if (tag == 26) {
-         parse_dead:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_dead()));
-          ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-            this->dead().data(), this->dead().length(),
-            ::google::protobuf::internal::WireFormat::PARSE,
-            "dead");
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectAtEnd()) goto success;
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:gamer.CommonAction)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:gamer.CommonAction)
-  return false;
-#undef DO_
-}
-
-void CommonAction::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.CommonAction)
-  // required string idle = 1;
-  if (has_idle()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->idle().data(), this->idle().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "idle");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->idle(), output);
-  }
-
-  // required string walk = 2;
-  if (has_walk()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->walk().data(), this->walk().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "walk");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->walk(), output);
-  }
-
-  // required string dead = 3;
-  if (has_dead()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->dead().data(), this->dead().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "dead");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->dead(), output);
-  }
-
-  if (!unknown_fields().empty()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:gamer.CommonAction)
-}
-
-::google::protobuf::uint8* CommonAction::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.CommonAction)
-  // required string idle = 1;
-  if (has_idle()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->idle().data(), this->idle().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "idle");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->idle(), target);
-  }
-
-  // required string walk = 2;
-  if (has_walk()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->walk().data(), this->walk().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "walk");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->walk(), target);
-  }
-
-  // required string dead = 3;
-  if (has_dead()) {
-    ::google::protobuf::internal::WireFormat::VerifyUTF8StringNamedField(
-      this->dead().data(), this->dead().length(),
-      ::google::protobuf::internal::WireFormat::SERIALIZE,
-      "dead");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->dead(), target);
-  }
-
-  if (!unknown_fields().empty()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.CommonAction)
-  return target;
-}
-
-int CommonAction::ByteSize() const {
-  int total_size = 0;
-
-  if (_has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    // required string idle = 1;
-    if (has_idle()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->idle());
-    }
-
-    // required string walk = 2;
-    if (has_walk()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->walk());
-    }
-
-    // required string dead = 3;
-    if (has_dead()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::StringSize(
-          this->dead());
-    }
-
-  }
-  if (!unknown_fields().empty()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        unknown_fields());
-  }
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CommonAction::MergeFrom(const ::google::protobuf::Message& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  const CommonAction* source =
-    ::google::protobuf::internal::dynamic_cast_if_available<const CommonAction*>(
-      &from);
-  if (source == NULL) {
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-    MergeFrom(*source);
-  }
-}
-
-void CommonAction::MergeFrom(const CommonAction& from) {
-  GOOGLE_CHECK_NE(&from, this);
-  if (from._has_bits_[0 / 32] & (0xffu << (0 % 32))) {
-    if (from.has_idle()) {
-      set_idle(from.idle());
-    }
-    if (from.has_walk()) {
-      set_walk(from.walk());
-    }
-    if (from.has_dead()) {
-      set_dead(from.dead());
-    }
-  }
-  mutable_unknown_fields()->MergeFrom(from.unknown_fields());
-}
-
-void CommonAction::CopyFrom(const ::google::protobuf::Message& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CommonAction::CopyFrom(const CommonAction& from) {
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CommonAction::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
-
-  return true;
-}
-
-void CommonAction::Swap(CommonAction* other) {
-  if (other != this) {
-    std::swap(idle_, other->idle_);
-    std::swap(walk_, other->walk_);
-    std::swap(dead_, other->dead_);
-    std::swap(_has_bits_[0], other->_has_bits_[0]);
-    _unknown_fields_.Swap(&other->_unknown_fields_);
-    std::swap(_cached_size_, other->_cached_size_);
-  }
-}
-
-::google::protobuf::Metadata CommonAction::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CommonAction_descriptor_;
-  metadata.reflection = CommonAction_reflection_;
-  return metadata;
-}
-
-
-// ===================================================================
-
-#ifndef _MSC_VER
-const int ActorCfg::kActorModelFieldNumber;
-const int ActorCfg::kActorAudioFieldNumber;
-const int ActorCfg::kCommonActionFieldNumber;
+const int ActorCfg::kActorFieldNumber;
 #endif  // !_MSC_VER
 
 ActorCfg::ActorCfg()
   : ::google::protobuf::Message() {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:gamer.ActorCfg)
+  // @@protoc_insertion_point(constructor:gamer.cfg.ActorCfg)
 }
 
 void ActorCfg::InitAsDefaultInstance() {
-  common_action_ = const_cast< ::gamer::CommonAction*>(&::gamer::CommonAction::default_instance());
 }
 
 ActorCfg::ActorCfg(const ActorCfg& from)
   : ::google::protobuf::Message() {
   SharedCtor();
   MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:gamer.ActorCfg)
+  // @@protoc_insertion_point(copy_constructor:gamer.cfg.ActorCfg)
 }
 
 void ActorCfg::SharedCtor() {
   _cached_size_ = 0;
-  common_action_ = NULL;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
 ActorCfg::~ActorCfg() {
-  // @@protoc_insertion_point(destructor:gamer.ActorCfg)
+  // @@protoc_insertion_point(destructor:gamer.cfg.ActorCfg)
   SharedDtor();
 }
 
 void ActorCfg::SharedDtor() {
   if (this != default_instance_) {
-    delete common_action_;
   }
 }
 
@@ -2429,11 +722,7 @@ ActorCfg* ActorCfg::New() const {
 }
 
 void ActorCfg::Clear() {
-  if (has_common_action()) {
-    if (common_action_ != NULL) common_action_->::gamer::CommonAction::Clear();
-  }
-  actor_model_.Clear();
-  actor_audio_.Clear();
+  actor_.Clear();
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
   mutable_unknown_fields()->Clear();
 }
@@ -2442,49 +731,22 @@ bool ActorCfg::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:gamer.ActorCfg)
+  // @@protoc_insertion_point(parse_start:gamer.cfg.ActorCfg)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .gamer.ActorModelCfg actor_model = 1;
+      // repeated .gamer.cfg.Actor actor = 1;
       case 1: {
         if (tag == 10) {
-         parse_actor_model:
+         parse_actor:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                input, add_actor_model()));
+                input, add_actor()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(10)) goto parse_actor_model;
-        if (input->ExpectTag(18)) goto parse_actor_audio;
-        break;
-      }
-
-      // repeated .gamer.ActorAudioCfg actor_audio = 2;
-      case 2: {
-        if (tag == 18) {
-         parse_actor_audio:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-                input, add_actor_audio()));
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(18)) goto parse_actor_audio;
-        if (input->ExpectTag(26)) goto parse_common_action;
-        break;
-      }
-
-      // required .gamer.CommonAction common_action = 3;
-      case 3: {
-        if (tag == 26) {
-         parse_common_action:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_common_action()));
-        } else {
-          goto handle_unusual;
-        }
+        if (input->ExpectTag(10)) goto parse_actor;
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -2503,100 +765,57 @@ bool ActorCfg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:gamer.ActorCfg)
+  // @@protoc_insertion_point(parse_success:gamer.cfg.ActorCfg)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:gamer.ActorCfg)
+  // @@protoc_insertion_point(parse_failure:gamer.cfg.ActorCfg)
   return false;
 #undef DO_
 }
 
 void ActorCfg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:gamer.ActorCfg)
-  // repeated .gamer.ActorModelCfg actor_model = 1;
-  for (int i = 0; i < this->actor_model_size(); i++) {
+  // @@protoc_insertion_point(serialize_start:gamer.cfg.ActorCfg)
+  // repeated .gamer.cfg.Actor actor = 1;
+  for (int i = 0; i < this->actor_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->actor_model(i), output);
-  }
-
-  // repeated .gamer.ActorAudioCfg actor_audio = 2;
-  for (int i = 0; i < this->actor_audio_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->actor_audio(i), output);
-  }
-
-  // required .gamer.CommonAction common_action = 3;
-  if (has_common_action()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->common_action(), output);
+      1, this->actor(i), output);
   }
 
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:gamer.ActorCfg)
+  // @@protoc_insertion_point(serialize_end:gamer.cfg.ActorCfg)
 }
 
 ::google::protobuf::uint8* ActorCfg::SerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:gamer.ActorCfg)
-  // repeated .gamer.ActorModelCfg actor_model = 1;
-  for (int i = 0; i < this->actor_model_size(); i++) {
+  // @@protoc_insertion_point(serialize_to_array_start:gamer.cfg.ActorCfg)
+  // repeated .gamer.cfg.Actor actor = 1;
+  for (int i = 0; i < this->actor_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteMessageNoVirtualToArray(
-        1, this->actor_model(i), target);
-  }
-
-  // repeated .gamer.ActorAudioCfg actor_audio = 2;
-  for (int i = 0; i < this->actor_audio_size(); i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, this->actor_audio(i), target);
-  }
-
-  // required .gamer.CommonAction common_action = 3;
-  if (has_common_action()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        3, this->common_action(), target);
+        1, this->actor(i), target);
   }
 
   if (!unknown_fields().empty()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:gamer.ActorCfg)
+  // @@protoc_insertion_point(serialize_to_array_end:gamer.cfg.ActorCfg)
   return target;
 }
 
 int ActorCfg::ByteSize() const {
   int total_size = 0;
 
-  if (_has_bits_[2 / 32] & (0xffu << (2 % 32))) {
-    // required .gamer.CommonAction common_action = 3;
-    if (has_common_action()) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->common_action());
-    }
-
-  }
-  // repeated .gamer.ActorModelCfg actor_model = 1;
-  total_size += 1 * this->actor_model_size();
-  for (int i = 0; i < this->actor_model_size(); i++) {
+  // repeated .gamer.cfg.Actor actor = 1;
+  total_size += 1 * this->actor_size();
+  for (int i = 0; i < this->actor_size(); i++) {
     total_size +=
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->actor_model(i));
-  }
-
-  // repeated .gamer.ActorAudioCfg actor_audio = 2;
-  total_size += 1 * this->actor_audio_size();
-  for (int i = 0; i < this->actor_audio_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->actor_audio(i));
+        this->actor(i));
   }
 
   if (!unknown_fields().empty()) {
@@ -2624,13 +843,7 @@ void ActorCfg::MergeFrom(const ::google::protobuf::Message& from) {
 
 void ActorCfg::MergeFrom(const ActorCfg& from) {
   GOOGLE_CHECK_NE(&from, this);
-  actor_model_.MergeFrom(from.actor_model_);
-  actor_audio_.MergeFrom(from.actor_audio_);
-  if (from._has_bits_[2 / 32] & (0xffu << (2 % 32))) {
-    if (from.has_common_action()) {
-      mutable_common_action()->::gamer::CommonAction::MergeFrom(from.common_action());
-    }
-  }
+  actor_.MergeFrom(from.actor_);
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
 
@@ -2647,21 +860,14 @@ void ActorCfg::CopyFrom(const ActorCfg& from) {
 }
 
 bool ActorCfg::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000004) != 0x00000004) return false;
 
-  if (!::google::protobuf::internal::AllAreInitialized(this->actor_model())) return false;
-  if (!::google::protobuf::internal::AllAreInitialized(this->actor_audio())) return false;
-  if (has_common_action()) {
-    if (!this->common_action().IsInitialized()) return false;
-  }
+  if (!::google::protobuf::internal::AllAreInitialized(this->actor())) return false;
   return true;
 }
 
 void ActorCfg::Swap(ActorCfg* other) {
   if (other != this) {
-    actor_model_.Swap(&other->actor_model_);
-    actor_audio_.Swap(&other->actor_audio_);
-    std::swap(common_action_, other->common_action_);
+    actor_.Swap(&other->actor_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
@@ -2679,6 +885,7 @@ void ActorCfg::Swap(ActorCfg* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace cfg
 }  // namespace gamer
 
 // @@protoc_insertion_point(global_scope)

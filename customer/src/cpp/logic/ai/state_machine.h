@@ -4,7 +4,7 @@
  @ author:		  Connor
  @ version:	      1.0.0
  @ date:		  2014-09-12
- @ description:   role state machine.
+ @ description:   role finite state machine.
  @ others:
  @ history:
  1.date:
@@ -16,10 +16,9 @@
 #define CITY_HUNTER_SRC_STATE_MACHINE_H_
 
 #include <map>
-//#include "actor_typedef.h"
+
 #include "actor_states.h"
 #include "macros.h"
-//#include "state.h"
 
 namespace gamer
 {
@@ -30,6 +29,7 @@ template<typename Entity> class FindingTargetState;
 template<typename Entity> class NearingState;
 template<typename Entity> class AttackingState;
 template<typename Entity> class BeingAttackedState;
+template<typename Entity> class DefendingState;
 template<typename Entity> class DeadState;
 
 template <typename Entity>
@@ -62,17 +62,15 @@ public:
 		}
 	}
 
-    // it will create state if the state has not created, then change to state
-    // @ param state_id : constant form enum gamer::StateIDs
     void changeState(int state_id)
     {
         auto state = getState(state_id);
         if (nullptr == state)
         {
-            state = createState((gamer::StateIDs)state_id);
+            state = this->createState((gamer::StateIDs)state_id);
         }
 
-        changeState(state);
+        this->changeState(state);
     }
 
     inline ActorState* current_state() const { return current_state_; }
@@ -103,32 +101,30 @@ private:
             {
                 return (ActorState*)new AttackingState<ActorType>(state_id);
             }
-            break;
         case gamer::StateIDs::FINDING_TARGET_STATE:
             {
                 return (ActorState*)new FindingTargetState<ActorType>(state_id);
             }
-            break;
         case gamer::StateIDs::IDLE_STATE:
             {
                 return (ActorState*)new IdleState<ActorType>(state_id);
             }
-            break;
-        case gamer::StateIDs::NEARING_STATE:
+        case gamer::StateIDs::NEARING_TARGET_STATE:
             {
                 return (ActorState*)new NearingState<ActorType>(state_id);
             }
-            break;
         case gamer::StateIDs::BEING_ATTACKED_STATE:
             {
                 return (ActorState*)new BeingAttackedState<ActorType>(state_id);
             }
-            break;
         case gamer::StateIDs::DEAD_STATE:
             {
                 return (ActorState*)new DeadState<ActorType>(state_id);
             }
-            break;
+        case gamer::StateIDs::DEFENDING_STATE:
+            {
+                return (ActorState*)new DefendingState<ActorType>(state_id);
+            }
         default:
             break;
         }
@@ -144,12 +140,7 @@ private:
 
         is_state_changing_ = true;
 
-        //assert(state && "<FSM::ChangeState>: trying to change to NULL state");
-
-        // keep a record of the previous state
-        // m_pPreviousState = current_state_;
-
-        if (true == isInState(state))
+        if (true == this->isInState(state))
         {
             is_state_changing_ = false;
             return;
@@ -162,7 +153,7 @@ private:
         }
 
         // store the state
-        addState(state);
+        this->addState(state);
 
         // change state to the new state
         current_state_ = state;

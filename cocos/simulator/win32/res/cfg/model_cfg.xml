@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Model id="0" file="model/knight/knight.c3b" />
+	<Model id="1" file="model/archer/archer.c3b" />
+	<Model id="2" file="model/mage/mage.c3b" />
+</Root>

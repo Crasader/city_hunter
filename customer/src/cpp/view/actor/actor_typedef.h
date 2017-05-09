@@ -15,9 +15,6 @@
 #ifndef CITY_HUNTER_SRC_ACTOR_TYPEDEF_H_
 #define CITY_HUNTER_SRC_ACTOR_TYPEDEF_H_
 
-//#include "cocos/3d/CCSprite3D.h"
-//#include "actor.h"
-
 namespace cocos2d
 {
     

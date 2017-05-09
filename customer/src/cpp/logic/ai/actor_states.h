@@ -17,18 +17,17 @@
 
 #include <vector>
 
-#include "action_command.h"
-#include "attack_command.h"
-#include "command_constants.h"
-#include "command_manager.h"
+#include "battle_manager.h"
+#include "command_headers.h"
+#include "event_headers.h"
 #include "game_object.h"
 #include "graph_typedef.h"
 #include "path_finder.h"
 #include "state.h"
 #include "state_constants.h"
-#include "scene_manager.h"
-#include "space_partition.h"
-#include "utils_graph.h"
+#include "util_graph.h"
+#include "util_actor.h"
+// TODO : ugly, deal with included header
 
 namespace gamer
 {
@@ -37,6 +36,8 @@ template<typename Actor>
 class IdleState : public State<Actor>
 {
 public:
+    IdleState() = delete;
+
     IdleState(int state_id) : State<Actor>(state_id) {}
 
     virtual void onEnter(Actor* actor) override
@@ -44,10 +45,7 @@ public:
         if(nullptr == actor)
             return;
 
-        ActionCommand<Actor> cmd(CommandIDs::CMD_ID_PLAY_ACTION);
-        cmd.set_sub_command_id(CommandIDs::CMD_ID_PLAY_IDLE_ACTION);
-        cmd.set_initiator(actor);
-        CommandManager::getInstance()->sendCmd(&cmd);
+        EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTOR_ENTERED_STATE, actor);
     }
 
     virtual void onUpdate(Actor* actor) override
@@ -66,6 +64,8 @@ template<typename Actor>
 class FindingTargetState : public State<Actor>
 {
 public:
+    FindingTargetState() = delete;
+
     FindingTargetState(int state_id) 
         :State<Actor>(state_id)
         ,found_target_(false)
@@ -92,8 +92,8 @@ public:
         auto limit = 5;
         if (found_target_)
         {
-            actor->set_pos_update_enabled(true);
-            actor->state_machine()->changeState(StateIDs::NEARING_STATE);            
+            actor->start_position_update();
+            actor->state_machine()->changeState(StateIDs::NEARING_TARGET_STATE);            
         }
         else if (find_count_ < limit)
         {
@@ -132,15 +132,14 @@ private:
             return false;
 
         // TODO : sort neighbors by threat, and choose the high threat neighbor as target
-
         actor->set_target(neighbors[0]);
 
         // set path to target        
         Position3D src_pos = self_pos;
         Position3D tar_pos = getPositionForMoving(actor);
 
-        auto sorce  = utils_graph::getNodeIndexByPos(src_pos);
-        auto target = utils_graph::getNodeIndexByPos(tar_pos);
+        auto sorce  = util_graph::getNodeIndexByPos(src_pos);
+        auto target = util_graph::getNodeIndexByPos(tar_pos);
 
         auto path = PathFinder::getInstance()->doAStarSearch(sorce, target);
         actor->set_target_path(path);
@@ -148,7 +147,7 @@ private:
         return true;
     }
 
-    // get the pos to move 
+    // TODO : ugly
     Position3D getPositionForMoving(Actor* actor)
     {
         Position3D move_pos;
@@ -186,6 +185,8 @@ template<typename Actor>
 class NearingState : public State<Actor>
 {
 public:
+    NearingState() = delete;
+
     NearingState(int state_id) : State<Actor>(state_id) {}
 
     virtual void onEnter(Actor* actor) override
@@ -193,37 +194,13 @@ public:
         if (nullptr == actor)
             return;
 
-        ActionCommand<Actor> cmd(CommandIDs::CMD_ID_PLAY_ACTION);
-        cmd.set_sub_command_id(CommandIDs::CMD_ID_PLAY_WALK_ACTION);
-        cmd.set_initiator(actor);
-        CommandManager::getInstance()->sendCmd(&cmd);
+        EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTOR_ENTERED_STATE, actor);
 
         // turn face to target
         auto target = actor->target();
         if (nullptr != target)
-        {               
-            auto tar_pos = target->getPosition();
-            auto self_pos = actor->getPosition();
-
-            cocos2d::Vec2 target_pos1 = cocos2d::Vec2(tar_pos.x, -tar_pos.z);
-            cocos2d::Vec2 self_pos1 = cocos2d::Vec2(self_pos.x, -self_pos.z);
-            cocos2d::Vec2 target_vec = target_pos1 - self_pos1;
-            target_vec.normalize();
-            float target_angle = atan2f(target_vec.y, target_vec.x);
-            float target_degree = CC_RADIANS_TO_DEGREES(target_angle);    
-            
-            float cur_facing = actor->entity()->getRotation3D().y;
-            float delta_degree = target_degree - cur_facing;
-            delta_degree = (int)delta_degree % 360;
-            bool anti_clockwise = (delta_degree - 180) < 0;
-            if (anti_clockwise)
-            {
-                actor->entity()->setRotation3D(cocos2d::Vec3(0, target_degree + 90, 0));
-            }            
-            else
-            {
-                actor->entity()->setRotation3D(cocos2d::Vec3(0, -(360 - target_degree) + 90, 0));
-            }
+        {   
+            util_actor::turnFace2Target(actor, target);
         }
     }
 
@@ -236,9 +213,11 @@ public:
         if (nullptr == target)
             return;
 
-        typename graph::NavGraphNode3D::Position self_pos   = actor->getPosition();
-        typename graph::NavGraphNode3D::Position target_path_last_pos = actor->target_path_last_pos();
-        if (self_pos.distanceSquared(target_path_last_pos) <= 1)
+        auto self_pos   = actor->getPosition();
+        auto target_pos = target->getPosition();
+        //auto target_path_last_pos = actor->target_path_last_pos(); // TODO : move this func to util
+        // TODO : read from cfg
+        if (self_pos.distanceSquared(target_pos) <= 6400) // TODO : attack arrange
         {
             actor->state_machine()->changeState(StateIDs::ATTACKING_STATE);
         }
@@ -246,7 +225,7 @@ public:
 
     virtual void onExit(Actor* actor) override
     {
-
+ 
     }
 };
 
@@ -254,6 +233,8 @@ template<typename Actor>
 class AttackingState : public State<Actor>
 {
 public:
+    AttackingState() = delete;
+
     AttackingState(int state_id) : State<Actor>(state_id) {}
 
     virtual void onEnter(Actor* actor) override
@@ -261,13 +242,9 @@ public:
         if (nullptr == actor)
             return;
 
-        sendAttackCmd(actor);
-
-        auto target = actor->target();        
-        if (nullptr != target)
-        {
-            target->state_machine()->changeState(StateIDs::BEING_ATTACKED_STATE);
-        }
+        util_actor::turnFace2Target(actor, actor->target());
+        actor->target()->set_target(actor);
+        CommandManager::getInstance()->sendCmd(CommandIDs::CMD_ATTACK, actor);
     }
 
     virtual void onUpdate(Actor* actor) override
@@ -275,21 +252,13 @@ public:
         if(nullptr == actor)
             return;
 
-        auto target = actor->target();        
-        if (nullptr != target)
+        if (actor->target()->hp() <= 0)
         {
-            //target->set_hp(target->hp() - 20);
-            if (target->hp() > 0)
-            {
-                sendAttackCmd(actor);
-            }
-            else
-            {
-                actor->set_pos_update_enabled(false);
-                actor->state_machine()->changeState(StateIDs::IDLE_STATE);
-                actor->state_machine()->changeState(StateIDs::FINDING_TARGET_STATE);
-                //actor->state_machine()->changeState(StateIDs::IDLE_STATE);
-            }
+            actor->state_machine()->changeState(StateIDs::IDLE_STATE);
+        }
+        else
+        {
+            CommandManager::getInstance()->sendCmd(CommandIDs::CMD_ATTACK, actor);
         }
     }
 
@@ -299,28 +268,21 @@ public:
     }
 
 private:
-    void sendAttackCmd(Actor* actor)
-    {
-        AttackCommand<Actor> att_cmd(CommandIDs::CMD_ID_NORMAL_ATTACK);
-        att_cmd.set_attacker(actor);
-        att_cmd.set_target(actor->target());
-
-        CommandManager::getInstance()->sendCmd(&att_cmd);
-    }
 };
 
 template<typename Actor>
 class BeingAttackedState : public State<Actor>
 {
 public:
+    BeingAttackedState() = delete;
+
     BeingAttackedState(int state_id) : State<Actor>(state_id) {}
 
     virtual void onEnter(Actor* actor) override
     {
         if (nullptr == actor)
             return;
-
-        //actor->set_ai_enabled(true);
+        EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTOR_ENTERED_STATE, actor);
     }
 
     virtual void onUpdate(Actor* actor) override
@@ -328,12 +290,44 @@ public:
         if(nullptr == actor)
             return;
 
-        //actor->set_hp(actor->hp() - 20);
+        if (actor->hp() <= 0)
+        {
+            actor->state_machine()->changeState(StateIDs::DEAD_STATE);
+        }
+        BattleManager::getInstance()->dealWithNextState(actor);
+    }
+
+    virtual void onExit(Actor* actor) override
+    {
+
+    }
+};
+
+template<typename Actor>
+class DefendingState : public State<Actor>
+{
+public:
+    DefendingState() = delete;
+
+    DefendingState(int state_id) : State<Actor>(state_id) {}
+
+    virtual void onEnter(Actor* actor) override
+    {
+        if (nullptr == actor)
+            return;
+        EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTOR_ENTERED_STATE, actor);
+    }
+
+    virtual void onUpdate(Actor* actor) override
+    {
+        if (nullptr == actor)
+            return;
 
         if (actor->hp() <= 0)
         {
             actor->state_machine()->changeState(StateIDs::DEAD_STATE);
         }
+        BattleManager::getInstance()->dealWithNextState(actor);
     }
 
     virtual void onExit(Actor* actor) override
@@ -346,6 +340,8 @@ template<typename Actor>
 class DeadState : public State<Actor>
 {
 public:
+    DeadState() = delete;
+
     DeadState(int state_id) : State<Actor>(state_id) {}
 
     virtual void onEnter(Actor* actor) override
@@ -353,18 +349,15 @@ public:
         if (nullptr == actor)
             return;
 
-        actor->set_ai_enabled(false);
+        EventManager::getInstance()->dispatchEvent(EventIDs::EVENT_ACTOR_ENTERED_STATE, actor);
 
-        ActionCommand<Actor> cmd(CommandIDs::CMD_ID_PLAY_ACTION);
-        cmd.set_sub_command_id(CommandIDs::CMD_ID_PLAY_DEAD_ACTION);
-        cmd.set_initiator(actor);
-        CommandManager::getInstance()->sendCmd(&cmd);
+        actor->stop_position_update();
+        actor->stop_ai_update();
     }
 
     virtual void onUpdate(Actor* actor) override
     {
-        if(nullptr == actor)
-            return;
+
     }
 
     virtual void onExit(Actor* actor) override

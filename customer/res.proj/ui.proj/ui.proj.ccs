@@ -1,0 +1,26 @@
+<Solution>
+  <PropertyGroup Name="ui.proj" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="ui">
+          <Folder Name="common_png" />
+          <Folder Name="gaming">
+            <Folder Name="hud">
+              <Folder Name="png">
+                <Image Name="blood_blue.png" />
+                <Image Name="role_head.png" />
+              </Folder>
+              <Project Name="gaming_hud_bottom_layer.csd" Type="Layer" />
+              <Project Name="gaming_hud_bottom_role_layer.csd" Type="Layer" />
+              <Project Name="gaming_hud_layer.csd" Type="Layer" />
+            </Folder>
+          </Folder>
+          <Folder Name="hall" />
+          <Folder Name="login" />
+          <Folder Name="room_list" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
